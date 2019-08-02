@@ -70,7 +70,7 @@ h2 {
 }
 
 .container {
-    width: 50%;
+    width: 40%;
     padding: 40px;
     background-color: rgba(10, 10, 10, 0.77);
     border: 2px ridge rgba(238, 238, 238, 0.13);
@@ -85,7 +85,7 @@ h2 {
 }
 
 .login {
-    width: 50%;
+    width: 70%;
     text-align: center;
     margin: 0 auto 0 auto;
 }
@@ -206,21 +206,25 @@ input[type="text"], input[type="password"] {
     color: #FFF;
 }
 
-.footer {
+.copyright {
     text-align: center;
-    margin: 100px 20px 20px;
+    bottom: 5px;
+    height: 16px;
+    display: inline-block;
+    font-size: 10px;
+    color: #FFF;
+    letter-spacing: 0;
+    line-height: 18px;
 }
-.footer p {
+.copyright p {
     color: #CCC;
     line-height: 25px;
-    /*--w3layouts--*/
-    /*--agileits--*/
 }
-.footer a {
+.copyright a {
     color: #CCC;
     text-decoration: none;
 }
 
-.footer a:hover {
+.copyright a:hover {
     color: #FFF;
 }
