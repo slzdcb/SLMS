@@ -4,13 +4,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <!-- 引入CSS -->
-    <link href="${pageContext.request.contextPath}/static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css"/>
-    <link href="${pageContext.request.contextPath}/static/h-ui/css/H-ui.login.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/static/h-ui/lib/icheck/icheck.css" rel="stylesheet" type="text/css"/>
-    <link href="${pageContext.request.contextPath}/static/h-ui/lib/Hui-iconfont/1.0.1/iconfont.css" rel="stylesheet"
-          type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/easyui/themes/icon.css">
+
     <link rel="stylesheet" type="text/css"
           href="${pageContext.request.contextPath}/static/easyui/themes/default/easyui.css">
     <!-- 引入JS -->
@@ -80,16 +75,26 @@
     <div class="login">
         <h2>用 户 登 录</h2>
         <form action="#" method="post">
-            <input type="text" id="username" placeholder="用户名" required="">
-            <input type="password" id="password" placeholder="密码" required="">
+            <input type="text" id="username" name="username" placeholder="用户名" required="">
+            <input type="password" id="password" name="password" placeholder="密码" required="">
         </form>
-        <div class="extratlogin">
-            <a>忘记密码?</a>
-            <a>我是管理员</a>
+        <div class="row cl">
+            <input id="verifiCode" class="input-text radius size-L" name="verifiCode" type="text"
+                   placeholder="验证码"
+                   style="width: 55%;">
+            <img title="点击图片切换验证码哟 ~" id="vcodeImg" src="getVerifiCodeImage" alt="#">
+        </div>
+        <div class="role">
+            <div class="radio-box">
+                <input type="radio" id="radio-2" name="userType" checked value="2"/>
+                <label for="radio-1">学生</label>
+                <input type="radio" id="radio-1" name="userType" value="1"/>
+                <label for="radio-2">管理员</label>
+            </div>
         </div>
         <div class="send-button">
             <form>
-                <input type="submit" id="login" value="登 录">
+                <input type="submit" id="submitBtn" id="login" value="登 录">
             </form>
         </div>
     </div>

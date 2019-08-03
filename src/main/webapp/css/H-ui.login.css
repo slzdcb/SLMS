@@ -2,35 +2,6 @@
 /* -----------   H-ui 前端框架	-------------
 H-ui.login.css v2.2.1
 -----------------------------------------*/
-body {
-	font-size: 14px
-}
-
-.header, .footer {
-	position: absolute;
-	left: 0;
-	right: 0;
-	width: 100%;
-	z-index: 99
-}
-
-.header {
-	top: 0;
-	height: 60px;
-	background: #00358e;
-	padding: 0;
-}
-
-.loginWraper {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 1;
-	background: #ffffff url(../images/login-bg.jpg) no-repeat center
-}
 
 .loginBox {
 	position: absolute;

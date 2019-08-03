@@ -1,7 +1,8 @@
-﻿@charset "utf-8";
-/* -----------	 H-ui前端框架	-----------
-H-ui.css v2.1.23
-------------------------------------*/
+/* -----------   H-ui 前端框架	 -------------
+H-ui.login.css v2.1.22
+-----------------------------------------*/
+@charset "utf-8"; 
+
 * {
 	word-wrap: break-word
 }
@@ -41,13 +42,13 @@ input, button, textarea, select, optgroup, option {
 input, button {
 	overflow: visible;
 	vertical-align: middle;
-	outline: none
+	outline: 0
 }
 
 input[type="submit"], input[type="reset"], input[type="button"], input[type="text"],
 	input[type="password"] {
 	-webkit-appearance: none;
-	outline: none
+	outline: 0
 }
 
 body, th, td, button, input, select, textarea {
@@ -69,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, area {
-	outline: none;
+	outline: 0;
 	blr: expression(this.onFocus = this.blur ())
 }
 
@@ -80,7 +81,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
-	outline: none
+	outline: 0
 }
 
 a.ie6:hover {
@@ -88,15 +89,15 @@ a.ie6:hover {
 }
 
 a:focus {
-	outline: none
+	outline: 0
 }
 
 a:hover, a:active {
-	outline: none
+	outline: 0
 }
 
 :focus {
-	outline: none
+	outline: 0
 }
 
 sub, sup {
@@ -106,7 +107,7 @@ sub, sup {
 button, input[type="button"], input[type="submit"] {
 	line-height: normal !important
 }
-/*img*/
+
 img {
 	border: 0;
 	vertical-align: middle
@@ -123,7 +124,6 @@ a img, img {
 	}
 }
 
-/*IE下a:hover 背景闪烁*/
 * html{
 	overflow: -moz-scrollbars-vertical;
 	zoom: expression(function(ele){ele.style.zoom= "1";
@@ -135,8 +135,6 @@ a img, img {
 this
 ))
 }
-
-/*HTML5 reset*/
 header, footer, section, aside, details, menu, article, section, nav,
 	address, hgroup, figure, figcaption, legend {
 	display: block;
@@ -172,13 +170,13 @@ legend small {
 	color: #999
 }
 
-svg:not (:root ) {
+svg:not (:root ){
 	overflow: hidden
 }
 
 fieldset {
 	border-width: 0;
-	padding: 0.35em 0.625em 0.75em;
+	padding: .35em .625em .75em;
 	margin: 0 2px;
 	border: 1px solid #c0c0c0
 }
@@ -189,18 +187,14 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 }
 
 input[type="search"] {
-	-webkit-appearance: textfield; /* 1 */
+	-webkit-appearance: textfield
 }
 
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration
 	{
 	-webkit-appearance: none
 }
-/*清楚浮动
-	Name:			style_clearfix
-	Example:		class="clearfix|cl"
-	Explain:		clearfix（简写cl）避免因子元素浮动而导致的父元素高度缺失能问题
-*/
+
 .cl:after, .clearfix:after {
 	content: "\20";
 	display: block;
@@ -211,22 +205,6 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 
 .cl, .clearfix {
 	zoom: 1
-}
-
-/*2.1 栅格系统
-	Name:			style_span
-	Example:
-	<div class="responsive">
-	<div class="row cl" role="grid">
-	  <div class="col-1">……</div>
-	  ……
-	</div>
-	</div>
-	Explain:		栅格系统
-*/
-/*2.1 响应式栅格系统*/
-.row.cl {
-	
 }
 
 .row {
@@ -456,7 +434,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 	right: 91.66667%;
 	left: auto
 }
-/*局部模块平分*/
+
 .col-1-1 {
 	width: 100%
 }
@@ -512,494 +490,490 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 	}
 	.responsive [class^="col-offset-"], .responsive [class*=" col-offset-"]
 		{
-		margin-left: 0px !important
+		margin-left: 0 !important
 	}
 }
 
 @media ( min-width :768px) {
 	.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3,
 		.col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
-		float: left;
+		float: left
 	}
 	.col-sm-12 {
-		width: 100%;
+		width: 100%
 	}
 	.col-sm-11 {
-		width: 91.66666666666666%;
+		width: 91.66666666666666%
 	}
 	.col-sm-10 {
-		width: 83.33333333333334%;
+		width: 83.33333333333334%
 	}
 	.col-sm-9 {
-		width: 75%;
+		width: 75%
 	}
 	.col-sm-8 {
-		width: 66.66666666666666%;
+		width: 66.66666666666666%
 	}
 	.col-sm-7 {
-		width: 58.333333333333336%;
+		width: 58.333333333333336%
 	}
 	.col-sm-6 {
-		width: 50%;
+		width: 50%
 	}
 	.col-sm-5 {
-		width: 41.66666666666667%;
+		width: 41.66666666666667%
 	}
 	.col-sm-4 {
-		width: 33.33333333333333%;
+		width: 33.33333333333333%
 	}
 	.col-sm-3 {
-		width: 25%;
+		width: 25%
 	}
 	.col-sm-2 {
-		width: 16.666666666666664%;
+		width: 16.666666666666664%
 	}
 	.col-sm-1 {
-		width: 8.333333333333332%;
+		width: 8.333333333333332%
 	}
 	.col-sm-pull-12 {
-		right: 100%;
+		right: 100%
 	}
 	.col-sm-pull-11 {
-		right: 91.66666666666666%;
+		right: 91.66666666666666%
 	}
 	.col-sm-pull-10 {
-		right: 83.33333333333334%;
+		right: 83.33333333333334%
 	}
 	.col-sm-pull-9 {
-		right: 75%;
+		right: 75%
 	}
 	.col-sm-pull-8 {
-		right: 66.66666666666666%;
+		right: 66.66666666666666%
 	}
 	.col-sm-pull-7 {
-		right: 58.333333333333336%;
+		right: 58.333333333333336%
 	}
 	.col-sm-pull-6 {
-		right: 50%;
+		right: 50%
 	}
 	.col-sm-pull-5 {
-		right: 41.66666666666667%;
+		right: 41.66666666666667%
 	}
 	.col-sm-pull-4 {
-		right: 33.33333333333333%;
+		right: 33.33333333333333%
 	}
 	.col-sm-pull-3 {
-		right: 25%;
+		right: 25%
 	}
 	.col-sm-pull-2 {
-		right: 16.666666666666664%;
+		right: 16.666666666666664%
 	}
 	.col-sm-pull-1 {
-		right: 8.333333333333332%;
+		right: 8.333333333333332%
 	}
 	.col-sm-pull-0 {
-		right: 0;
+		right: 0
 	}
 	.col-sm-push-12 {
-		left: 100%;
+		left: 100%
 	}
 	.col-sm-push-11 {
-		left: 91.66666666666666%;
+		left: 91.66666666666666%
 	}
 	.col-sm-push-10 {
-		left: 83.33333333333334%;
+		left: 83.33333333333334%
 	}
 	.col-sm-push-9 {
-		left: 75%;
+		left: 75%
 	}
 	.col-sm-push-8 {
-		left: 66.66666666666666%;
+		left: 66.66666666666666%
 	}
 	.col-sm-push-7 {
-		left: 58.333333333333336%;
+		left: 58.333333333333336%
 	}
 	.col-sm-push-6 {
-		left: 50%;
+		left: 50%
 	}
 	.col-sm-push-5 {
-		left: 41.66666666666667%;
+		left: 41.66666666666667%
 	}
 	.col-sm-push-4 {
-		left: 33.33333333333333%;
+		left: 33.33333333333333%
 	}
 	.col-sm-push-3 {
-		left: 25%;
+		left: 25%
 	}
 	.col-sm-push-2 {
-		left: 16.666666666666664%;
+		left: 16.666666666666664%
 	}
 	.col-sm-push-1 {
-		left: 8.333333333333332%;
+		left: 8.333333333333332%
 	}
 	.col-sm-push-0 {
-		left: 0;
+		left: 0
 	}
 	.col-sm-offset-12 {
-		margin-left: 100%;
+		margin-left: 100%
 	}
 	.col-sm-offset-11 {
-		margin-left: 91.66666666666666%;
+		margin-left: 91.66666666666666%
 	}
 	.col-sm-offset-10 {
-		margin-left: 83.33333333333334%;
+		margin-left: 83.33333333333334%
 	}
 	.col-sm-offset-9 {
-		margin-left: 75%;
+		margin-left: 75%
 	}
 	.col-sm-offset-8 {
-		margin-left: 66.66666666666666%;
+		margin-left: 66.66666666666666%
 	}
 	.col-sm-offset-7 {
-		margin-left: 58.333333333333336%;
+		margin-left: 58.333333333333336%
 	}
 	.col-sm-offset-6 {
-		margin-left: 50%;
+		margin-left: 50%
 	}
 	.col-sm-offset-5 {
-		margin-left: 41.66666666666667%;
+		margin-left: 41.66666666666667%
 	}
 	.col-sm-offset-4 {
-		margin-left: 33.33333333333333%;
+		margin-left: 33.33333333333333%
 	}
 	.col-sm-offset-3 {
-		margin-left: 25%;
+		margin-left: 25%
 	}
 	.col-sm-offset-2 {
-		margin-left: 16.666666666666664%;
+		margin-left: 16.666666666666664%
 	}
 	.col-sm-offset-1 {
-		margin-left: 8.333333333333332%;
+		margin-left: 8.333333333333332%
 	}
 	.col-sm-offset-0 {
-		margin-left: 0;
+		margin-left: 0
 	}
 }
 
 @media ( min-width :992px) {
 	.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3,
 		.col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
-		float: left;
+		float: left
 	}
 	.col-md-12 {
-		width: 100%;
+		width: 100%
 	}
 	.col-md-11 {
-		width: 91.66666666666666%;
+		width: 91.66666666666666%
 	}
 	.col-md-10 {
-		width: 83.33333333333334%;
+		width: 83.33333333333334%
 	}
 	.col-md-9 {
-		width: 75%;
+		width: 75%
 	}
 	.col-md-8 {
-		width: 66.66666666666666%;
+		width: 66.66666666666666%
 	}
 	.col-md-7 {
-		width: 58.333333333333336%;
+		width: 58.333333333333336%
 	}
 	.col-md-6 {
-		width: 50%;
+		width: 50%
 	}
 	.col-md-5 {
-		width: 41.66666666666667%;
+		width: 41.66666666666667%
 	}
 	.col-md-4 {
-		width: 33.33333333333333%;
+		width: 33.33333333333333%
 	}
 	.col-md-3 {
-		width: 25%;
+		width: 25%
 	}
 	.col-md-2 {
-		width: 16.666666666666664%;
+		width: 16.666666666666664%
 	}
 	.col-md-1 {
-		width: 8.333333333333332%;
+		width: 8.333333333333332%
 	}
 	.col-md-pull-12 {
-		right: 100%;
+		right: 100%
 	}
 	.col-md-pull-11 {
-		right: 91.66666666666666%;
+		right: 91.66666666666666%
 	}
 	.col-md-pull-10 {
-		right: 83.33333333333334%;
+		right: 83.33333333333334%
 	}
 	.col-md-pull-9 {
-		right: 75%;
+		right: 75%
 	}
 	.col-md-pull-8 {
-		right: 66.66666666666666%;
+		right: 66.66666666666666%
 	}
 	.col-md-pull-7 {
-		right: 58.333333333333336%;
+		right: 58.333333333333336%
 	}
 	.col-md-pull-6 {
-		right: 50%;
+		right: 50%
 	}
 	.col-md-pull-5 {
-		right: 41.66666666666667%;
+		right: 41.66666666666667%
 	}
 	.col-md-pull-4 {
-		right: 33.33333333333333%;
+		right: 33.33333333333333%
 	}
 	.col-md-pull-3 {
-		right: 25%;
+		right: 25%
 	}
 	.col-md-pull-2 {
-		right: 16.666666666666664%;
+		right: 16.666666666666664%
 	}
 	.col-md-pull-1 {
-		right: 8.333333333333332%;
+		right: 8.333333333333332%
 	}
 	.col-md-pull-0 {
-		right: 0;
+		right: 0
 	}
 	.col-md-push-12 {
-		left: 100%;
+		left: 100%
 	}
 	.col-md-push-11 {
-		left: 91.66666666666666%;
+		left: 91.66666666666666%
 	}
 	.col-md-push-10 {
-		left: 83.33333333333334%;
+		left: 83.33333333333334%
 	}
 	.col-md-push-9 {
-		left: 75%;
+		left: 75%
 	}
 	.col-md-push-8 {
-		left: 66.66666666666666%;
+		left: 66.66666666666666%
 	}
 	.col-md-push-7 {
-		left: 58.333333333333336%;
+		left: 58.333333333333336%
 	}
 	.col-md-push-6 {
-		left: 50%;
+		left: 50%
 	}
 	.col-md-push-5 {
-		left: 41.66666666666667%;
+		left: 41.66666666666667%
 	}
 	.col-md-push-4 {
-		left: 33.33333333333333%;
+		left: 33.33333333333333%
 	}
 	.col-md-push-3 {
-		left: 25%;
+		left: 25%
 	}
 	.col-md-push-2 {
-		left: 16.666666666666664%;
+		left: 16.666666666666664%
 	}
 	.col-md-push-1 {
-		left: 8.333333333333332%;
+		left: 8.333333333333332%
 	}
 	.col-md-push-0 {
-		left: 0;
+		left: 0
 	}
 	.col-md-offset-12 {
-		margin-left: 100%;
+		margin-left: 100%
 	}
 	.col-md-offset-11 {
-		margin-left: 91.66666666666666%;
+		margin-left: 91.66666666666666%
 	}
 	.col-md-offset-10 {
-		margin-left: 83.33333333333334%;
+		margin-left: 83.33333333333334%
 	}
 	.col-md-offset-9 {
-		margin-left: 75%;
+		margin-left: 75%
 	}
 	.col-md-offset-8 {
-		margin-left: 66.66666666666666%;
+		margin-left: 66.66666666666666%
 	}
 	.col-md-offset-7 {
-		margin-left: 58.333333333333336%;
+		margin-left: 58.333333333333336%
 	}
 	.col-md-offset-6 {
-		margin-left: 50%;
+		margin-left: 50%
 	}
 	.col-md-offset-5 {
-		margin-left: 41.66666666666667%;
+		margin-left: 41.66666666666667%
 	}
 	.col-md-offset-4 {
-		margin-left: 33.33333333333333%;
+		margin-left: 33.33333333333333%
 	}
 	.col-md-offset-3 {
-		margin-left: 25%;
+		margin-left: 25%
 	}
 	.col-md-offset-2 {
-		margin-left: 16.666666666666664%;
+		margin-left: 16.666666666666664%
 	}
 	.col-md-offset-1 {
-		margin-left: 8.333333333333332%;
+		margin-left: 8.333333333333332%
 	}
 	.col-md-offset-0 {
-		margin-left: 0;
+		margin-left: 0
 	}
 }
 
 @media ( min-width :1200px) {
 	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3,
 		.col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
-		float: left;
+		float: left
 	}
 	.col-lg-12 {
-		width: 100%;
+		width: 100%
 	}
 	.col-lg-11 {
-		width: 91.66666666666666%;
+		width: 91.66666666666666%
 	}
 	.col-lg-10 {
-		width: 83.33333333333334%;
+		width: 83.33333333333334%
 	}
 	.col-lg-9 {
-		width: 75%;
+		width: 75%
 	}
 	.col-lg-8 {
-		width: 66.66666666666666%;
+		width: 66.66666666666666%
 	}
 	.col-lg-7 {
-		width: 58.333333333333336%;
+		width: 58.333333333333336%
 	}
 	.col-lg-6 {
-		width: 50%;
+		width: 50%
 	}
 	.col-lg-5 {
-		width: 41.66666666666667%;
+		width: 41.66666666666667%
 	}
 	.col-lg-4 {
-		width: 33.33333333333333%;
+		width: 33.33333333333333%
 	}
 	.col-lg-3 {
-		width: 25%;
+		width: 25%
 	}
 	.col-lg-2 {
-		width: 16.666666666666664%;
+		width: 16.666666666666664%
 	}
 	.col-lg-1 {
-		width: 8.333333333333332%;
+		width: 8.333333333333332%
 	}
 	.col-lg-pull-12 {
-		right: 100%;
+		right: 100%
 	}
 	.col-lg-pull-11 {
-		right: 91.66666666666666%;
+		right: 91.66666666666666%
 	}
 	.col-lg-pull-10 {
-		right: 83.33333333333334%;
+		right: 83.33333333333334%
 	}
 	.col-lg-pull-9 {
-		right: 75%;
+		right: 75%
 	}
 	.col-lg-pull-8 {
-		right: 66.66666666666666%;
+		right: 66.66666666666666%
 	}
 	.col-lg-pull-7 {
-		right: 58.333333333333336%;
+		right: 58.333333333333336%
 	}
 	.col-lg-pull-6 {
-		right: 50%;
+		right: 50%
 	}
 	.col-lg-pull-5 {
-		right: 41.66666666666667%;
+		right: 41.66666666666667%
 	}
 	.col-lg-pull-4 {
-		right: 33.33333333333333%;
+		right: 33.33333333333333%
 	}
 	.col-lg-pull-3 {
-		right: 25%;
+		right: 25%
 	}
 	.col-lg-pull-2 {
-		right: 16.666666666666664%;
+		right: 16.666666666666664%
 	}
 	.col-lg-pull-1 {
-		right: 8.333333333333332%;
+		right: 8.333333333333332%
 	}
 	.col-lg-pull-0 {
-		right: 0;
+		right: 0
 	}
 	.col-lg-push-12 {
-		left: 100%;
+		left: 100%
 	}
 	.col-lg-push-11 {
-		left: 91.66666666666666%;
+		left: 91.66666666666666%
 	}
 	.col-lg-push-10 {
-		left: 83.33333333333334%;
+		left: 83.33333333333334%
 	}
 	.col-lg-push-9 {
-		left: 75%;
+		left: 75%
 	}
 	.col-lg-push-8 {
-		left: 66.66666666666666%;
+		left: 66.66666666666666%
 	}
 	.col-lg-push-7 {
-		left: 58.333333333333336%;
+		left: 58.333333333333336%
 	}
 	.col-lg-push-6 {
-		left: 50%;
+		left: 50%
 	}
 	.col-lg-push-5 {
-		left: 41.66666666666667%;
+		left: 41.66666666666667%
 	}
 	.col-lg-push-4 {
-		left: 33.33333333333333%;
+		left: 33.33333333333333%
 	}
 	.col-lg-push-3 {
-		left: 25%;
+		left: 25%
 	}
 	.col-lg-push-2 {
-		left: 16.666666666666664%;
+		left: 16.666666666666664%
 	}
 	.col-lg-push-1 {
-		left: 8.333333333333332%;
+		left: 8.333333333333332%
 	}
 	.col-lg-push-0 {
-		left: 0;
+		left: 0
 	}
 	.col-lg-offset-12 {
-		margin-left: 100%;
+		margin-left: 100%
 	}
 	.col-lg-offset-11 {
-		margin-left: 91.66666666666666%;
+		margin-left: 91.66666666666666%
 	}
 	.col-lg-offset-10 {
-		margin-left: 83.33333333333334%;
+		margin-left: 83.33333333333334%
 	}
 	.col-lg-offset-9 {
-		margin-left: 75%;
+		margin-left: 75%
 	}
 	.col-lg-offset-8 {
-		margin-left: 66.66666666666666%;
+		margin-left: 66.66666666666666%
 	}
 	.col-lg-offset-7 {
-		margin-left: 58.333333333333336%;
+		margin-left: 58.333333333333336%
 	}
 	.col-lg-offset-6 {
-		margin-left: 50%;
+		margin-left: 50%
 	}
 	.col-lg-offset-5 {
-		margin-left: 41.66666666666667%;
+		margin-left: 41.66666666666667%
 	}
 	.col-lg-offset-4 {
-		margin-left: 33.33333333333333%;
+		margin-left: 33.33333333333333%
 	}
 	.col-lg-offset-3 {
-		margin-left: 25%;
+		margin-left: 25%
 	}
 	.col-lg-offset-2 {
-		margin-left: 16.666666666666664%;
+		margin-left: 16.666666666666664%
 	}
 	.col-lg-offset-1 {
-		margin-left: 8.333333333333332%;
+		margin-left: 8.333333333333332%
 	}
 	.col-lg-offset-0 {
-		margin-left: 0;
+		margin-left: 0
 	}
 }
-/*2.2 布局
-	Name:			style_Layout
-	Explain:		左右两栏|左中右三栏|上中下
-	Last Modify:	guojunhui
-*/
+
 .Hui-wraper, .wp, .container {
 	margin-left: auto;
 	margin-right: auto;
@@ -1008,10 +982,6 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 
 .container-fluid {
 	width: 100%
-}
-
-.minWP {
-	
 }
 
 .sd {
@@ -1064,7 +1034,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 	width: 200px
 }
 
-@media ( max-width : 1000px) {
+@media ( max-width :1000px) {
 	.Hui-wraper, .wp, .container {
 		width: auto !important;
 		padding: 0 10px !important
@@ -1077,17 +1047,6 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 	}
 }
 
-/*3.0 基础样式*/
-/*3.1 排版*/
-/*3.1.1 标题
-	Example：
-	<h1>h1. 大标题<small>小标题</small></h1>
-    <h2>h2. 大标题<small>小标题</small></h2>
-    <h3>h3. 大标题<small>小标题</small></h3>
-    <h4>h4. 大标题<small>小标题</small></h4>
-    <h5>h5. 大标题<small>小标题</small></h5>
-    <h6>h6. 大标题<small>小标题</small></h6>
-*/
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	line-height: 1.1;
@@ -1143,58 +1102,39 @@ h6 {
 	font-size: 12px
 }
 
-/*3.1.2 强调
-	Example:
-	<p>这是段落，向下10像素间距</p>
-	<smail>小型文本，是父容器字体大小的85%</smail>
-	<strong>重要文本，加粗显示</strong>
-	<em>被强调的文本，斜体显示</em>
-	<u>带下划线的文本</u>
-	<cite>引用</cite>
-	<mark>突出显示文本</mark>
-	<del>带删除线的文本</del>
-	<pre class="prettyprint linenums">预格式化的文本</pre>
-*/
 p {
 	margin-bottom: 10px
-} /*段落*/
+}
+
 small {
 	font-size: 85%
-} /*小型文本*/
+}
+
 b, strong {
 	font-weight: bold
-} /*重要的文本，加粗*/
+}
+
 em {
 	font-style: italic
-} /*被强调的文本*/
-i {
-	
-} /*斜体*/
-u {
-	
-} /*加下划线*/
+}
+
 cite {
 	font-style: normal
-} /*引用*/
+}
+
 mark {
 	color: #000;
 	background: #ff0
-} /*突出显示文本*/
-var {
-	
-} /*变量*/
-kbd {
-	
-} /*键盘文本*/
-code {
-	
-} /*计算机代码文本*/
+}
+
 dfn {
 	font-style: italic
-} /*一个定义项目*/
+}
+
 del {
 	font-family: Simsun
-} /*删除线*/
+}
+
 code, kbd, pre, samp {
 	font-family: monospace, serif;
 	font-size: 1em
@@ -1202,25 +1142,24 @@ code, kbd, pre, samp {
 
 pre {
 	white-space: pre-wrap
-} /*预格式化的文本*/
+}
+
 .uppercase {
 	text-transform: uppercase
-} /*文字大写*/
+}
+
 .lowercase {
 	text-transform: lowercase
-} /*文字小写*/
+}
+
 .capitalize {
 	text-transform: capitalize
-} /*首字母大写*/
+}
+
 .en {
 	font-family: Arial !important
 }
-/*3.1.3 对齐
-	Name:			style_text-align
-	Example:		class="text-l|text-r|text-c|va-t|va-m|va-b"
-	Explain:		.text-水平对齐 （.text-l左对齐|.text-r右对齐|.text-c居中对齐）
-					.va-上下对齐 （.va-t 居上对齐|.va-m 居中对齐|.va-b 居下对齐）
-*/
+
 .text-l {
 	text-align: left
 }
@@ -1250,11 +1189,7 @@ pre {
 .va-b {
 	vertical-align: bottom !important
 }
-/*3.1.4 定位
-	Name:			style_position
-	Example:		class="pos-r|pos-a|pos-f"
-	Explain:		.pos-r 相对定位|.pos-a 绝对定位|.pos-f 固定
-*/
+
 .pos-r {
 	position: relative
 }
@@ -1266,11 +1201,7 @@ pre {
 .pos-f {
 	position: fixed
 }
-/*3.1.5 浮动
-	Name:			style_float
-	Example:		class="l|r"
-	Explain:		.l 左浮动|.r 右浮动
-*/
+
 .l, .f-l {
 	float: left !important;
 	_display: inline
@@ -1285,7 +1216,6 @@ pre {
 	float: right
 }
 
-/*控制元素对定位的位置：居左|居右|j居上|居下*/
 .left {
 	left: 0;
 	right: auto
@@ -1306,30 +1236,19 @@ pre {
 	bottom: auto
 }
 
-/*3.1.6 文字单行溢出省略号
-	Name:			style_text-overflow
-	Example:		class="text-overflow"
-*/
 .text-overflow {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap
 }
-/*3.1.7 线条
-	Name:			style_line
-	Example:		class="line"
-*/
+
 .line {
-	font-size: 0px;
-	line-height: 0px;
+	font-size: 0;
+	line-height: 0;
 	border-top: solid 1px #eee;
 	float: none
 }
-/*3.1.8 外边距
-	Name:			style_margin
-	Example:		class="mt-5|mt-10..."
-	Explain:		.mt表示上边距|.mb表示下边距|.ml表示左边距|.mr表示右边距
-*/
+
 .mt-5 {
 	margin-top: 5px
 }
@@ -1449,11 +1368,7 @@ pre {
 .mr-50 {
 	margin-right: 50px
 }
-/*3.1.9 内填充
-	Name:			style_padding
-	Example:		class="pt-5|pt-10|……"
-	Explain:		.pt表示上填充|.pb表示下填充|.pl表示左填充|.pr表示右填充
-*/
+
 .pt-5 {
 	padding-top: 5px
 }
@@ -1525,18 +1440,14 @@ pre {
 .pd-40 {
 	padding: 40px
 }
-/*3.1.10 边框，css3圆角
-	Name:			style-border
-	Example:		class="bk_gray radius"
-	Explain:		.bk_gray 边框|radius 圆角|round 椭圆 | circle 圆形
-*/
+
 .bk-gray {
 	border: solid 1px #eee
 }
 
 .radius {
 	border-radius: 4px;
-	overflow: hidden;
+	overflow: hidden
 }
 
 .size-MINI.radius {
@@ -1553,42 +1464,30 @@ pre {
 
 .round {
 	border-radius: 1000px;
-	overflow: hidden;
+	overflow: hidden
 }
 
 .circle {
 	border-radius: 50%;
-	overflow: hidden;
+	overflow: hidden
 }
-/*3.1.11 css3阴影
-	Name:			style_shadow
-	Example:		class="box_shadow|text-shadow"
-	Explain:		box_shadow 块级元素阴影，全局样式，可用在表格，文本框，文本域，div等块级元素上。
-					text-shadow 文字阴影
-*/
+
 .box-shadow {
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
 }
 
 .text-shadow {
 	-webkit-text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-	text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.2)
 }
-/*3.1.12 行内分割竖线
-	Name:			style_pipe
-	Example:		<span class="pipe">|</span>
-*/
+
 .pipe {
 	margin: 0 5px;
 	color: #CCC;
 	font-size: 10px !important
 }
-/*3.1.13 文字尺寸
-	Name:			style_font-size
-	Example:		class="f-12|f-14|f-16|f-18|f-20|f-24|f-26|f-28|f-30"
-	Explain:		12px字体|14px字体|16px字体|18px字体|20px字体|24px字体|26px字体|28px字体|30px字体
-*/
+
 .f-12 {
 	font-size: 12px
 }
@@ -1624,11 +1523,7 @@ pre {
 .f-30 {
 	font-size: 30px
 }
-/*3.1.14 文字行距
-	Name:			mod_line-height
-	Example:		class="lh-16|lh-18|lh-20|lh-22|lh-24|lh-26|lh-28|lh-30"
-	Explain:		16px行高|18px行高|20px行高|22px行高|24px行高|26px行高|30px行高
-*/
+
 .lh-16 {
 	line-height: 16px
 }
@@ -1660,7 +1555,7 @@ pre {
 .lh-30 {
 	line-height: 30px
 }
-/*2.0以前的兼容版本*/
+
 .l16 {
 	line-height: 16px
 }
@@ -1693,12 +1588,6 @@ pre {
 	line-height: 30px
 }
 
-/*3.1.15 文字颜色
-	Name:			style_color
-	Example:		class="c-primary|c-sub|c-success|c-danger|c-warning|c-333|c-666|c-999|c-red|c-green|c-blue|c-white|c-black|c-orange"
-	Explain:		主要颜色|次主色|强调色—成功|强调色—危险|强调色—警告色|强调色—错误色|次主色—浅黑|辅助色—灰色|标准色—红色|标准色—绿色|标准色—蓝色|标准色—白色|标准色—黑色|标准色—橙色
-*/
-/*全局默认链接颜色*/
 body {
 	background-color: #fff;
 	color: #333
@@ -1716,7 +1605,6 @@ a:hover {
 	color: #06c
 }
 
-/*主要颜色*/
 .c-primary, .c-primary a, a.c-primary {
 	color: #5a98de
 }
@@ -1724,7 +1612,7 @@ a:hover {
 .c-primary a:hover, a.c-primary:hover {
 	color: #5a98de
 }
-/*次主色*/
+
 .c-secondary, .c-secondary a, a.c-secondary {
 	color: #555
 }
@@ -1733,7 +1621,6 @@ a:hover {
 	color: #555
 }
 
-/*强调色—成功*/
 .c-success, .c-success a, a.c-success {
 	color: #5eb95e
 }
@@ -1742,7 +1629,6 @@ a:hover {
 	color: #5eb95e
 }
 
-/*强调色—危险*/
 .c-danger, .c-danger a, a.c-danger {
 	color: #dd514c
 }
@@ -1751,7 +1637,6 @@ a:hover {
 	color: #dd514c
 }
 
-/*强调色—警告*/
 .c-warning, .c-warning a, a.c-warning {
 	color: #f37b1d
 }
@@ -1760,7 +1645,6 @@ a:hover {
 	color: #f37b1d
 }
 
-/*强调色—错误*/
 .c-error, .c-error a, a.c-error {
 	color: #c00
 }
@@ -1769,7 +1653,6 @@ a:hover {
 	color: #c00
 }
 
-/*辅助色—浅黑*/
 .c-333, .c-333 a, a.c-333 {
 	color: #333
 }
@@ -1778,7 +1661,6 @@ a:hover {
 	color: #333
 }
 
-/*辅助色—灰色*/
 .c-666, .c-666 a, a.c-666 {
 	color: #666
 }
@@ -1795,7 +1677,6 @@ a:hover {
 	color: #999
 }
 
-/*标准色—红色*/
 .c-red, .c-red a, a.c-red {
 	color: red
 }
@@ -1803,7 +1684,7 @@ a:hover {
 .c-red a:hover, a.c-red:hover {
 	color: #red
 }
-/*标准色—绿色*/
+
 .c-green, .c-green a, a.c-green {
 	color: green
 }
@@ -1811,7 +1692,7 @@ a:hover {
 .c-red a:hover, a.c-red:hover {
 	color: green
 }
-/*标准色—蓝色*/
+
 .c-blue, .c-blue a, a.c-blue {
 	color: blue
 }
@@ -1819,7 +1700,7 @@ a:hover {
 .c-blue a:hover, a.c-blue:hover {
 	color: blue
 }
-/*标准色—白色*/
+
 .c-white, .c-white a, a.c-white {
 	color: white
 }
@@ -1827,7 +1708,7 @@ a:hover {
 .c-white a:hover, a.c-white:hover {
 	color: white
 }
-/*标准色—黑色*/
+
 .c-black, .c-black a {
 	color: black
 }
@@ -1835,7 +1716,7 @@ a:hover {
 .c-black a:hover, a.c-black:hover {
 	color: black
 }
-/*标准色—橙色*/
+
 .c-orange, .c-orange a, a.c-orange {
 	color: orange
 }
@@ -1844,15 +1725,6 @@ a:hover {
 	color: orange
 }
 
-/*3.1.16 文字颜色强调	从2.0起废弃3.1.16 文字强调，字体颜色全部放入到3.1.15
-	Example:		class="text-muted|text-primary|text-warning|text-error|text-danger|text-success|text-info"
-	Explain:		柔和|重要|警告|错误|危险|成功|信息
-*/
-
-/*3.1.17 缩略语
-	Example:		<abbr title="User Interface" class="initialism">UI</abbr>
-	Explain:		
-*/
 abbr[title], abbr[data-original-title] {
 	cursor: help;
 	border-bottom: 1px dotted #999
@@ -1862,20 +1734,14 @@ abbr.initialism {
 	font-size: 90%;
 	text-transform: uppercase
 }
-/*3.1.18 地址
-	Example:		<address>北京市海淀区上地……</address>
-	Explain:		
-*/
+
 address {
 	display: block;
 	margin-bottom: 20px;
 	font-style: normal;
 	line-height: 20px
 }
-/*3.1.19 引用
-	Example:		<blockquote>这是引用的内容</blockquote>
-	Explain:		
-*/
+
 blockquote {
 	padding: 0 0 0 15px;
 	margin: 0 0 20px;
@@ -1922,13 +1788,10 @@ q:before, q:after, blockquote:before, blockquote:after {
 	content: ""
 }
 
-q { /*短的引用*/
+q {
 	quotes: "\201C" "\201D" "\2018" "\2019"
 }
-/*3.1.20 上标，下标
-	Example:		<sup>2</sup>	<sub>2<sub>
-	Explain:		上标|下标
-*/
+
 sub, sup {
 	position: relative;
 	font-size: 75%;
@@ -1943,11 +1806,7 @@ sup {
 sub {
 	bottom: -0.25em
 }
-/*3.1.21 内容样式
-	Name:			style_content
-	Example:		<div class="content"><p>……</p></div>
-	Explain:		内容样式
-*/
+
 .content {
 	position: relative;
 	font-size: 14px;
@@ -1977,7 +1836,7 @@ sub {
 	text-indent: 2em
 }
 
-@media ( max-width : 480px) {
+@media ( max-width :480px) {
 	.content img {
 		max-width: 100% !important;
 		height: auto !important;
@@ -1987,12 +1846,7 @@ sub {
 		width: expression(this.width > 320 && this.width > this.height ? 320 : auto)
 	}
 }
-/*3.1.22 列表
-	Name:			style_ulolli
-	Example:		<ul class="tlist"><li>无序列表</li><li>无序列表</li><li>无序列表</li></ul>
-					<ol class="linenums"><li>有序列表</li><li>有序列表</li><li>有序列表</li></ol>
-	Explain:		
-*/
+
 ul.unstyled, ol.unstyled {
 	margin-left: 0;
 	list-style: none
@@ -2016,29 +1870,33 @@ ul.inline>li, ol.inline>li {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis
-} /*禁止换行*/
+}
+
 .dot-1 {
 	padding-left: 10px;
 	background: url(../images/dot_1.gif) no-repeat 3px center
-} /*圆点*/
+}
+
 .box-1 {
 	padding-left: 10px;
 	background: url(../images/box_1.gif) no-repeat 3px center
-} /*小方块*/
+}
+
 .jt-1 {
 	padding-left: 18px;
 	background: url(../images/jt_1.gif) no-repeat 3px center
-} /*箭头1*/
+}
+
 .jt-2 {
 	padding-left: 18px;
 	background: url(../images/jt_2.gif) no-repeat 3px center
-} /*箭头2*/
+}
+
 .jt-3 {
 	padding-left: 18px;
 	background: url(../images/jt_3.gif) no-repeat 3px center
-} /*箭头3*/
-/*排行榜*/
-/*<ol class="top-list"><li class="top"><em>1</em><a href="#">排行榜列表</a><span class="date">12</span></li></ol>*/
+}
+
 .top-list li {
 	height: 20px;
 	line-height: 20px;
@@ -2052,8 +1910,8 @@ ul.inline>li, ol.inline>li {
 }
 
 .top-list em {
-	background-color: #F8F8F8;
-	border: 1px solid #EBEBEB;
+	background-color: #f8f8f8;
+	border: 1px solid #ebebeb;
 	color: #333;
 	height: 18px;
 	left: 0;
@@ -2067,7 +1925,7 @@ ul.inline>li, ol.inline>li {
 
 .top-list .top em {
 	background-color: #390;
-	border: none;
+	border: 0;
 	color: #fff;
 	height: 20px;
 	line-height: 20px;
@@ -2088,11 +1946,7 @@ ul.inline>li, ol.inline>li {
 	color: #999
 }
 
-.listview {
-	
-}
-/*横向手机 竖向平板*/
-@media ( max-width : 767px) {
+@media ( max-width :767px) {
 	.tlist li {
 		position: relative;
 		font-size: 18px;
@@ -2100,13 +1954,13 @@ ul.inline>li, ol.inline>li {
 	}
 	.tlist li a {
 		display: block;
-		padding: 0.7em 30px 0.7em 12px
+		padding: .7em 30px .7em 12px
 	}
 	.dot_1 {
-		padding-left: 0px
+		padding-left: 0
 	}
 	.night .tlist li {
-		border-bottom: 1px solid #1F1F1F
+		border-bottom: 1px solid #1f1f1f
 	}
 	.tlist .time {
 		display: none
@@ -2125,14 +1979,6 @@ ul.inline>li, ol.inline>li {
 		background-position: 0 -75px
 	}
 }
-/*3.1.23 描述
-	Name:			style_dldtdd
-	Example:		<dl class="dl-horizontal cl"><dt>H-ui</dt><dd>基于Bootstrap框架的改进扩展的前端框架</dd></dl>
-	Explain:		.dl-horizontal 水平描述，默认不加为垂直模式。
-*/
-.dl-horizontal.cl {
-	
-}
 
 .dl-horizontal dt {
 	float: left;
@@ -2147,11 +1993,7 @@ ul.inline>li, ol.inline>li {
 .dl-horizontal dd {
 	margin-left: 180px
 }
-/*3.1.24 隐藏 显示
-  Name:				style_display
-  Example:    <div class="hide">隐藏的内容</div> <div class="show">显示的内容</div>
-  Explain:    		.hide 隐藏 / .show 显示
-*/
+
 .hide {
 	display: none
 }
@@ -2185,34 +2027,13 @@ ul.inline>li, ol.inline>li {
 	visibility: hidden
 }
 
-/*3.1.25 尺寸	新增尺寸全局类名，用于表单、按钮、表格、头像、标签等元素上，要与元素一起配合使用，方能看到效果*/
-.size-MINI {
-	
-} /*迷你*/
-.size-S {
-	
-} /*小*/
-.size-M {
-	
-} /*中 缺省默认尺寸，可以不写，可以理解为：均码*/
-.size-L {
-	
-} /*L*/
-.size-XL {
-	
-} /*大*/
-.size-XXL {
-	
-} /*加大*/
-.size-XXXL {
-	
-} /*超大*/
 .input-text, .btn, .input-text.size-M, .btn.size-M {
 	font-size: 14px;
 	height: 31px;
 	line-height: 1.42857;
 	padding: 4px
-} /*默认为M，可以不写，可以理解为：均码*/
+}
+
 a.btn, a.btn.size-M, span.btn, span.btn.size-M {
 	line-height: 21px
 }
@@ -2226,7 +2047,8 @@ a.btn, a.btn.size-M, span.btn, span.btn.size-M {
 	height: 23px;
 	padding: 1px 2px;
 	line-height: 1.42857
-} /*迷你*/
+}
+
 a.btn.size-MINI, span.btn.size-MINI {
 	line-height: 21px
 }
@@ -2240,7 +2062,8 @@ a.btn.size-MINI, span.btn.size-MINI {
 	height: 27px;
 	padding: 3px;
 	line-height: 1.42857
-} /*小*/
+}
+
 a.btn.size-S, span.btn.size-S {
 	line-height: 19px
 }
@@ -2253,7 +2076,8 @@ a.btn.size-S, span.btn.size-S {
 	font-size: 16px;
 	height: 41px;
 	padding: 8px
-} /*大*/
+}
+
 a.btn.size-L, span.btn.size-L {
 	line-height: 23px
 }
@@ -2266,7 +2090,8 @@ a.btn.size-L, span.btn.size-L {
 	font-size: 18px;
 	height: 48px;
 	padding: 10px
-} /*特大*/
+}
+
 a.btn.size-XL, span.btn.size-XL {
 	line-height: 26px
 }
@@ -2275,7 +2100,7 @@ a.btn.size-XL, span.btn.size-XL {
 	padding: 10px 24px
 }
 
-@media ( max-width : 767px) {
+@media ( max-width :767px) {
 	.responsive .input-text.size-MINI, .responsive .btn.size-MINI {
 		height: 24px
 	}
@@ -2298,12 +2123,6 @@ a.btn.size-XL, span.btn.size-XL {
 	}
 }
 
-/*3.2 代码
-	Name:			style_pre
-
-	Example:		<code></code>,<pre class="prettyprint linenums">转义过的代码</pre>
-	Explain:		code：行内代码，pre：基本代码块;包装代码片段，.prettyprint颜色增强/.linenums显示行号
-*/
 code {
 	padding: 0 3px 2px;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace
@@ -2311,7 +2130,8 @@ code {
 
 pre .title, pre .keyword, pre .body, pre .des {
 	color: #333
-} /*关键词*/
+}
+
 pre {
 	display: block;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -2339,24 +2159,28 @@ pre {
 .prettyprint .com {
 	color: #998;
 	font-style: italic
-} /*注释*/
+}
+
 .prettyprint .tag {
 	color: #007
-} /*标签*/
+}
+
 .prettyprint .lit {
 	color: #195f91
 }
 
 .prettyprint .pun, .prettyprint .opn, .prettyprint .clo {
 	color: #93a1a1
-} /*等于*/
+}
+
 .prettyprint .fun {
 	color: #dc322f
 }
 
 .prettyprint .str, .prettyprint .atv {
 	color: #D14
-} /*值*/
+}
+
 .prettyprint .kwd, .prettyprint .prettyprint .tag {
 	color: #1e347b
 }
@@ -2364,7 +2188,8 @@ pre {
 .prettyprint .typ, .prettyprint .atn, .prettyprint .dec, .prettyprint .var
 	{
 	color: teal
-} /*文档声明，属性*/
+}
+
 .prettyprint .pln {
 	color: #48484c
 }
@@ -2399,19 +2224,13 @@ pre ol.linenums li {
 	text-shadow: 0 1px 0 #fff
 }
 
-@media ( max-width : 767px) {
+@media ( max-width :767px) {
 	pre ol.linenums {
 		margin-left: 0;
 		list-style: none
 	}
 }
 
-/*3.3 表格
-	Name:			style_table
-	Example:		<table class="table table-bordered table-striped table-condensed"><thead><tr><th>…</th></tr></thead><tbody><tr><td>…</td></tr></tbody></table>
-	Explain:		表格，None无样式，仅仅有列和行|.table行与行之间以水平线相隔|.table-bordered表格外围均有外边框|.table-striped奇数行背景设为浅灰色|.table-condensed竖直方向padding缩减一半，从8px变为4px，所有的 td 和 th 元素都受影响
-*/
-/*默认table*/
 table {
 	width: 100%;
 	empty-cells: show;
@@ -2424,7 +2243,7 @@ table th {
 	text-align: left;
 	font-weight: 400
 }
-/*带水平线*/
+
 .table th {
 	font-weight: bold
 }
@@ -2462,7 +2281,6 @@ table th {
 	background-color: #fff
 }
 
-/*带横向分割线*/
 .table-border {
 	border-top: 1px solid #ddd
 }
@@ -2471,11 +2289,10 @@ table th {
 	border-bottom: 1px solid #ddd
 }
 
-/*th带背景*/
 .table-bg thead th {
-	background-color: #F5FAFE
+	background-color: #f5fafe
 }
-/*带外边框*/
+
 .table-bordered {
 	border: 1px solid #ddd;
 	border-collapse: separate;
@@ -2491,64 +2308,63 @@ table th {
 	border-bottom: 0
 }
 
-/*奇数行背景设为浅灰色*/
 .table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th
 	{
 	background-color: #f9f9f9
 }
-/*竖直方向padding缩减一半*/
+
 .table-condensed th, .table-condensed td {
 	padding: 4px 5px
 }
-/*鼠标悬停样式*/
+
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
 	background-color: #f5f5f5
 }
-/*鼠标选择整行样式*/
+
 .table tbody tr.selected td {
-	background-color: #F3F3F3
+	background-color: #f3f3f3
 }
-/*定义颜色*/
-/*悬停在行*/
+
 .table tbody tr.active, .table tbody tr.active>td, .table tbody tr.active>th,
 	.table tbody tr .active {
-	background-color: #F5F5F5 !important
+	background-color: #f5f5f5 !important
 }
-/*成功或积极*/
+
 .table tbody tr.success, .table tbody tr.success>td, .table tbody tr.success>th,
 	.table tbody tr .success {
-	background-color: #DFF0D8 !important
+	background-color: #dff0d8 !important
 }
 
-/*警告或出错*/
 .table tbody tr.warning, .table tbody tr.warning>td, .table tbody tr.warning>th,
 	.table tbody tr .warning {
-	background-color: #FCF8E3 !important
+	background-color: #fcf8e3 !important
 }
-/*危险*/
+
 .table tbody tr.danger, .table tbody tr.danger>td, .table tbody tr.danger>th,
 	.table tbody tr .danger {
-	background-color: #F2DEDE !important
+	background-color: #f2dede !important
 }
 
-/*表格文字对齐方式，默认是居左对齐*/
 .table .text-c th, .table .text-c td {
 	text-align: center
-} /*整行居中*/
+}
+
 .table .text-r th, .table .text-r td {
 	text-align: right
-} /*整行居右*/
+}
+
 .table th.text-l, .table td.text-l {
 	text-align: left !important
-} /*单独列居左*/
+}
+
 .table th.text-c, .table td.text-c {
 	text-align: center !important
-} /*单独列居中*/
+}
+
 .table th.text-r, .table td.text-r {
 	text-align: right !important
-} /*单独列居右*/
+}
 
-/*datatable*/
 table.dataTable {
 	border-collapse: separate;
 	border-spacing: 0;
@@ -2563,15 +2379,15 @@ table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc,
 }
 
 table.dataTable thead .sorting {
-	background-image: url(../images/sort_both.png)
+	background-image: url(../static/h-ui/images/sort_both.png)
 }
 
 table.dataTable thead .sorting_asc {
-	background-image: url(../images/sort_asc.png)
+	background-image: url(../static/h-ui/images/sort_asc.png)
 }
 
 table.dataTable thead .sorting_desc {
-	background-image: url(../images/sort_desc.png)
+	background-image: url(../static/h-ui/images/sort_desc.png)
 }
 
 .dataTable td.sorting_1 {
@@ -2621,7 +2437,7 @@ table.dataTable thead .sorting_desc {
 	height: 26px;
 	line-height: 26px;
 	text-decoration: none;
-	margin: 0 0px 6px 6px;
+	margin: 0 0 6px 6px;
 	padding: 0 10px;
 	font-size: 14px
 }
@@ -2634,44 +2450,13 @@ table.dataTable thead .sorting_desc {
 	color: #fff
 }
 
-/*表格尺寸*/
-.table.size-MINI {
-	
-} /*迷你*/
-.table.size-S {
-	
-} /*小*/
-.table.size-M {
-	
-} /*中*/
-.table.size-L {
-	
-} /*默认为L，可以不写，可以理解为：均码*/
-.table.size-XL {
-	
-} /*大*/
-.table.size-XXL {
-	
-} /*加大*/
-.table.size-XXXL {
-	
-} /*超大*/
-
-/*让表格支持响应式*/
-/*
-<div class="table-responsive">
-  <table class="table">
-    ...
-  </table>
-</div>
-*/
-@media ( max-width : 767px) {
+@media ( max-width :767px) {
 	table-responsive {
 		width: 100%;
 		margin-bottom: 15px;
 		overflow-x: scroll;
 		overflow-y: hidden;
-		border: 1px solid #dddddd;
+		border: 1px solid #ddd;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
 		-webkit-overflow-scrolling: touch
 	}
@@ -2711,22 +2496,14 @@ table.dataTable thead .sorting_desc {
 	}
 }
 
-/*3.4 表单
-	Name:			style_form
-	Example:
-	Explain:
-
-*/
-/*3.4.1 input,textarea 文本域 文本区域*/
-/*默认状态*/
 .input-text, .textarea {
 	box-sizing: border-box;
 	border: solid 1px #ddd;
 	width: 100%;
-	-webkit-transition: all 0.2s linear 0s;
-	-moz-transition: all 0.2s linear 0s;
-	-o-transition: all 0.2s linear 0s;
-	transition: all 0.2s linear 0s
+	-webkit-transition: all .2s linear 0s;
+	-moz-transition: all .2s linear 0s;
+	-o-transition: all .2s linear 0s;
+	transition: all .2s linear 0s
 }
 
 .textarea {
@@ -2751,14 +2528,14 @@ table.dataTable thead .sorting_desc {
 .input-text:hover, .textarea:hover {
 	border: solid 1px #3bb4f2
 }
-/*得到焦点后*/
+
 .input-text.focus, textarea.focus {
 	border: solid 1px #0f9ae0 \9;
 	border-color: rgba(82, 168, 236, 0.8);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
 		rgba(102, 175, 233, 0.6)
 }
-/*不可点击*/
+
 .input-text.disabled, .textarea.disabled, .input-text.disabled.focus,
 	.textarea.disabled.focus {
 	background-color: #ededed;
@@ -2768,18 +2545,18 @@ table.dataTable thead .sorting_desc {
 	-moz-box-shadow: inset 0 2px 2px #e8e7e7;
 	box-shadow: inset 0 2px 2px #e8e7e7
 }
-/*只读状态*/
+
 .input-text.disabled, .textarea.disabled {
 	background-color: #e6e6e6;
 	cursor: default
 }
-/*阴影*/
+
 .input-text.box-shadow, .textarea.box-shadow {
 	-ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
 }
-/*行内元素*/
+
 .input-text.inline {
 	display: inline-block;
 	width: auto
@@ -2809,26 +2586,12 @@ input[type="radio"], input[type="checkbox"] {
 	left: 0
 }
 
-@media ( max-width : 767px) {
+@media ( max-width :767px) {
 	.responsive .check-box, .responsive .radio-box {
 		display: block
 	}
 }
 
-/*3.4.3 select 下拉框
-<span class="select-box">
-  <select class="select" size="1" name="demo">
-    <option value="1" selected>默认</option>
-    <option value="2">菜单二</option>
-    <option value="3">菜单三</option>
-  </select>
-</span>
-	Explain:	
-	select 是表单元素中最难美化的一个，有两种美化方式：
-		1、修改源生的，修改有限，只能修改个边框，背景，字体。优点：程序方便操作；缺点：丑，浏览器之间存在很大差异。
-		2、将源生的隐藏掉，用其他元素（如div li）通过js模拟下拉交互，然后再传值给源生的select。优点：好看，兼容好；缺点：代码冗余，依赖JS，不方便操作
-*/
-/*方法一、修改源生*/
 .select-box {
 	border: solid 1px #ddd;
 	box-sizing: border-box;
@@ -2847,7 +2610,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .select-box .select {
-	border: none
+	border: 0
 }
 
 .select-box.inline, .select-box.inline .select {
@@ -2865,7 +2628,7 @@ input[type="radio"], input[type="checkbox"] {
 
 .select-box.size-MINI {
 	height: 23px;
-	padding: 0px 5px
+	padding: 0 5px
 }
 
 .size-MINI .select {
@@ -2899,9 +2662,9 @@ input[type="radio"], input[type="checkbox"] {
 	font-size: 18px
 }
 
-@media ( max-width : 767px) {
+@media ( max-width :767px) {
 	.responsive .select-box {
-		border: none
+		border: 0
 	}
 	.responsive .select-box .select, .responsive .select {
 		border: solid 1px #ddd;
@@ -2916,20 +2679,6 @@ input[type="radio"], input[type="checkbox"] {
 	}
 }
 
-/*方法二、JS模拟
-<select name="demo" data-enabled="false">
-  <option value="1" selected>默认</option>
-  <option value="2">菜单二</option>
-  <option value="3">菜单三</option>
-</select>
-需要引用2个js文件
-<script type="text/javascript" src="lib/squid.js"></script> 
-<script type="text/javascript" src="lib/jselect-1.0.js"></script>
-页面调用方法 
-<script type="text/javascript">
-squid.swing.jselect()
-</script>
-*/
 .select-wrapper {
 	position: relative;
 	display: inline-block;
@@ -2970,10 +2719,6 @@ squid.swing.jselect()
 	top: 50%;
 	margin-top: -4px;
 	background: url(../images/iconpic-arrow-down2.png) no-repeat center
-}
-
-.select-icon:hover {
-	
 }
 
 .unselectable {
@@ -3024,13 +2769,6 @@ squid.swing.jselect()
 	color: #fff
 }
 
-/*3.4.4 input-file 文件上传
-	Example: 
-<span class="btn-upload">
-  <a style="z-index:2;" href="javascript:void();" class="btn btn-primary radius"><i class="iconfont">&#xf0020;</i> 浏览文件<input type="file" multiple name="file_0" class="input-file"></a>
-</span>
-	Explain：把文件选择域设为透明,通过绝对定位覆盖在长的好看的按钮上面。
-*/
 .btn-upload {
 	position: relative;
 	display: inline-block;
@@ -3073,9 +2811,7 @@ squid.swing.jselect()
 	width: 36px
 }
 
-@media ( max-width : 767px) {
-	/*.btn-upload{ position:static}
-		.input-file{ position:static; opacity:1; font-size:16px}*/
+@media ( max-width :767px) {
 	.upload-btn {
 		display: none
 	}
@@ -3084,7 +2820,6 @@ squid.swing.jselect()
 	}
 }
 
-/*数字表单*/
 .numberControlBox {
 	display: inline-block;
 	overflow: hidden;
@@ -3092,12 +2827,11 @@ squid.swing.jselect()
 }
 
 .ncb-up, .ncb-down {
-	font-size: 0px;
+	font-size: 0;
 	display: block;
 	height: 10px;
 	background-color: #f4f4f4;
-	background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%,
-		rgb(230, 230, 230) 50%, rgb(255, 255, 255) 100%);
+	background: -moz-linear-gradient(top, #fff 0, #e6e6e6 50%, #fff 100%);
 	width: 24px;
 	border: 1px solid #d1d1d1;
 	cursor: pointer
@@ -3125,39 +2859,40 @@ squid.swing.jselect()
 .ncb_btn_hover {
 	border: 1px solid #9dc7e7;
 	background-color: #dff2fc;
-	background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%,
-		rgb(210, 237, 250) 50%, rgb(255, 255, 255) 100%)
+	background: -moz-linear-gradient(top, #fff 0, #d2edfa 50%, #fff 100%)
 }
 
 .ncb_btn_selected {
 	border: 1px solid #6198c2;
 	background-color: #aee1fb;
-	background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%,
-		rgb(174, 225, 251) 50%, rgb(255, 255, 255) 100%)
+	background: -moz-linear-gradient(top, #fff 0, #aee1fb 50%, #fff 100%)
 }
 
 .input-text[type="number"] {
 	width: 80px
 }
 
-/*3.4.5 表单布局*/
 label, .placeholder {
 	font-size: 14px
 }
 
 .form legend {
 	font-size: 20px
-} /*表单名称*/
+}
+
 .form .row {
 	margin-top: 15px
-} /*表单行*/
+}
+
 .form-label {
 	display: block;
 	color: #555
-} /*表单标题*/
+}
+
 .formControls {
 	position: relative
-} /*表单控制区*/
+}
+
 .formControls>* {
 	vertical-align: middle
 }
@@ -3168,7 +2903,8 @@ label, .placeholder {
 	top: 4px;
 	color: #c6c6c6;
 	cursor: text
-} /*表单默认值*/
+}
+
 .form-horizontal .row {
 	display: table;
 	width: 100%
@@ -3188,25 +2924,30 @@ label, .placeholder {
 .form-horizontal .Validform_checktip {
 	margin-top: 5px
 }
-/*设置placeholder颜色*/
+
 ::-webkit-input-placeholder {
 	color: #b3b3b3
-} /* WebKit browsers */
+}
+
 :-moz-placeholder {
 	color: #b3b3b3
-} /* Mozilla Firefox 4 to 18 */
+}
+
 ::-moz-placeholder {
 	color: #b3b3b3
-} /* Mozilla Firefox 19+ */
+}
+
 :-ms-input-placeholder {
 	color: #b3b3b3
-} /* Internet Explorer 10+ */
+}
+
 .placeholder {
 	color: #adb0be;
 	position: absolute;
 	z-index: 9
-} /*不兼容placeholder属性的浏览器，可使用<span class="placeholder">表单默认值</span>*/
-@media ( max-width : 767px) {
+}
+
+@media ( max-width :767px) {
 	.responsive .form-label {
 		text-align: left;
 		padding-right: 0;
@@ -3219,8 +2960,7 @@ label, .placeholder {
 		margin-top: 10px
 	}
 }
-/*3.4.6 表单验证*/
-/*文本框的错误状态*/
+
 .Validform_error {
 	background-color: #fbe2e2;
 	border-color: #c66161;
@@ -3234,22 +2974,21 @@ label, .placeholder {
 	vertical-align: middle;
 	padding-left: 25px
 }
-/*错误*/
+
 .Validform_wrong {
-	background: url(../images/icon_error_s.png) no-repeat 0 center;
+	background: url(../static/h-ui/images/icon_error_s.png) no-repeat 0 center;
 	color: #ef392b
 }
-/*正确*/
+
 .Validform_right {
-	background: url(../images/icon_right_s.png) no-repeat 0 center
+	background: url(../static/h-ui/images/icon_right_s.png) no-repeat 0 center
 }
-/*警告*/
+
 .Validform_warning {
-	background: url(../images/icon_warning_s.png) no-repeat 0 center;
+	background: url(../static/h-ui/images/icon_warning_s.png) no-repeat 0 center;
 	color: #777
 }
 
-/*密码等级*/
 .passwordStrength b {
 	font-weight: 400
 }
@@ -3270,14 +3009,14 @@ label, .placeholder {
 }
 
 .passwordStrength .last {
-	border-right: none
+	border-right: 0
 }
 
 .passwordStrength .bgStrength {
 	color: #fff;
 	background-color: #fcc900
 }
-/*Validform对话框*/
+
 #Validform_msg {
 	font-size: 14px;
 	width: 300px;
@@ -3285,7 +3024,7 @@ label, .placeholder {
 	-moz-box-shadow: 2px 2px 3px #aaa;
 	background: #fff;
 	position: absolute;
-	top: 0px;
+	top: 0;
 	right: 50px;
 	z-index: 99999;
 	display: none;
@@ -3296,7 +3035,7 @@ label, .placeholder {
 
 #Validform_msg .iframe {
 	position: absolute;
-	left: 0px;
+	left: 0;
 	top: -1px;
 	z-index: -1
 }
@@ -3327,27 +3066,21 @@ label, .placeholder {
 #Validform_msg .Validform_info {
 	padding: 10px;
 	border: 1px solid #bbb;
-	border-top: none;
+	border-top: 0;
 	text-align: left
 }
 
-@media ( max-width : 767px) {
+@media ( max-width :767px) {
 	.responsive .Validform_checktip {
 		margin-top: 10px
 	}
 }
-/*3.5 按钮
-	Name:			style_button
-	Example:		<button class="btn radius radius btn-primary|btn-info|btn-success|btn-warning|btn-danger|btn-inverse|btn-link" type="button">按钮</button>
-	Explain:		btn-primary：主要|btn-info：信息|btn-success：成功|btn-warning：警告|btn-danger：危险|btn-inverse：反向|btn-link：链接
 
-*/
-/*关闭*/
 .close {
 	font-size: 20px;
 	color: #000;
 	text-shadow: 0 1px 0 #fff;
-	opacity: 0.2;
+	opacity: .2;
 	filter: alpha(opacity = 20)
 }
 
@@ -3355,7 +3088,7 @@ label, .placeholder {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
-	opacity: 0.4;
+	opacity: .4;
 	filter: alpha(opacity = 40)
 }
 
@@ -3366,7 +3099,7 @@ button.close {
 	border: 0;
 	-webkit-appearance: none
 }
-/*按钮*/
+
 .btn {
 	display: inline-block;
 	box-sizing: border-box;
@@ -3407,7 +3140,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.125) inset
 }
 
-/*默认——灰色	通常用于取消*/
 .btn-default {
 	background-color: #e6e6e6;
 	border-color: #e6e6e6
@@ -3420,7 +3152,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	border-color: #c7c7c7
 }
 
-/*主要——主色	通常用于确定、提交、购买、支付等*/
 .btn-primary {
 	color: #fff;
 	background-color: #5a98de;
@@ -3434,7 +3165,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	border-color: #0a6999
 }
 
-/*次要按钮*/
 .btn-secondary {
 	color: #fff;
 	background-color: #3bb4f2;
@@ -3448,7 +3178,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	border-color: #0f9ae0
 }
 
-/*成功*/
 .btn-success {
 	color: #fff;
 	background-color: #5eb95e;
@@ -3462,7 +3191,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	border-color: #429842
 }
 
-/*警告*/
 .btn-warning {
 	color: #fff;
 	background-color: #f37b1d;
@@ -3476,7 +3204,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	border-color: #c85e0b
 }
 
-/*危险*/
 .btn-danger {
 	color: #fff;
 	background-color: #dd514c;
@@ -3490,7 +3217,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	border-color: #c62b26
 }
 
-/*链接*/
 .btn-link {
 	color: #0e90d2;
 	cursor: pointer;
@@ -3504,7 +3230,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	background-color: transparent
 }
 
-/*禁用状态*/
 .btn.disabled {
 	cursor: not-allowed;
 	background-image: none;
@@ -3514,7 +3239,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	pointer-events: none
 }
 
-/*块级按钮*/
 .btn-block {
 	-moz-box-sizing: border-box;
 	display: block;
@@ -3523,7 +3247,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	width: 100%
 }
 
-/*表单组*/
 .form-group {
 	display: inline-block;
 	vertical-align: middle
@@ -3555,7 +3278,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	border-radius: 0 1000px 1000px 0
 }
 
-/*3.6 图片*/
 .duang-opacity img {
 	-webkit-transition: opacity .1s linear;
 	-moz-transition: opacity .1s linear;
@@ -3564,24 +3286,8 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 }
 
 .duang-opacity a:hover img, a:hover .opacity img {
-	opacity: 0.85;
+	opacity: .85;
 	filter: alpha(opacity = 85)
-}
-/*3.6.1 图集效果
-	Name:			modal_album
-	Example:
-<div class="album-item">
-	<div class="album-img">
-		<img src="">
-	</div>
-	<div class="album-title"> 《仙剑奇侠传》赵灵儿<span class="c-999">(20张)</span></div>
-	<div class="album-bg">
-		<div class="album-bg-Fir"></div>
-		<div class="album-bg-Sec"></div>
-	</div>
-</div>*/
-.album-item {
-	
 }
 
 .album-img {
@@ -3620,10 +3326,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	margin: 0 6px
 }
 
-/*3.6.2 头像
-	Name:			mod_avatar
-	Example:		<i class="avatar avatar-L radius"><img src="static/h-ui/images/avatar-default-S.gif"></i>
-*/
 .avatar {
 	display: inline-block;
 	position: relative;
@@ -3656,7 +3358,8 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 .avatar.size-M, .avatar.size-M img {
 	width: 32px;
 	height: 32px
-} /*默认为中，可以不写，可以理解为：均码*/
+}
+
 .avatar.size-L, .avatar.size-L img {
 	width: 40px;
 	height: 40px
@@ -3677,9 +3380,6 @@ a.btn:hover, a.btn:focus, a.btn:active, a.btn.active, a.btn.disabled, a.btn[disa
 	height: 128px
 }
 
-/*3.7 图标
-H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可以像控制字体那样随心所欲改变这些图标的颜色、大小、阴影以及任何CSS能控制的属性
-*/
 .iconpic {
 	display: inline-block;
 	vertical-align: sub;
@@ -3690,11 +3390,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	background-position: center;
 	background-repeat: no-repeat
 }
-/*3.8 效果
-	Name:			style_animation
-	Example:		<input class="btn hui-animation" val="淡入" type="button" data-tra="hui-fadein" />
-*/
-/* duang 加特效 */
+
 .hui-bounce, .hui-flip, .hui-flash, .hui-shake, .hui-swing, .hui-wobble,
 	.hui-ring {
 	-webkit-animation: 1s ease;
@@ -3725,42 +3421,41 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	animation: 1s ease-in forwards
 }
 
-/* 淡入 */
 .hui-fadein {
 	-webkit-animation-name: fadein;
 	-moz-animation-name: fadein;
 	-ms-animation-name: fadein;
 	animation-name: fadein
 }
-/* 淡入-从上 */
+
 .hui-fadeinT {
 	-webkit-animation-name: fadeinT;
 	-moz-animation-name: fadeinT;
 	-ms-animation-name: fadeinT;
 	animation-name: fadeinT
 }
-/* 淡入-从右 */
+
 .hui-fadeinR {
 	-webkit-animation-name: fadeinR;
 	-moz-animation-name: fadeinR;
 	-ms-animation-name: fadeinR;
 	animation-name: fadeinR
 }
-/* 淡入-从下 */
+
 .hui-fadeinB {
 	-webkit-animation-name: fadeinB;
 	-moz-animation-name: fadeinB;
 	-ms-animation-name: fadeinB;
 	animation-name: fadeinB
 }
-/* 淡入-从左 */
+
 .hui-fadeinL {
 	-webkit-animation-name: fadeinL;
 	-moz-animation-name: fadeinL;
 	-ms-animation-name: fadeinL;
 	animation-name: fadeinL
 }
-/* 淡出 */
+
 .hui-fadeout {
 	-webkit-animation-name: fadeout;
 	-moz-animation-name: fadeout;
@@ -3768,28 +3463,27 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	animation-name: fadeout
 }
 
-/* 淡出-向上 */
 .hui-fadeoutT {
 	-webkit-animation-name: fadeoutT;
 	-moz-animation-name: fadeoutT;
 	-ms-animation-name: fadeoutT;
 	animation-name: fadeoutT
 }
-/* 淡出-向右 */
+
 .hui-fadeoutR {
 	-webkit-animation-name: fadeoutR;
 	-moz-animation-name: fadeoutR;
 	-ms-animation-name: fadeoutR;
 	animation-name: fadeoutR
 }
-/* 淡出-向下 */
+
 .hui-fadeoutB {
 	-webkit-animation-name: fadeoutB;
 	-moz-animation-name: fadeoutB;
 	-ms-animation-name: fadeoutB;
 	animation-name: fadeoutB
 }
-/* 淡出-向左 */
+
 .hui-fadeoutL {
 	-webkit-animation-name: fadeoutL;
 	-moz-animation-name: fadeoutL;
@@ -3797,7 +3491,6 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	animation-name: fadeoutL
 }
 
-/* 弹跳 */
 .hui-bounce {
 	-webkit-animation-name: bounce;
 	-moz-animation-name: bounce;
@@ -3805,35 +3498,34 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	animation-name: bounce
 }
 
-/* 弹入 */
 .hui-bouncein {
 	-webkit-animation-name: bouncein;
 	-moz-animation-name: bouncein;
 	-ms-animation-name: bouncein;
 	animation-name: bouncein
 }
-/* 弹入-从上 */
+
 .hui-bounceinT {
 	-webkit-animation-name: bounceinT;
 	-moz-animation-name: bounceinT;
 	-ms-animation-name: bounceinT;
 	animation-name: bounceinT
 }
-/* 弹入-从右 */
+
 .hui-bounceinR {
 	-webkit-animation-name: bounceinR;
 	-moz-animation-name: bounceinR;
 	-ms-animation-name: bounceinR;
 	animation-name: bounceinR
 }
-/* 弹入-从下 */
+
 .hui-bounceinB {
 	-webkit-animation-name: bounceinB;
 	-moz-animation-name: bounceinB;
 	-ms-animation-name: bounceinB;
 	animation-name: bounceinB
 }
-/* 弹入-从左 */
+
 .hui-bounceinL {
 	-webkit-animation-name: bounceinL;
 	-moz-animation-name: bounceinL;
@@ -3841,35 +3533,34 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	animation-name: bounceinL
 }
 
-/* 弹出 */
 .hui-bounceout {
 	-webkit-animation-name: bounceout;
 	-moz-animation-name: bounceout;
 	-ms-animation-name: bounceout;
 	animation-name: bounceout
 }
-/* 弹出-向上 */
+
 .hui-bounceoutT {
 	-webkit-animation-name: bounceoutT;
 	-moz-animation-name: bounceoutT;
 	-ms-animation-name: bounceoutT;
 	animation-name: bounceoutT
 }
-/* 弹出-向右 */
+
 .hui-bounceoutR {
 	-webkit-animation-name: bounceoutR;
 	-moz-animation-name: bounceoutR;
 	-ms-animation-name: bounceoutR;
 	animation-name: bounceoutR
 }
-/* 弹出-向下 */
+
 .hui-bounceoutB {
 	-webkit-animation-name: bounceoutB;
 	-moz-animation-name: bounceoutB;
 	-ms-animation-name: bounceoutB;
 	animation-name: bounceoutB
 }
-/* 弹出-向左 */
+
 .hui-bounceoutL {
 	-webkit-animation-name: bounceoutL;
 	-moz-animation-name: bounceoutL;
@@ -3877,35 +3568,34 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	animation-name: bounceoutL
 }
 
-/* 转入 */
 .hui-rotatein {
 	-webkit-animation-name: rotatein;
 	-moz-animation-name: rotatein;
 	-ms-animation-name: rotatein;
 	animation-name: rotatein
 }
-/* 转入-从左上 */
+
 .hui-rotateinLT {
 	-webkit-animation-name: rotateinLT;
 	-moz-animation-name: rotateinLT;
 	-ms-animation-name: rotateinLT;
 	animation-name: rotateinLT
 }
-/* 转入-从左下 */
+
 .hui-rotateinLB {
 	-webkit-animation-name: rotateinLB;
 	-moz-animation-name: rotateinLB;
 	-ms-animation-name: rotateinLB;
 	animation-name: rotateinLB
 }
-/* 转入-从右上 */
+
 .hui-rotateinRT {
 	-webkit-animation-name: rotateinRT;
 	-moz-animation-name: rotateinRT;
 	-ms-animation-name: rotateinRT;
 	animation-name: rotateinRT
 }
-/* 转入-从右下*/
+
 .hui-rotateinRB {
 	-webkit-animation-name: rotateinRB;
 	-moz-animation-name: rotateinRB;
@@ -3913,35 +3603,34 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	animation-name: rotateinRB
 }
 
-/* 转出 */
 .hui-rotateout {
 	-webkit-animation-name: rotateout;
 	-moz-animation-name: rotateout;
 	-ms-animation-name: rotateout;
 	animation-name: rotateout
 }
-/* 转出-向左上 */
+
 .hui-rotateoutLT {
 	-webkit-animation-name: rotateoutLT;
 	-moz-animation-name: rotateoutLT;
 	-ms-animation-name: rotateoutLT;
 	animation-name: rotateoutLT
 }
-/* 转出-向左下 */
+
 .hui-rotateoutLB {
 	-webkit-animation-name: rotateoutLB;
 	-moz-animation-name: rotateoutLB;
 	-ms-animation-name: rotateoutLB;
 	animation-name: rotateoutLB
 }
-/* 转出-向右上 */
+
 .hui-rotateoutRT {
 	-webkit-animation-name: rotateoutRT;
 	-moz-animation-name: rotateoutRT;
 	-ms-animation-name: rotateoutRT;
 	animation-name: rotateoutRT
 }
-/* 转出-向右下 */
+
 .hui-rotateoutRB {
 	-webkit-animation-name: rotateoutRB;
 	-moz-animation-name: rotateoutRB;
@@ -3949,35 +3638,34 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	animation-name: rotateoutRB
 }
 
-/* 翻转 */
 .hui-flip {
 	-webkit-animation-name: flip;
 	-moz-animation-name: flip;
 	-ms-animation-name: flip;
 	animation-name: flip
 }
-/* 翻入-X轴 */
+
 .hui-flipinX {
 	-webkit-animation-name: flipinX;
 	-moz-animation-name: flipinX;
 	-ms-animation-name: flipinX;
 	animation-name: flipinX
 }
-/* 翻入-Y轴 */
+
 .hui-flipin, .hui-flipinY {
 	-webkit-animation-name: flipinY;
 	-moz-animation-name: flipinY;
 	-ms-animation-name: flipinY;
 	animation-name: flipinY
 }
-/* 翻出-X轴 */
+
 .hui-flipoutX {
 	-webkit-animation-name: flipoutX;
 	-moz-animation-name: flipoutX;
 	-ms-animation-name: flipoutX;
 	animation-name: flipoutX
 }
-/* 翻出-Y轴 */
+
 .hui-flipout, .hui-flipoutY {
 	-webkit-animation-name: flipoutY;
 	-moz-animation-name: flipoutY;
@@ -3985,43 +3673,41 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	animation-name: flipoutY
 }
 
-/* 闪烁 */
 .hui-flash {
 	-webkit-animation-name: flash;
 	-moz-animation-name: flash;
 	-ms-animation-name: flash;
 	animation-name: flash
 }
-/* 震颤 */
+
 .hui-shake {
 	-webkit-animation-name: shake;
 	-moz-animation-name: shake;
 	-ms-animation-name: shake;
 	animation-name: shake
 }
-/* 摇摆 */
+
 .hui-swing {
 	-webkit-animation-name: swing;
 	-moz-animation-name: swing;
 	-ms-animation-name: swing;
 	animation-name: swing
 }
-/* 摇晃 */
+
 .hui-wobble {
 	-webkit-animation-name: wobble;
 	-moz-animation-name: wobble;
 	-ms-animation-name: wobble;
 	animation-name: wobble
 }
-/* 震铃 */
+
 .hui-ring {
 	-webkit-animation-name: ring;
 	-moz-animation-name: ring;
 	-ms-animation-name: ring;
 	animation-name: ring
 }
-/* define */
-/* 淡入 */
+
 @
 -webkit-keyframes fadein { 0%{
 	opacity: 0
@@ -4066,7 +3752,6 @@ opacity
 1
 }
 }
-/* 淡入-从上 */
 @
 -webkit-keyframes fadeinT { 0%{
 	opacity: 0;
@@ -4119,7 +3804,6 @@ opacity
 :translateY(0)
 }
 }
-/* 淡入-从右 */
 @
 -webkit-keyframes fadeinR { 0%{
 	opacity: 0;
@@ -4172,7 +3856,6 @@ opacity
 :translateX(0)
 }
 }
-/* 淡入-从下 */
 @
 -webkit-keyframes fadeinB { 0%{
 	opacity: 0;
@@ -4225,7 +3908,6 @@ opacity
 :translateY(0)
 }
 }
-/* 淡入-从左 */
 @
 -webkit-keyframes fadeinL { 0%{
 	opacity: 0;
@@ -4278,7 +3960,6 @@ opacity
 :translateX(0)
 }
 }
-/* 淡出 */
 @
 -webkit-keyframes fadeout { 0%{
 	opacity: 1
@@ -4323,7 +4004,6 @@ opacity
 0
 }
 }
-/* 淡出-向上 */
 @
 -webkit-keyframes fadeoutT { 0%{
 	opacity: 1;
@@ -4376,7 +4056,6 @@ opacity
 :translateY(-100px)
 }
 }
-/* 淡出-向右 */
 @
 -webkit-keyframes fadeoutR { 0%{
 	opacity: 1;
@@ -4429,7 +4108,6 @@ opacity
 :translateX(100px)
 }
 }
-/* 淡出-向下 */
 @
 -webkit-keyframes fadeoutB { 0%{
 	opacity: 1;
@@ -4482,7 +4160,6 @@ opacity
 :translateY(100px)
 }
 }
-/* 淡出-向左 */
 @
 -webkit-keyframes fadeoutL { 0%{
 	opacity: 1;
@@ -4535,7 +4212,6 @@ opacity
 :translateX(-100px)
 }
 }
-/* 弹跳 */
 @
 -webkit-keyframes bounce { 0%,20%,50%,80%,100%{
 	-webkit-transform: translateY(0)
@@ -4592,7 +4268,6 @@ transform
 :translateY(-15px)
 }
 }
-/* 弹入 */
 @
 -webkit-keyframes bouncein { 0%{
 	opacity: 0;
@@ -4701,7 +4376,6 @@ transform
 :scale(1)
 }
 }
-/* 弹入-从上 */
 @
 -webkit-keyframes bounceinT { 0%{
 	opacity: 0;
@@ -4786,7 +4460,6 @@ transform
 :translateY(0)
 }
 }
-/* 弹入-从右 */
 @
 -webkit-keyframes bounceinR { 0%{
 	opacity: 0;
@@ -4871,7 +4544,6 @@ transform
 :translateX(0)
 }
 }
-/* 弹入-从下 */
 @
 -webkit-keyframes bounceinB { 0%{
 	opacity: 0;
@@ -4956,7 +4628,6 @@ transform
 :translateY(0)
 }
 }
-/* 弹入-从左 */
 @
 -webkit-keyframes bounceinL { 0%{
 	opacity: 0;
@@ -5041,7 +4712,6 @@ transform
 :translateX(0)
 }
 }
-/* 弹出 */
 @
 -webkit-keyframes bounceout { 0%{
 	-webkit-transform: scale(1)
@@ -5166,7 +4836,6 @@ opacity
 )
 }
 }
-/* 弹出-向上*/
 @
 -webkit-keyframes bounceoutT { 0%{
 	-webkit-transform: translateY(0)
@@ -5239,7 +4908,6 @@ opacity
 :translateY(-100px)
 }
 }
-/* 弹出-向右*/
 @
 -webkit-keyframes bounceoutR { 0%{
 	-webkit-transform: translateX(0)
@@ -5312,7 +4980,6 @@ opacity
 :translateX(100px)
 }
 }
-/* 弹出-向下 */
 @
 -webkit-keyframes bounceoutB { 0%{
 	-webkit-transform: translateY(0)
@@ -5385,7 +5052,6 @@ opacity
 :translateY(100px)
 }
 }
-/* 弹出-向左 */
 @
 -webkit-keyframes bounceoutL { 0%{
 	-webkit-transform: translateX(0)
@@ -5458,7 +5124,6 @@ opacity
 :translateX(-200px)
 }
 }
-/* 转入 */
 @
 -webkit-keyframes rotatein { 0%{
 	opacity: 0;
@@ -5511,7 +5176,6 @@ opacity
 :rotate(0)
 }
 }
-/* 转入-从左上 */
 @
 -webkit-keyframes rotateinLT { 0%{
 	-webkit-transform-origin: left bottom;
@@ -5588,7 +5252,6 @@ bottom
 1
 }
 }
-/* 转入-从左下 */
 @
 -webkit-keyframes rotateineftB { 0%{
 	-webkit-transform-origin: left bottom;
@@ -5665,7 +5328,6 @@ bottom
 1
 }
 }
-/* 转入-从右上 */
 @
 -webkit-keyframes rotateinRT { 0%{
 	-webkit-transform-origin: right bottom;
@@ -5742,7 +5404,6 @@ bottom
 1
 }
 }
-/* 转入-从右下*/
 @
 -webkit-keyframes rotateinRB { 0%{
 	-webkit-transform-origin: right bottom;
@@ -5819,7 +5480,6 @@ bottom
 1
 }
 }
-/* 转出 */
 @
 -webkit-keyframes rotateout { 0%{
 	-webkit-transform-origin: center center;
@@ -5896,7 +5556,6 @@ center
 0
 }
 }
-/* 转出-向左上 */
 @
 -webkit-keyframes rotateoutLT { 0%{
 	-webkit-transform-origin: left bottom;
@@ -5973,7 +5632,6 @@ bottom
 0
 }
 }
-/* 转出-向左下 */
 @
 -webkit-keyframes rotateoutLB { 0%{
 	-webkit-transform-origin: left bottom;
@@ -6050,7 +5708,6 @@ bottom
 0
 }
 }
-/* 转出-向右上 */
 @
 -webkit-keyframes rotateoutRT { 0%{
 	-webkit-transform-origin: right bottom;
@@ -6127,7 +5784,6 @@ bottom
 0
 }
 }
-/* 转出-向右下 */
 @
 -webkit-keyframes rotateoutBR { 0%{
 	-webkit-transform-origin: right bottom;
@@ -6204,7 +5860,6 @@ bottom
 0
 }
 }
-/* 翻转 */
 @
 -webkit-keyframes flip { 0%{
 	-webkit-transform: perspective(400px) rotateY(0);
@@ -6417,7 +6072,6 @@ scale
 :ease-in
 }
 }
-/* 翻入-X轴 */
 @
 -webkit-keyframes flipinX { 0%{
 	-webkit-transform: perspective(400px) rotateX(90deg);
@@ -6538,7 +6192,6 @@ rotateX
 1
 }
 }
-/* 翻入-Y轴 */
 @
 -webkit-keyframes flipinY { 0%{
 	-webkit-transform: perspective(400px) rotateY(90deg);
@@ -6659,7 +6312,6 @@ rotateY
 1
 }
 }
-/* 翻出-X轴 */
 @
 -webkit-keyframes flipoutX { 0%{
 	-webkit-transform: perspective(400px) rotateX(0);
@@ -6724,7 +6376,6 @@ rotateX
 0
 }
 }
-/* 翻出-Y轴 */
 @
 -webkit-keyframes flipoutY { 0%{
 	-webkit-transform: perspective(400px) rotateY(0);
@@ -6789,7 +6440,6 @@ rotateY
 0
 }
 }
-/* 闪烁 */
 @
 -webkit-keyframes flash { 0%,50%,100%{
 	opacity: 1
@@ -6834,7 +6484,6 @@ opacity
 0
 }
 }
-/* 震颤 */
 @
 -webkit-keyframes shake { 0%,100%{
 	-webkit-transform: translateX(0)
@@ -6891,7 +6540,6 @@ transform
 :translateX(10px)
 }
 }
-/* 摇摆 */
 @
 -webkit-keyframes swing { 20%{
 	-webkit-transform: rotate(15deg)
@@ -6980,7 +6628,6 @@ transform
 :rotate(0)
 }
 }
-/* 摇晃 */
 @
 -webkit-keyframes wobble { 0%{
 	-webkit-transform: translateX(0)
@@ -7161,7 +6808,6 @@ transform
 :translateX(0)
 }
 }
-/* 震铃 */
 @
 -webkit-keyframes ring { 0%{
 	-webkit-transform: scale(1)
@@ -7334,18 +6980,6 @@ rotate
 (0)
 }
 }
-/*4.1 按钮组
-  Name:     mod_btn-group
-  Example:  
-<div class="btn-group">
-  <span class="btn btn-primary radius">左边按钮</span>
-  <span class="btn btn-default radius">中间按钮</span>
-  <span class="btn btn-default radius">中间按钮</span>
-  <span class="btn btn-default radius">右边按钮</span>
-</div>
-
-  Explain:
-*/
 .btn-group {
 	font-size: 0
 }
@@ -7365,59 +6999,50 @@ rotate
 }
 
 .btn-group>.btn:last-child:not (:first-child ), .btn-group>.dropdown-toggle:not
-	(:first-child ) {
+	(:first-child ){
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0
 }
 
-/*4.2.1 导航条
-	Name:			mod_mainnav
-	Example:		
-	<nav class="mainnav">
-	  <ul class="cl">
-	    <li class="current"><a href="/">首页</a></li>
-		<li><a href="#">核心</a></li>
-		<li><a href="#">扩展</a></li>
-		<li><a href="#">案例</a></li>
-		<li><a href="#">联系我们</a></li>
-	  </ul>
-    </nav>
-	Explain: 鼠标经过状态a:hover，当前选中状态li:current。		
-*/
 .mainnav {
 	z-index: 1;
 	background-color: #222
-} /*导航条背景*/
+}
+
 .mainnav>ul>li, .mainnav>ul>li>a {
 	height: 40px;
 	line-height: 40px
-} /*导航条高度*/
+}
+
 .mainnav>ul>li {
 	display: inline-block;
 	color: #fff;
 	font-size: 14px;
 	font-weight: bold
-} /*设置字体*/
+}
+
 .mainnav>ul>li>a {
 	display: inline-block;
 	padding: 0 18px;
 	color: #fff;
 	text-align: center
-} /*链接颜色*/
+}
+
 .mainnav>ul>li>a:hover, .mainnav>ul>li.current>a {
 	color: #fff;
 	text-decoration: none;
 	background-color: #000;
-	-webkit-transition: background-color 0.3s ease 0s;
-	-moz-transition: background-color 0.3s ease 0s;
-	-o-transition: background-color 0.3s ease 0s;
-	-ms-transition: background-color 0.3s ease 0s;
-	transition: background-color 0.3s ease 0s
-} /*交互颜色*/
+	-webkit-transition: background-color .3s ease 0s;
+	-moz-transition: background-color .3s ease 0s;
+	-o-transition: background-color .3s ease 0s;
+	-ms-transition: background-color .3s ease 0s;
+	transition: background-color .3s ease 0s
+}
+
 .Hui-nav-toggle {
 	display: none;
 	position: absolute;
-	top: 0px;
+	top: 0;
 	right: 10px;
 	padding: 9px 10px;
 	-moz-border-radius: 4px;
@@ -7427,7 +7052,7 @@ rotate
 	background-color: rgba(0, 0, 0, 0.5)
 }
 
-@media ( max-width : 767px) {
+@media ( max-width :767px) {
 	.mainnav>ul>li {
 		font-size: 1.125em
 	}
@@ -7436,7 +7061,7 @@ rotate
 	}
 }
 
-@media ( max-width : 480px) {
+@media ( max-width :480px) {
 	.mainnav>ul>li {
 		text-align: center
 	}
@@ -7448,13 +7073,9 @@ rotate
 		width: 100%
 	}
 }
-/*4.2.2 面包屑导航
-	Name:			mod_breadcrumb
-	Example:		
-	<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i><a href="/" class="maincolor">首页</a><span class="c-666 en">&gt;</span><a href="#">组件</a><span class="c-666 en">&gt;</span><span class="c-666">当前页面</span></nav>
-*/
+
 .breadcrumb {
-	border-bottom: 1px solid #E5E5E5;
+	border-bottom: 1px solid #e5e5e5;
 	line-height: 39px;
 	height: 39px;
 	padding-left: 20px;
@@ -7464,18 +7085,13 @@ rotate
 .breadcrumb span {
 	padding: 0 5px
 }
-/*4.2.3 翻页导航
-	Name:			mod_pageNav
-	Example:		<div class="pageNav" id="pageNav"></div>
-	Explain:		需要调用pagenav.cn.js
 
-*/
 .pageNav {
 	float: none;
 	clear: both;
-	font-size: 0px;
+	font-size: 0;
 	font-family: Arial, Helvetica, sans-serif;
-	padding: 18px 0px;
+	padding: 18px 0;
 	text-align: center
 }
 
@@ -7487,7 +7103,7 @@ rotate
 }
 
 .pageNav a {
-	border: 1px solid #CCDBE4;
+	border: 1px solid #ccdbe4;
 	cursor: pointer
 }
 
@@ -7500,22 +7116,16 @@ rotate
 	font-weight: bold
 }
 
-/*4.2.4 顶部导航
-	Name:			mod_topnav
-	Sample:
-	<div class="topnav"><div class="cl"><div class="l">您好，欢迎来到Hui！</div><div class="r"><span class="r_nav">[ <a rel="nofollow" href="javascript:login();">登录</a> ]</span><span class="pipe">|</span><span class="r_nav">[ <a href="javascript:register();" rel="nofollow">注册</a> ]</span><span class="pipe">|</span><span class="r_nav"><a title="收藏" href="javascript:addFavorite();">收藏本站</a></span><span class="pipe">|</span><span class="r_nav"><a href="javascript:void(0)" onclick="setHome(this);" title="设为首页">设为首页</a></span></div></div></div>
-	
-*/
 .topnav {
 	height: 30px;
 	line-height: 30px;
 	background: url(../images/bg_topnav.gif) repeat-x 0 0;
-	border-bottom: 1px solid #EBEBEB;
+	border-bottom: 1px solid #ebebeb;
 	font-size: 12px
 }
 
 .topbar {
-	background-color: #ECECEC;
+	background-color: #ececec;
 	border-bottom: 1px solid #ddd
 }
 
@@ -7528,16 +7138,6 @@ rotate
 	color: #999
 }
 
-/*4.2.5 向导
-	Name:			mod_steps
-	Sample:
-	<div class="four steps">
-	  <span class="step">第一步</span>
-	  <span class="active step">第二步</span>
-	  <span class="disabled step">第三步</span>
-	  <span class="disabled step">第四步</span>
-	</div>
-*/
 .steps, .step {
 	display: inline-block;
 	position: relative;
@@ -7605,39 +7205,39 @@ rotate
 }
 
 .step:hover, .step.hover {
-	background-color: #F7F7F7;
+	background-color: #f7f7f7;
 	color: rgba(0, 0, 0, .8)
 }
 
 .steps .step.hover:after, .steps .step:hover:after, .step:hover, .step.hover::after
 	{
-	border-left-color: #F7F7F7
+	border-left-color: #f7f7f7
 }
 
 .steps .step.down, .steps .step:active, .step.down, .step:active {
-	background-color: #F0F0F0
+	background-color: #f0f0f0
 }
 
 .steps .step.down:after, .steps .step:active:after, .steps.down::after,
 	.steps:active::after {
-	border-left-color: #F0F0F0
+	border-left-color: #f0f0f0
 }
 
 .steps .step.active, .active.step {
 	cursor: auto;
-	background-color: #428BCA;
+	background-color: #428bca;
 	color: #FFF;
 	font-weight: 700
 }
 
 .steps .step.active:after, .active.steps:after {
-	border-left-color: #428BCA
+	border-left-color: #428bca
 }
 
 .steps .disabled.step, .disabled.step {
 	cursor: auto;
 	background-color: #FFF;
-	color: #CBCBCB
+	color: #cbcbcb
 }
 
 .disabled.step:after {
@@ -7679,7 +7279,6 @@ rotate
 	border-radius: 0 0 .3125em
 }
 
-/*向导数量*/
 .one.steps, .two.steps, .three.steps, .four.steps, .five.steps, .six.steps,
 	.seven.steps, .eight.steps {
 	display: block
@@ -7717,25 +7316,18 @@ rotate
 	width: 12.5%
 }
 
-/*向导尺寸*/
 .small.step, .small.steps .step {
 	font-size: .8rem
-} /*小*/
+}
+
 .step, .steps .step {
 	font-size: 1rem
-} /*默认*/
+}
+
 .large.step, .large.steps .step {
 	font-size: 1.25rem
-} /*大*/
+}
 
-/*兼容写法
-	Sample:
-	<div class="steps-ie cl">
-	  <a class="step-ie active" href="#">第一步<em class="arrow"></em></a>
-	  <a class="step-ie" href="#">第二步<em class="arrow"></em></a>
-	  <a class="step-ie" href="#">第三步<em class="arrow"></em></a>
-	</div>
-*/
 .steps-ie, .step-ie, .step-ie .arrow {
 	height: 44px;
 	line-height: 44px
@@ -7777,15 +7369,6 @@ rotate
 	background-image: url(../images/step_arrow-active.png)
 }
 
-/*4.2.6 竖向导向tab导航
-	Sample:
-	<div class="verticalTab">
-	  <a class="" href="#">导航一<em></em></a>
-	  <a class="active" href="#">导航二<em></em></a>
-	  <a href="#">导航三<em></em></a>
-	  <a href="#">导航四<em></em></a>
-	</div>
-*/
 .verticalTab {
 	background: #fff url(../images/tab_bg.png) repeat-y 0 0;
 	width: 38px
@@ -7822,22 +7405,14 @@ rotate
 	background-image: url(../images/tabNav_right-active.png)
 }
 
-/*4.2.6 横向导向tab导航
-	Sample:
-	<ul class="acrossTab">
-	  <li>导航一<i></i><em></em></li>
-	  <li class="active">导航二<i></i><em></em></li>
-	  <li>导航三<i></i><em></em></li>
-	</ul>
-*/
 .acrossTab {
 	height: 29px;
-	background: url(../images/acrossTab-bg.png) repeat-x 0 0;
+	background: url(../static/h-ui/images/acrossTab-bg.png) repeat-x 0 0;
 	padding-top: 1px
 }
 
 .acrossTab li, .acrossTab li em {
-	background: url(../images/acrossTab.png) no-repeat 0 0
+	background: url(../static/h-ui/images/acrossTab.png) no-repeat 0 0
 }
 
 .acrossTab li {
@@ -7892,19 +7467,13 @@ rotate
 	font-size: 0;
 	line-height: 0;
 	cursor: pointer;
-	background: url(../images/acrossTab-close.png) no-repeat 0 0
+	background: url(../static/h-ui/images/acrossTab-close.png) no-repeat 0 0
 }
 
 .acrossTab li i:hover {
 	background-position: 0 bottom
 }
 
-/*4.3 下拉菜单
-	Name:			mod_dropDown
-	Example:		<span class="dropDown "><a class="dropDown_A" href="#">下拉菜单</a><span class="dropDown-menu box-shadow"><ul><li><a href="#">菜单一</a></li><li><a href="#">菜单二</a></li></ul></span>span>
-	Explain:		如需要在不同的地方显示不同的样式，请在<span class="dropDown"> 追加class，采用覆盖的方式重写默认样式。
-
-*/
 .dropDown {
 	display: inline-block
 }
@@ -7914,13 +7483,13 @@ rotate
 }
 
 .dropDown_A i {
-	transition-duration: 0.3s;
+	transition-duration: .3s;
 	transition-property: all
 }
 
 .dropDown-menu {
 	display: none;
-	transition: all 0.3s ease 0s
+	transition: all .3s ease 0s
 }
 
 .dropDown:focus, .dropDown-menu:focus {
@@ -7937,7 +7506,7 @@ rotate
 	line-height: 0;
 	background: url(../images/icon-jt.png) no-repeat 0 0
 }
-/*鼠标经过*/
+
 .dropDown.hover .dropDown_A, .dropDown.open .dropDown_A {
 	text-decoration: none;
 	background-color: rgba(255, 255, 255, 0.2)
@@ -7945,11 +7514,11 @@ rotate
 
 .dropDown.hover .dropDown_A i, .dropDown.open .dropDown_A i {
 	transform: rotate(180deg);
-	transition-duration: 0.3s;
+	transition-duration: .3s;
 	transition-property: all;
 	_background-position: 0 0
 }
-/*打开菜单*/
+
 .dropDown.open {
 	position: relative;
 	z-index: 990
@@ -7964,16 +7533,17 @@ rotate
 	min-width: 100%;
 	background-color: #fff;
 	border: solid 1px #f2f2f2
-} /*默认左对齐*/
+}
+
 .dropDown.open .dropDown-menu.box-shadow {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0
 }
 
 .dropDown.open .dropDown-menu.radius {
-	border-top: none
+	border-top: 0
 }
-/*右对齐*/
+
 .dropDown.open.right .dropDown-menu {
 	right: -1px !important;
 	left: auto !important
@@ -7989,7 +7559,7 @@ rotate
 	clear: both;
 	border-bottom: solid 1px #f2f2f2;
 	margin-bottom: -1px;
-	padding: 0px 20px;
+	padding: 0 20px;
 	height: 30px;
 	line-height: 30px;
 	font-size: 12px;
@@ -7999,14 +7569,14 @@ rotate
 }
 
 .dropDown-menu li:last-child a {
-	border-bottom: none
+	border-bottom: 0
 }
 
 .dropDown-menu li a:hover, .dropDown-menu li a:focus {
 	background-color: #f0f1f2;
 	text-decoration: none
 }
-/*禁用菜单*/
+
 .dropDown.open .dropDown-menu .disabled a, .dropDown.open .dropdown-menu .disabled a:hover,
 	.dropDown.open .dropdown-menu .disabled a:focus {
 	color: #999;
@@ -8017,36 +7587,13 @@ rotate
 
 .dropDown.open .dropDown-menu li.divider {
 	display: block;
-	height: 0px;
-	line-height: 0px;
+	height: 0;
+	line-height: 0;
 	margin: 9px 0;
 	overflow: hidden;
 	border-top: solid 1px #eee
 }
 
-/*4.4 幻灯片
-	Name:			module_slider
-	Sample:
-  <section class="slider cl has-dots">
-		<a href="javascript:void(0)" class="unslider-arrow prev"></a>
-		<a href="javascript:void(0)" class="unslider-arrow next"></a>
-    <ul class="tabcon">
-      <li><a href="#" target="_blank"><img name="" src="pic/1.png" width="300" height="150" alt=""></a></li>
-      <li><a href="#" target="_blank"><img name="" src="pic/2.png" width="300" height="150" alt=""></a></li>
-      <li><a href="#" target="_blank"><img name="" src="pic/3.png" width="300" height="150" alt=""></a></li>
-    </ul>
-  </section>
-	<script type="text/javascript" src="Lib/unslider.min.js"></script> 
-	<script type="text/javascript">
-	$(function() {
-		$('.slider').unslider({deplay:3000,fluid: true,dots: true});
-		var unslider = $('.slider').unslider();
-    	$('.unslider-arrow').click(function() {
-        	var fn = this.className.split(' ')[1];
-			unslider.data('unslider')[fn]()})});
-	</script>
-	Explain: 默认dots为圆点，在slider后面追加numSlider样式就变成带数字的方框，boxSlider为不带数字长方条
-*/
 .slider {
 	position: relative;
 	text-align: center;
@@ -8061,7 +7608,7 @@ rotate
 .dots {
 	position: absolute;
 	left: 0;
-	right: 0px;
+	right: 0;
 	bottom: 10px;
 	text-align: center
 }
@@ -8071,11 +7618,11 @@ rotate
 	text-align: center;
 	width: 8px;
 	height: 8px;
-	font-size: 0px;
-	line-height: 0px;
+	font-size: 0;
+	line-height: 0;
 	margin-right: 8px;
 	cursor: pointer;
-	background-color: #C2C2C2;
+	background-color: #c2c2c2;
 	border-radius: 8px
 }
 
@@ -8094,7 +7641,7 @@ rotate
 	font-family: Arial;
 	font-weight: bold;
 	text-indent: inherit;
-	border-radius: 0px
+	border-radius: 0
 }
 
 .numSlider .dots span.active {
@@ -8105,7 +7652,7 @@ rotate
 .boxSlider .dots span {
 	width: 40px;
 	height: 10px;
-	border-radius: 0px
+	border-radius: 0
 }
 
 .boxRadius .dots span {
@@ -8120,7 +7667,7 @@ rotate
 	height: 50px;
 	width: 50px;
 	z-index: 3;
-	opacity: 0.7;
+	opacity: .7;
 	filter: alpha(opacity = 70);
 	background-color: #303030;
 	background-image: url(../images/unslider-arrow.png);
@@ -8133,24 +7680,15 @@ rotate
 }
 
 .prev {
-	left: 0px;
+	left: 0;
 	background-position: 0 0
 }
 
 .next {
-	right: 0px;
+	right: 0;
 	background-position: right 0
 }
-/*4.5 选项卡
-	Name:			module_slider
-	Sample:
-	<div id="tab_demo" class="HuiTab">
-      <div class="tabBar cl"><span>选项卡一</span><span>选项卡二</span><span>自适应宽度</span></div>
-      <div class="tabCon">内容一</div>
-      <div class="tabCon">内容二</div>
-      <div class="tabCon">内容三</div>
-    </div>	
-*/
+
 .tabBar {
 	border-bottom: 2px solid #222
 }
@@ -8174,16 +7712,7 @@ rotate
 .tabCon {
 	display: none
 }
-/*4.6 标签与标号
-	Name:			style_label
-	Example:		<span class="label label-default|label-primary|label-secondary|label-success|label-warning|label-danger">默认</span>
-	Explain:		.label-default 默认|.label-primary 主要|.label-secondary 次要|.label-success 成功|.label-warning 警告|.label-danger 危险
-	
-	Name:			style_badge
-	Example:		<span class="badge badge-default|label-primary|badge-secondary|badge-success|badge-warning|badge-danger">默认</span>
-	Explain:		.badge-default 默认|.badge-primary 主要|.badge-secondary 次要|.badge-success 成功|.badge-warning 警告|.badge-danger 危险
 
-*/
 .label, .badge {
 	display: inline-block;
 	padding: 2px 4px;
@@ -8195,7 +7724,7 @@ rotate
 	vertical-align: middle;
 	background-color: #999
 }
-/*圆角*/
+
 .label.radius {
 	border-radius: 3px
 }
@@ -8216,7 +7745,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	cursor: pointer
 }
 
-/*默认*/
 .label-default, .badge-default {
 	background-color: #e6e6e6;
 	color: #333
@@ -8227,7 +7755,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	color: #333
 }
 
-/*主要*/
 .label-primary, .badge-primary {
 	background-color: #5a98de
 }
@@ -8236,7 +7763,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	background-color: #5a98de
 }
 
-/*主要*/
 .label-secondary, .badge-secondary {
 	background-color: #3bb4f2
 }
@@ -8245,7 +7771,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	background-color: #3bb4f2
 }
 
-/*成功*/
 .label-success, .badge-success {
 	background-color: #5eb95e
 }
@@ -8254,7 +7779,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	background-color: #5eb95e
 }
 
-/*警告*/
 .label-warning, .badge-warning {
 	background-color: #f37b1d
 }
@@ -8263,7 +7787,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	background-color: #f37b1d
 }
 
-/*危险*/
 .label-danger, .badge-danger {
 	background-color: #dd514c
 }
@@ -8272,24 +7795,11 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	background-color: #dd514c
 }
 
-/*4.7 缩略图
-	Name:       style_img
-	Example:		
-	Explain:		缩略图
-*/
-.imgbox {
-	
-}
-
-.img {
-	
-}
-
 .img-circle {
 	border-radius: 50%
 }
 
-@media ( max-width : 480px) {
+@media ( max-width :480px) {
 	.responsive img, .thumbImage img {
 		max-width: 100% !important;
 		height: auto !important;
@@ -8304,12 +7814,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	}
 }
 
-/*4.8 警告
-	Name:			mod_Hui-alert
-	Example:		
-  <div class="Huialert Huialert-success/Huialert-danger/Huialert-error/Huialert-info/Huialert-block"><i class="Hui-iconfont">&#xe6a6;</i>警告内容<ul><li>……</li></ul></div>
-	Explain:		警告,使用警告框jQuery插件
-*/
 .Huialert {
 	position: relative;
 	padding: 8px 35px 8px 14px;
@@ -8334,13 +7838,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	line-height: 20px;
 	cursor: pointer;
 	color: #000;
-	opacity: 0.2;
+	opacity: .2;
 	_color: #666
 }
 
 .Huialert .Hui-iconfont.hover {
 	color: #000;
-	opacity: 0.8
+	opacity: .8
 }
 
 .Huialert-success {
@@ -8396,12 +7900,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	margin-top: 5px
 }
 
-/*4.9 进度条 loading
-	Name:			mod_progress
-	Example:
-	<div class="progress radius"><div class="progress-bar"><span class="sr-only"></span></div></div>
-	Explain:		警告,使用警告框jQuery插件
-*/
 .progress, .progress-bar, .sr-only {
 	height: 10px;
 	font-size: 0;
@@ -8413,9 +7911,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	width: 400px
 }
 
-.progress.radius {
-	
-} /*自定义圆角*/
 .progress-bar {
 	width: 100%;
 	background-color: #efefef
@@ -8426,13 +7921,9 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	background-color: #58b957
 }
 
-/*4.10 对话框
-	Name:			mod_modal
-	Example:		
-*/
 .loading {
 	height: 50px;
-	background: url(../images/loading_072.gif) no-repeat center
+	background: url(../static/h-ui/images/loading_072.gif) no-repeat center
 }
 
 .mask {
@@ -8443,10 +7934,10 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	width: 100%;
 	height: 100%;
 	background: url(../images/backdrop.png) repeat 0 0;
-	-moz-transition: all 0.3s ease-in;
-	-webkit-transition: all 0.3s ease-in;
-	-o-transition: all 0.3s ease-in;
-	transition: all 0.3s ease-in
+	-moz-transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+	-o-transition: all .3s ease-in;
+	transition: all .3s ease-in
 }
 
 * html .mask {
@@ -8457,13 +7948,14 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 		this.offsetHeight)
 }
 
-/*Huimodal*/
 .modal-open {
 	overflow: hidden
-} /*当弹出层出现时，隐藏body右侧滚动条*/
+}
+
 .page-overflow {
 	margin-right: 16px
-} /*隐藏body滚动条时，页面偏移*/
+}
+
 .modal-scrollable {
 	position: fixed;
 	top: 0;
@@ -8471,10 +7963,12 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	bottom: 0;
 	left: 0;
 	overflow: auto
-} /*弹出层的最外层，全屏，用户响应点击和滚动*/
+}
+
 .modal-overflow .modal-scrollable {
 	overflow-y: scroll
-} /*弹窗超出屏幕高度时，弹出层替代body右侧滚动条，实现弹出层的整体滚动*/
+}
+
 .modal-backdrop {
 	position: fixed;
 	top: 0;
@@ -8485,22 +7979,26 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	height: 100%;
 	z-index: 1040;
 	background-color: #000
-} /*默认遮罩层，全屏黑色*/
+}
+
 * html .modal-backdrop {
 	position: absolute;
 	left: expression(documentElement.scrollLeft + documentElement.clientWidth - 
 		this.offsetWidth);
 	top: expression(documentElement.scrollTop + documentElement.clientHeight - 
 		this.offsetHeight)
-} /*解决IE下 遮罩层兼容性*/
+}
+
 .modal-backdrop.fade {
 	opacity: 0;
 	filter: alpha(opacity = 0)
-} /*遮罩层失去时，透明度为0*/
+}
+
 .modal-backdrop, .modal-backdrop.fade.in {
-	opacity: 0.7;
+	opacity: .7;
 	filter: alpha(opacity = 70)
-} /*遮罩层进入 0.7透明度*/
+}
+
 .modal {
 	position: absolute;
 	top: 50%;
@@ -8521,14 +8019,15 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	border-radius: 6px;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	*border: 1px solid #999
-} /*弹出层，绝对定位，默认【宽度500px，高度自适应，背景白色，6px圆角，带阴影】，自定义宽度可在data-width中设置参数*/
+}
+
 .fade {
 	opacity: 0;
 	filter: alpha(opacity = 0);
-	-webkit-transition: opacity 0.2s linear;
-	-moz-transition: opacity 0.2s linear;
-	-o-transition: opacity 0.2s linear;
-	transition: opacity 0.2s linear
+	-webkit-transition: opacity .2s linear;
+	-moz-transition: opacity .2s linear;
+	-o-transition: opacity .2s linear;
+	transition: opacity .2s linear
 }
 
 .fade.in {
@@ -8538,41 +8037,48 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 
 .modal.fade {
 	top: -100%
-} /*弹出层进入动画效果*/
+}
+
 .modal.fade.in {
 	top: 50%
-} /*弹出层进入后居顶距离，配合margin-top负值，实现上下自动居中*/
+}
+
 .modal.modal-overflow.fade.in {
-	top: 0px
-} /*如果弹出层高度大于窗口，弹出窗口距顶0像素*/
+	top: 0
+}
+
 .loading-spinner {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	margin: -12px 0 0 -12px
-} /*Ajax加载数据时loading*/
-/*弹出层header区*/
+}
+
 .modal-header {
 	padding: 9px 15px;
 	border-bottom: 1px solid #eee;
 	position: relative
-} /*弹出层头部*/
+}
+
 .modal-header .close {
 	position: absolute;
 	right: 10px;
 	top: 10px
-} /*关闭按钮，请调用4.1.1 按钮 .close*/
+}
+
 .modal-header h3 {
 	margin: 0
-} /*标题*/
+}
+
 .modal-body {
 	overflow-y: visible;
 	padding: 15px
-} /*内容不限高度，内填充15px，不满意可自行修改*/
+}
+
 .modal-form {
 	margin-bottom: 0
-} /*弹出层表单*/
-/*弹出层footer区，放按钮*/
+}
+
 .modal-footer {
 	padding: 14px 15px 15px;
 	margin-bottom: 0;
@@ -8625,8 +8131,8 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 
 .hover .mask_box {
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
+	bottom: 0;
+	left: 0;
 	display: block;
 	background: url(../images/backdrop.png) repeat 0 0;
 	text-align: left
@@ -8742,12 +8248,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	z-index: 2070
 }
 
-/*4.12 返回顶部
-	Name:			mod_totop
-	Level:			Global
-	Example:		<a href="javascript:void(0)" class="toTop" title=backToTopTxt alt=backToTopTxt></a>
-	Explain:		返回顶部
-*/
 .toTop {
 	position: fixed;
 	bottom: 10px;
@@ -8768,7 +8268,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	text-align: center;
 	text-decoration: none;
 	_position: absolute;
-	_top: expression(documentElement.scrollTop + 
+	_top: expression(documentElement.scrollTop +
 		documentElement.clientHeight-this.offsetHeight)
 }
 
@@ -8778,36 +8278,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	background-color: #999
 }
 
-/*4.13 分享到
-	Name:			mod_share
-	Example:
-<section class="share cl">
-<!-- Baidu Button BEGIN -->
-<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
-<span class="bds_more">分享到：</span>
-<a class="bds_tsina"></a>
-<a class="bds_qzone"></a>
-<a class="bds_tqq"></a>
-<a class="bds_renren"></a>
-<a class="bds_sqq"></a>
-</div>
-<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
-document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-</script>
-<!-- Baidu Button END -->
-</section>
-	Explain:		分享到 直接调用百度分享，http://share.baidu.com/code
-
-*/
-/*4.14 Panel 面板
-	Name:			mod_panel
-	Sample:	
-	<div class="panel panel-default">
-		<div class="panel-body">默认面板</div>
-	</div>
-*/
 .panel {
 	background-color: #fff;
 	border: solid 1px transparent
@@ -8818,18 +8288,20 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	padding: 8px 15px;
 	font-size: 14px;
 	font-weight: 700
-} /*面板标题*/
+}
+
 .panel-body {
 	padding: 15px
-} /*面板内容*/
+}
+
 .panel-footer {
 	background-color: #f5f5f5;
 	border-top: 1px solid #ddd;
 	padding: 5px 20px
-} /*面板页脚*/
-/*默认面板*/
+}
+
 .panel-default {
-	border-color: #ddd;
+	border-color: #ddd
 }
 
 .panel-default>.panel-header {
@@ -8838,9 +8310,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	color: #444
 }
 
-/*主要面板*/
 .panel-primary {
-	border-color: #5a98de;
+	border-color: #5a98de
 }
 
 .panel-primary>.panel-header {
@@ -8849,9 +8320,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	color: #fff
 }
 
-/*次要面板*/
 .panel-secondary {
-	border-color: #3bb4f2;
+	border-color: #3bb4f2
 }
 
 .panel-secondary>.panel-header {
@@ -8860,9 +8330,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	color: #fff
 }
 
-/*成功面板*/
 .panel-success {
-	border-color: #5eb95e;
+	border-color: #5eb95e
 }
 
 .panel-success>.panel-header {
@@ -8871,9 +8340,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	color: #fff
 }
 
-/*警告面板*/
 .panel-warning {
-	border-color: #f37b1d;
+	border-color: #f37b1d
 }
 
 .panel-warning>.panel-header {
@@ -8882,9 +8350,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	color: #fff
 }
 
-/*危险面板*/
 .panel-danger {
-	border-color: #dd514c;
+	border-color: #dd514c
 }
 
 .panel-danger>.panel-header {
@@ -8893,10 +8360,6 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	color: #fff
 }
 
-/*4.15 案例
-	Name:			mod_docs-example
-	Example:		<div class="docs-example tooltip-demo">……</div>
-*/
 .docs-example {
 	position: relative;
 	*position: static;
@@ -8922,10 +8385,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	color: #9da0a4;
 	border-radius: 4px 0 4px 0
 }
-/*4.16 滚动
-	Name:			mod_rolling
-	Example:		<div class="rollpicshow"><ul><li>……</li></ul></div>
-*/
+
 .marquee {
 	height: 22px;
 	overflow: hidden;
@@ -8968,16 +8428,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 .rollpicshow li {
 	padding: 10px
 }
-/*4.17 搜索条
-	Name:			mod_searchBar
-	Sample:
-<div class="searchBar">
-  <form class="form-search" method="post" action="">
-    <input id="searchKeyword" name="searchKeyword" value="请输入搜索关键词" class="searchTxt">
-    <input id="searchBtn" name="searchBtn" type="submit" value="搜索" class="searchBtn" onclick="b_onclick()">
-  </form>
-</div>
-*/
+
 .searchBar {
 	z-index: 100;
 	width: 460px;
@@ -8987,7 +8438,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 }
 
 .form-search {
-	margin-bottom: 0px
+	margin-bottom: 0
 }
 
 .searchTxt {
@@ -8999,7 +8450,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	color: #9a9a9a;
 	margin-left: 33px;
 	margin-top: 5px;
-	border: none;
+	border: 0;
 	background-color: #fff
 }
 
@@ -9010,7 +8461,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 .searchBtn {
 	float: right;
 	display: block;
-	border: none;
+	border: 0;
 	width: 73px;
 	height: 33px;
 	cursor: pointer;
@@ -9021,7 +8472,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 .searchBtn:hover {
 	background-position: right -114px
 }
-/*搜索下拉提示*/
+
 .ac_results {
 	position: absolute;
 	width: 386px;
@@ -9029,7 +8480,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	border: solid 1px #890800;
 	background-color: #fff;
 	top: 32px;
-	left: 0px;
+	left: 0;
 	display: none
 }
 
@@ -9071,7 +8522,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	line-height: 22px;
 	cursor: pointer;
 	color: #000;
-	font: 宋体;
+	font: 瀹嬩綋;
 	font-size: 12px
 }
 
@@ -9087,12 +8538,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 .AD {
 	text-align: center
 }
-/*4.18.1 对联广告
-	Name:			mod_AD_dual
-	Sample:
-	<div class="dual dual_l"><div class="dual_con">对联的内容</div><a href="#" class="dual_close">X关闭</a></div>
-	<div class="dual dual_r"><div class="dual_con">对联的内容</div><a href="#" class="dual_close">X关闭</a></div>
-*/
+
 .dual {
 	top: 260px;
 	position: absolute;
@@ -9129,24 +8575,6 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	text-decoration: none
 }
 
-/*4.19 标签*/
-/*4.19.1 标签输入效果
-	Name:			mod_Hui-tags
-	Sample:			
-	<div class="Hui-tags">
-	  <div class="Hui-tags-editor cl"><i class="Hui-tags-icon"></i>
-		<span class="Hui-tags-token">Hui前端框架</span>
-		<span class="Hui-tags-token">CSS3</span>
-		<span class="Hui-tags-token">HTML5</span>
-		<div class="Hui-tags-iptwrap"><input type="text" class="Hui-tags-input" maxlength="20" value=""><label class="Hui-tags-label">添加相关标签，用空格或回车分隔</label></div>
-	  </div>
-	  <div class="Hui-tags-list">
-	    <div class="Hui-notag">暂无常用标签</div>
-		<div class="Hui-tags-has"><span>前端框架</span> <span>前端开发</span> <span>H-ui</span></div>
-	  </div>
-	  <input type="hidden" class="Hui-tags-val" name="" value="">
-	</div>
-*/
 .Hui-tags {
 	border: solid 1px #dedede;
 	padding: 0 10px
@@ -9233,19 +8661,10 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	margin-right: 10px
 }
 
-/*4.19.2 标签混排效果
-	Name:			mod_tags
-	Sample:			<div class="pd-10 tags"><a href="http://www.h-ui.net/">H-ui前端框架</a>……</div>
-	
-*/
 .tags a {
 	height: 26px;
 	line-height: 26px;
 	padding-right: 6px
-}
-
-.tags0 {
-	
 }
 
 .tags1 {
@@ -9297,28 +8716,19 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	text-decoration: underline
 }
 
-/*4.19.3 tag云标签*/
 #tagyun {
 	position: relative
 }
 
 #tagyun a {
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 	font-weight: bold;
 	text-decoration: none;
 	padding: 3px 6px
 }
 
-/*4.20 折叠
-	Name:			mod_Huifold
-	Sample:	
-	<ul id="" class="Huifold">
-	  <li class="item"><h4>标题<b>+</b></h4><div class="info">内容 </div></li>
-	  ……
-	</ul>
-*/
 .Huifold .item {
 	position: relative
 }
@@ -9353,9 +8763,6 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	padding: 10px
 }
 
-/*4.21 遮罩条
-	Name:			mod_maskBar
-*/
 .maskBar {
 	position: absolute;
 	width: 100%;
@@ -9366,7 +8773,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	background-color: #000;
 	z-index: 2;
 	color: #fff !important;
-	opacity: 0.6;
+	opacity: .6;
 	filter: alpha(opacity = 60)
 }
 
@@ -9376,11 +8783,11 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 }
 
 .maskWraper.hover .maskBar {
-	bottom: 0px;
+	bottom: 0;
 	transition: bottom 200ms;
-	-moz-transition: bottom 200ms; /* Firefox 4 */
-	-webkit-transition: bottom 200ms; /* Safari 和 Chrome */
-	-o-transition: bottom 200ms; /* Opera */
+	-moz-transition: bottom 200ms;
+	-webkit-transition: bottom 200ms;
+	-o-transition: bottom 200ms
 }
 
 .maskBox {
@@ -9399,28 +8806,14 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 }
 
 .maskWraper.hover .maskBox {
-	opacity: 0.2;
+	opacity: .2;
 	filter: alpha(opacity = 20);
 	transition: opacity 500ms;
-	-moz-transition: opacity 500ms; /* Firefox 4 */
-	-webkit-transition: opacity 500ms; /* Safari 和 Chrome */
-	-o-transition: opacity 500ms; /* Opera */
+	-moz-transition: opacity 500ms;
+	-webkit-transition: opacity 500ms;
+	-o-transition: opacity 500ms
 }
 
-/*4.22 评论列表
-	Name:			mod_comment
-	Sample:		
-	<ul class="commentList">
-	  <li class="item cl">
-	    <a href="#"><i class="avatar avatar-L radius"><img alt="" src="static/h-ui/images/avatar-default-S.gif"></i></a>
-		<div class="comment-main">
-		  <header class="comment-header">
-		    <div class="comment-meta"><a class="comment-author" href="#">辉哥</a> 评论于 <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20">2014-8-31 15:20</time></div>
-	      </header>
-		  <div class="comment-body"><p><a href="#">@某人</a> 你是猴子派来的救兵吗？</p></div></div>
-	  </li>
-	</ul>
-*/
 .commentList .item {
 	list-style: none outside none;
 	margin: 1.6rem 0 0
@@ -9527,46 +8920,6 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	margin-right: 2px
 }
 
-/*4.23 tip效果
-	Name:			mod_tip
-*/
-.tip {
-	
-}
-
-.tip-header {
-	
-}
-
-.tit-body {
-	
-}
-
-.tit-footer {
-	
-}
-
-.tip.left {
-	
-}
-
-.tip.right {
-	
-}
-
-.tip.top {
-	
-}
-
-.tip.bottom {
-	
-}
-
-/*5 页面
-	Name:			page
-*/
-
-/*5.1 错误页-404*/
 .page-404 {
 	color: #afb5bf;
 	padding-top: 60px
@@ -9593,29 +8946,4 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	bottom: 0;
 	left: 0;
 	right: 0
-}
-
-/*5.2 博客列表页*/
-.page-blog-list {
-	
-}
-/*5.3 博客详情页*/
-.page-blog-show {
-	
-}
-/*5.4 关于我们页*/
-.page-about-show {
-	
-}
-/*5.5 帮助列表页*/
-.page-help-list {
-	
-}
-/*5.6 帮助详情页*/
-.page-help-show {
-	
-}
-/*5.7 友情链接页*/
-.page-flink {
-	
 }

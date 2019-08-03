@@ -12,7 +12,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>(ŎдŎ；) ! ! !</title>
-    <link href="${pageContext.request.contextPath}/static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/css/H-ui.min.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/static/h-ui/lib/Hui-iconfont/1.0.1/iconfont.css" rel="stylesheet"
           type="text/css"/>
 </head>

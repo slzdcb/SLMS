@@ -206,25 +206,44 @@ input[type="text"], input[type="password"] {
     color: #FFF;
 }
 
-.copyright {
+.footer {
     text-align: center;
     bottom: 5px;
     height: 16px;
     display: inline-block;
     font-size: 10px;
-    color: #FFF;
     letter-spacing: 0;
-    line-height: 18px;
-}
-.copyright p {
     color: #CCC;
     line-height: 25px;
-}
-.copyright a {
-    color: #CCC;
     text-decoration: none;
 }
 
-.copyright a:hover {
-    color: #FFF;
+.header {
+    top: 0;
+    height: 60px;
+    background: #00358e;
+    padding: 0;
+}
+
+.row {
+    box-sizing: border-box
+}
+
+input[type="radio"], input[type="checkbox"] {
+    line-height: normal;
+    margin-top: -4px
+}
+
+.role{
+    width: 100%;
+    color: #F0F8FF;
+    padding-top: 10px;
+    display: block;
+    position: relative;
+}
+
+.check-box, .radio-box {
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
 }
