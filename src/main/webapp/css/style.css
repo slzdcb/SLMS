@@ -238,12 +238,12 @@ input[type="radio"], input[type="checkbox"] {
     width: 100%;
     color: #F0F8FF;
     padding-top: 10px;
-    display: block;
+    display: inline-block;
     position: relative;
 }
 
 .check-box, .radio-box {
     text-align: center;
-    display: block;
+    display: inline-block;
     box-sizing: border-box;
 }
