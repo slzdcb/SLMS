@@ -1,39 +1,90 @@
 package com.uestc.service;
 
-import com.uestc.bean.LoginForm;
-import com.uestc.bean.Teacher;
+import com.github.pagehelper.PageInfo;
+import com.uestc.dto.other.MyPage;
+import com.uestc.dto.teacher.TeacherSearchDto;
+import com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto;
+import com.uestc.entity.Teacher;
 
 import java.util.List;
 
 /**
- * @project: sms
- * @description: 业务层-操控教师信息
- * @author: 黄宇辉
- * @date: 6/18/2019-9:47 AM
- * @version: 1.0
- * @website: https://yubuntu0109.github.io/
- */
+ * @author JinZhiyun
+ * @IntefaceName TitleService
+ * @Description 教师业务接口
+ * @Date 2019/6/14 12:52
+ * @Version 1.0
+ **/
 public interface TeacherService {
+    /**
+     * @author JinZhiyun
+     * @Description 返回所有符合条件教师信息的分页结果
+     * @Date 8:39 2019/6/30
+     * @Param [myPage, teacherSearch]
+     * @return com.github.pagehelper.PageInfo<com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto>
+     **/
+    PageInfo<TeacherWithTitleMajorCollegeDto> selectAllTeacherInfo(MyPage myPage, TeacherSearchDto teacherSearch);
 
-    // TODO: 6/18/2019 验证登录信息是否正确
-    Teacher login(LoginForm loginForm);
+    /**
+     * @author JinZhiyun
+     * @Description 返回用户名对应的教师及其附带信息分页结果
+     * @Date 9:08 2019/6/30
+     * @Param [myPage, teaNum]
+     * @return com.github.pagehelper.PageInfo<com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto>
+     **/
+    PageInfo<TeacherWithTitleMajorCollegeDto> selectTeacherOwnInfoByNum(MyPage myPage, String teaNum);
 
-    // TODO: 6/18/2019 根据教师与班级名查询指定/全部教师列表信息
-    List<Teacher> selectList(Teacher teacher);
+    /**
+     * @author JinZhiyun
+     * @Description 返回工号对应的教师
+     * @Date 12:31 2019/6/30
+     * @Param [teaNum]
+     * @return com.uestc.entity.Teacher
+     **/
+    Teacher selectTeacherByNum(String teaNum);
 
-    // TODO: 6/19/2019 根据工号查询指定教师信息
-    Teacher findByTno(Teacher teacher);
+    /**
+     * @author JinZhiyun
+     * @Description 修改教师信息
+     * @Date 12:36 2019/6/30
+     * @Param [teaOriNum, teaWTMC]
+     * @return void
+     **/
+    void updateTeacherInfo(String teaOriNum, TeacherWithTitleMajorCollegeDto teaWTMC);
 
-    // TODO: 6/18/2019 添加教师信息
-    int insert(Teacher teacher);
+    /**
+     * @author JinZhiyun
+     * @Description 添加教师业务
+     * @Date 16:16 2019/6/30
+     * @Param [teaWTMC]
+     * @return void
+     **/
+    void insertTeacher(TeacherWithTitleMajorCollegeDto teaWTMC);
 
-    // TODO: 6/18/2019 根据id修改指定教师信息 
-    int update(Teacher teacher);
+    /**
+     * @author JinZhiyun
+     * @Description 删除一个教师业务
+     * @Date 16:42 2019/6/30
+     * @Param [teaNum]
+     * @return void
+     **/
+    void deleteOneTeacher(String teaNum);
 
-    // TODO: 6/18/2019 根据id删除指定教师信息
-    int deleteById(Integer[] ids);
+    /**
+     * @author JinZhiyun
+     * @Description 删除多个教师业务
+     * @Date 17:15 2019/6/30
+     * @Param [teaNums]
+     * @return void
+     **/
+    void deleteManyTeachers(List<String> teaNums);
 
-    // TODO: 6/18/2019 根据id修改指定教师密码
-    int updatePassowrd(Teacher teacher);
-
+    /**
+     * @author JinZhiyun
+     * @Description 由工号返回相应教师信息
+     * @Date 12:49 2019/7/7
+     * @Param [teaNum]
+     * @return com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto
+     **/
+    TeacherWithTitleMajorCollegeDto selectTeacherInfoByNum(String teaNum);
 }

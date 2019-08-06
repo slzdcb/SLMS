@@ -1,171 +1,191 @@
 package com.uestc.controller;
 
-import com.github.pagehelper.PageHelper;
+import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageInfo;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.uestc.dto.other.MyPage;
+import com.uestc.dto.other.ResultMap;
+import com.uestc.dto.teacher.TeacherSearchDto;
+import com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto;
+import com.uestc.entity.User;
+import com.uestc.util.Constants;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
-import com.uestc.bean.Teacher;
-import com.uestc.service.ClazzService;
-import com.uestc.service.TeacherService;
-import com.uestc.util.UploadFile;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * @project: sms
- * @description: 控制器-管理教师信息页面
- * @author: 黄宇辉
- * @date: 6/18/2019-9:46 AM
- * @version: 1.0
- * @website: https://yubuntu0109.github.io/
- */
-
+ * @ClassName TeacherController
+ * @Author JinZhiyun
+ * @Description 教师业务控制器
+ * @Date 2019/4/16 13:07
+ * @Version 1.0
+ **/
 @Controller
 @RequestMapping("/teacher")
-public class TeacherController {
-
-    //注入业务对象
-    @Autowired
-    private ClazzService clazzService;
-    @Autowired
-    private TeacherService teacherService;
-
-    //存储预返回页面的数据对象
-    private Map<String, Object> result = new HashMap<>();
+public class TeacherController extends BaseController{
+    /**
+     * @author JinZhiyun
+     * @Description 定向到教师信息查询页面teaInfoQuery.jsp
+     * @Date 8:02 2019/6/30
+     * @Param []
+     * @return java.lang.String
+     **/
+    @RequestMapping("/query")
+    public String query(){
+        return "/app/query/teaInfoQuery";
+    }
 
     /**
-     * @description: 跳转到教师信息管理页面
-     * @param: modelAndView
-     * @date: 2019-06-18 9:52 AM
-     * @return: org.springframework.web.servlet.ModelAndView
-     */
-    @GetMapping("/goTeacherListView")
-    public ModelAndView goTeacherListView(ModelAndView modelAndView) {
-        //向页面发送一个存储着Clazz的List对象
-        modelAndView.addObject("clazzList", clazzService.selectAll());
-        modelAndView.setViewName("teacher/teacherList");
-        return modelAndView;
+     * @author JinZhiyun
+     * @Description 查询教师信息的ajax交互
+     * @Date 8:07 2019/6/30
+     * @Param [myPage, teacherSearch]
+     * @return com.uestc.dto.other.ResultMap<java.util.List<com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto>>
+     **/
+    @RequestMapping("/showAllTeaInfo")
+    @ResponseBody
+    public ResultMap<List<TeacherWithTitleMajorCollegeDto>> showAllTeaInfo(MyPage myPage, TeacherSearchDto teacherSearch) {
+        PageInfo<TeacherWithTitleMajorCollegeDto> pageInfo = teacherService.selectAllTeacherInfo(myPage, teacherSearch);//从数据库中获取查询所需的数据，在此之前，你不需要在sql语句中编写分页语句，该插件会在查询时直接将分页语句添加到数据库后
+        return new ResultMap<>(0, "", (int) pageInfo.getTotal(), pageInfo.getList());
     }
 
 
     /**
-     * @description: 分页查询学生信息列表:根据教师与班级名查询指定/全部教师信息列表
-     * @param: page 当前页码
-     * @param: rows 列表行数
-     * @param: teachername
-     * @param: clazzname
-     * @date: 2019-06-18 10:17 AM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/getTeacherList")
+     * @author JinZhiyun
+     * @Description 查询教师个人信息的ajax交互
+     * @Date 16:53 2019/7/25
+     * @Param [myPage]
+     * @return com.uestc.dto.other.ResultMap<java.util.List<com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto>>
+     **/
+    @RequestMapping("/myOwnInfo")
     @ResponseBody
-    public Map<String, Object> getTeacherList(Integer page, Integer rows, String teachername, String clazzname) {
-
-        //存储查询的teachername,clazzname信息
-        Teacher teacher = new Teacher(teachername, clazzname);
-        //设置每页的记录数
-        PageHelper.startPage(page, rows);
-        //根据班级与教师名获取指定或全部教师信息列表
-        List<Teacher> list = teacherService.selectList(teacher);
-        //封装列表信息
-        PageInfo<Teacher> pageInfo = new PageInfo<>(list);
-        //获取总记录数
-        long total = pageInfo.getTotal();
-        //获取当前页数据列表
-        List<Teacher> teacherList = pageInfo.getList();
-        //存储数据对象
-        result.put("total", total);
-        result.put("rows", teacherList);
-
-        return result;
+    public ResultMap<List<TeacherWithTitleMajorCollegeDto>> myOwnInfo(MyPage myPage) {
+        User user = (User) session.getAttribute(Constants.USERINFO_SESSION);
+        PageInfo<TeacherWithTitleMajorCollegeDto> pageInfo = teacherService.selectTeacherOwnInfoByNum(myPage, user.getUserName());//从数据库中获取查询所需的数据，在此之前，你不需要在sql语句中编写分页语句，该插件会在查询时直接将分页语句添加到数据库后
+        return new ResultMap<>(0, "", (int) pageInfo.getTotal(), pageInfo.getList());
     }
 
     /**
-     * @description: 添加教师信息
-     * @param: teacher
-     * @date: 2019-06-18 10:23 AM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/addTeacher")
+     * @return java.lang.String
+     * @Author JinZhiyun
+     * @Description 定向到教师信息修改页面teaInfoModify.jsp
+     * @Date 12:35 2019/4/27
+     * @Param []
+     **/
+    @RequestMapping("/modify")
+    public String modify() {
+        //是否权限判断直接交给springmvc拦截器
+        return "app/modify/teaInfoModify";
+    }
+    /**
+     * @author JinZhiyun
+     * @Description 重定向到编辑教师iframe子页面并返回相应model
+     * @Date 16:53 2019/7/25
+     * @Param [model, teaWTMC]
+     * @return java.lang.String
+     **/
+    @RequestMapping("/edit")
+    public String teaEdit(Model model, TeacherWithTitleMajorCollegeDto teaWTMC) {
+        model.addAttribute(Constants.TEACHER_ALL_INFO_MODEL, teaWTMC);
+        return "app/modify/teaForm";
+    }
+
+    /**
+     * @author JinZhiyun
+     * @Description 更新教师信息
+     * @Date 16:53 2019/7/25
+     * @Param [teaOriNum, teaWTMC]
+     * @return java.util.Map<java.lang.String,java.lang.Object>
+     **/
+    @RequestMapping("/updateInfo")
     @ResponseBody
-    public Map<String, Object> addStudent(Teacher teacher) {
-        //判断工号是否已存在
-        if (teacherService.findByTno(teacher) != null) {
-            result.put("success", false);
-            result.put("msg", "工号已存在! 请修改后重试!");
-            return result;
+    public Map<String, Object> updateInfo(@RequestParam("teaOriNum") String teaOriNum, TeacherWithTitleMajorCollegeDto teaWTMC) {
+        Map<String, Object> map = new HashMap();
+        if (!teaOriNum.equals(teaWTMC.getTeaNum())) { //如果工学号修改过了
+            if (teacherService.selectTeacherByNum(teaWTMC.getTeaNum()) != null) { //如果修改后的学生学号已存在
+                map.put("data", "teaNumExist");
+                return map;
+            }
         }
-        if (teacherService.insert(teacher) > 0) {
-            result.put("success", true);
+        teacherService.updateTeacherInfo(teaOriNum, teaWTMC);
+        map.put("data", "updateSuccess");
+        return map;
+    }
+
+    /**
+     * @author JinZhiyun
+     * @Description 添加教师ajax交互
+     * @Date 16:12 2019/6/30
+     * @Param [teaWTMC]
+     * @return java.util.Map<java.lang.String,java.lang.Object>
+     **/
+    @RequestMapping("/insert")
+    @ResponseBody
+    public Map<String, Object> insertTeacher(TeacherWithTitleMajorCollegeDto teaWTMC) {
+        Map<String, Object> map = new HashMap();
+        if (teacherService.selectTeacherByNum(teaWTMC.getTeaNum()) != null) {
+            map.put("data", "teaNumExist");
         } else {
-            result.put("success", false);
-            result.put("msg", "添加失败! (ಥ_ಥ)服务器端发生异常!");
+            teacherService.insertTeacher(teaWTMC);
+            map.put("data", "insertSuccess");
         }
-        return result;
+        return map;
     }
-
 
     /**
-     * @description: 根据id修改指定的教师信息
-     * @param: teacher
-     * @date: 2019-06-18 10:29 AM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/editTeacher")
+     * @author JinZhiyun
+     * @Description 删除一个教师ajax交互
+     * @Date 16:42 2019/6/30
+     * @Param [teaNum]
+     * @return java.util.Map<java.lang.String,java.lang.Object>
+     **/
+    @RequestMapping("/deleteOne")
     @ResponseBody
-    public Map<String, Object> editTeacher(Teacher teacher) {
-        if (teacherService.update(teacher) > 0) {
-            result.put("success", true);
-        } else {
-            result.put("success", false);
-            result.put("msg", "修改失败! (ಥ_ಥ)服务器端发生异常!");
-        }
-        return result;
+    public Map<String, Object> deleteOneTeacher(@RequestParam("teaNum") String teaNum) {
+        Map<String, Object> map = new HashMap();
+        teacherService.deleteOneTeacher(teaNum);
+        map.put("data", "deleteSuccess");
+        return map;
     }
-
 
     /**
-     * @description: 根据id删除指定的教师信息
-     * @param: ids
-     * @date: 2019-06-18 10:34 AM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/deleteTeacher")
+     * @return java.util.Map<java.lang.String   ,   java.lang.Object>
+     * @Author JinZhiyun
+     * @Description 删除多个教师ajax交互
+     * @Date 9:32 2019/5/2
+     * @Param [teachers]
+     **/
+    @RequestMapping("/deleteMany")
     @ResponseBody
-    public Map<String, Object> deleteTeacher(@RequestParam(value = "ids[]", required = true) Integer[] ids) {
-
-        if (teacherService.deleteById(ids) > 0) {
-            result.put("success", true);
-        } else {
-            result.put("success", false);
-            result.put("msg", "删除失败! (ಥ_ಥ)服务器端发生异常!");
+    public Map<String, Object> deleteManyTeachers(@RequestParam("teachers") String teachers) {
+        Map<String, Object> map = new HashMap();
+        List<TeacherWithTitleMajorCollegeDto> teaWMCDs = JSON.parseArray(teachers, TeacherWithTitleMajorCollegeDto.class);
+        List<String> teaNums=new ArrayList<>();
+        for (TeacherWithTitleMajorCollegeDto teaWMCD:teaWMCDs) {
+            teaNums.add(teaWMCD.getTeaNum());
         }
-        return result;
+        teacherService.deleteManyTeachers(teaNums);
+        map.put("data", "deleteSuccess");
+        return map;
     }
-
 
     /**
-     * @description: 上传头像-原理:将头像上传到项目发布目录中,通过读取数据库中的头像路径来获取头像
-     * @param: photo
-     * @param: request
-     * @date: 2019-06-18 10:38 AM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/uploadPhoto")
-    @ResponseBody
-    public Map<String, Object> uploadPhoto(MultipartFile photo, HttpServletRequest request) {
-        //存储头像的本地目录
-        final String dirPath = request.getServletContext().getRealPath("/upload/teacher_portrait/");
-        //存储头像的项目发布目录
-        final String portraitPath = request.getServletContext().getContextPath() + "/upload/teacher_portrait/";
-        //返回头像的上传结果
-        return UploadFile.getUploadResult(photo, dirPath, portraitPath);
+     * @return java.lang.String
+     * @Author JinZhiyun
+     * @Description 定向到班主任信息iframe子页面classStuInfo.jsp
+     * @Date 9:20 2019/4/19
+     * @Param [model, teaNum]
+     **/
+    @RequestMapping("/teaInfo")
+    public String teaInfo(Model model, @RequestParam(value = "teaNum", required = false) String teaNum) {
+        TeacherWithTitleMajorCollegeDto teaWTMC = teacherService.selectTeacherInfoByNum(teaNum);
+        model.addAttribute(Constants.TEACHER_MODEL, teaWTMC);
+        return "app/query/classTeaInfo";
     }
-
 }

@@ -1,169 +1,192 @@
 package com.uestc.controller;
 
-import com.github.pagehelper.PageHelper;
+import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageInfo;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.uestc.dto.other.MyPage;
+import com.uestc.dto.other.ResultMap;
+import com.uestc.dto.student.StudentSearchDto;
+import com.uestc.dto.student.StudentWithGradeClassMajorCollegeDto;
+import com.uestc.entity.User;
+import com.uestc.util.Constants;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
-import com.uestc.bean.Student;
-import com.uestc.service.ClazzService;
-import com.uestc.service.StudentService;
-import com.uestc.util.UploadFile;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * @project: sms
- * @description: 控制器-管理学生信息页面
- * @author: 黄宇辉
- * @date: 6/16/2019-10:50 AM
- * @version: 1.0
- * @website: https://yubuntu0109.github.io/
- */
+ * @ClassName StudentController
+ * @Author JinZhiyun
+ * @Description 学生业务控制器
+ * @Date 2019/4/13 20:58
+ * @Version 1.0
+ **/
 @Controller
 @RequestMapping("/student")
-public class StudentController {
-
-    // 注入业务对象
-    @Autowired
-    private ClazzService clazzService;
-    @Autowired
-    private StudentService studentService;
-
-    //存储预返回页面的数据对象
-    private Map<String, Object> result = new HashMap<>();
-
+public class StudentController extends BaseController{
     /**
-     * @description: 跳转到学生信息管理页面
-     * @param: modelAndView
-     * @date: 2019-06-16 10:59 AM
-     * @return: org.springframework.web.servlet.ModelAndView
-     */
-    @GetMapping("/goStudentListView")
-    public ModelAndView goStudentListView(ModelAndView modelAndView) {
-        //向页面发送一个存储着Clazz的List对象
-        modelAndView.addObject("clazzList", clazzService.selectAll());
-        modelAndView.setViewName("student/studentList");
-        return modelAndView;
-    }
-
-
-    /**
-     * @description: 分页查询学生信息列表:根据学生与班级名查询指定/全部学生信息列表
-     * @param: page
-     * @param: rows
-     * @param: studentname
-     * @param: clazzname
-     * @date: 2019-06-17 5:15 PM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/getStudentList")
-    @ResponseBody
-    public Map<String, Object> getStudentList(Integer page, Integer rows, String studentname, String clazzname) {
-
-        //存储查询的studentname,clazzname信息
-        Student student = new Student(studentname, clazzname);
-        //设置每页的记录数
-        PageHelper.startPage(page, rows);
-        //根据班级与学生名获取指定或全部学生信息列表
-        List<Student> list = studentService.selectList(student);
-        //封装信息列表
-        PageInfo<Student> pageInfo = new PageInfo<>(list);
-        //获取总记录数
-        long total = pageInfo.getTotal();
-        //获取当前页数据列表
-        List<Student> studentList = pageInfo.getList();
-        //存储数据对象
-        result.put("total", total);
-        result.put("rows", studentList);
-
-        return result;
+     * @return java.lang.String
+     * @Author JinZhiyun
+     * @Description 定向到学生信息查询页面stuInfoQuery.jsp
+     * @Date 23:01 2019/4/18
+     * @Param []
+     **/
+    @RequestMapping("/query")
+    public String query() {
+        return "/app/query/stuInfoQuery";
     }
 
     /**
-     * @description: 添加学生信息
-     * @param: student
-     * @date: 2019-06-17 5:18 PM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/addStudent")
+     * @author JinZhiyun
+     * @Description 查询学生信息的ajax交互
+     * @Date 14:48 2019/6/19
+     * @Param [myPage, studentSearch]
+     * @return com.uestc.dto.other.ResultMap<java.util.List<com.uestc.dto.student.StudentSearchDto>>
+     **/
+    @RequestMapping("/showAllStuInfo")
     @ResponseBody
-    public Map<String, Object> addStudent(Student student) {
-        //判断学号是否已存在
-        if (studentService.fingBySno(student) != null) {
-            result.put("success", false);
-            result.put("msg", "该学号已经存在! 请修改后重试!");
-            return result;
+    public ResultMap<List<StudentWithGradeClassMajorCollegeDto>> showAllStuInfo(MyPage myPage, StudentSearchDto studentSearch) {
+        PageInfo<StudentWithGradeClassMajorCollegeDto> pageInfo = studentService.selectAllStudentInfo(myPage, studentSearch);//从数据库中获取查询所需的数据，在此之前，你不需要在sql语句中编写分页语句，该插件会在查询时直接将分页语句添加到数据库后
+        return new ResultMap<>(0, "", (int) pageInfo.getTotal(), pageInfo.getList());
+    }
+
+    /**
+     * @author JinZhiyun
+     * @Description 查询学生个人信息的ajax交互
+     * @Date 16:51 2019/7/25
+     * @Param [myPage]
+     * @return com.uestc.dto.other.ResultMap<java.util.List<com.uestc.dto.student.StudentWithGradeClassMajorCollegeDto>>
+     **/
+    @RequestMapping("/myOwnInfo")
+    @ResponseBody
+    public ResultMap<List<StudentWithGradeClassMajorCollegeDto>> myOwnInfo(MyPage myPage) {
+        User user = (User) session.getAttribute(Constants.USERINFO_SESSION);
+        PageInfo<StudentWithGradeClassMajorCollegeDto> pageInfo = studentService.selectStudentOwnInfoByNum(myPage, user.getUserName());
+        return new ResultMap<>(0, "", (int) pageInfo.getTotal(), pageInfo.getList());
+    }
+
+    /**
+     * @return java.lang.String
+     * @Author JinZhiyun
+     * @Description 定向到学生信息修改页面stuInfoModify.jsp
+     * @Date 10:14 2019/4/20
+     * @Param []
+     **/
+    @RequestMapping("/modify")
+    public String modify() {
+        //是否权限判断直接交给springmvc拦截器
+        return "app/modify/stuInfoModify";
+    }
+
+    /**
+     * @author JinZhiyun
+     * @Description 重定向到编辑学生iframe子页面并返回相应model
+     * @Date 16:11 2019/7/7
+     * @Param [model, stuWGCMC]
+     * @return java.lang.String
+     **/
+    @RequestMapping("/edit")
+    public String stuEdit(Model model, StudentWithGradeClassMajorCollegeDto stuWGCMC) {
+        model.addAttribute(Constants.STUDENT_ALL_INFO_MODEL, stuWGCMC);
+        return "app/modify/stuForm";
+    }
+
+    /**
+     * @author JinZhiyun
+     * @Description 更新学生信息
+     * @Date 16:52 2019/7/25
+     * @Param [stuOriNum, stuWGCMC]
+     * @return java.util.Map<java.lang.String,java.lang.Object>
+     **/
+    @RequestMapping("/updateInfo")
+    @ResponseBody
+    public Map<String, Object> updateInfo(@RequestParam("stuOriNum") String stuOriNum, StudentWithGradeClassMajorCollegeDto stuWGCMC) {
+        Map<String, Object> map = new HashMap();
+        if (!stuOriNum.equals(stuWGCMC.getStuNum())) { //如果学号修改过了
+            if (studentService.selectStudentByNum(stuWGCMC.getStuNum()) != null) { //如果修改后的学生学号已存在
+                map.put("data", "stuNumExist");
+                return map;
+            }
         }
-        //添加学生信息
-        if (studentService.insert(student) > 0) {
-            result.put("success", true);
+        studentService.updateStudentInfo(stuOriNum, stuWGCMC);
+        map.put("data", "updateSuccess");
+        return map;
+    }
+
+    /**
+     * @author JinZhiyun
+     * @Description 添加学生ajax交互
+     * @Date 21:18 2019/6/23
+     * @Param [stuWGCMC]
+     * @return java.util.Map<java.lang.String,java.lang.Object>
+     **/
+    @RequestMapping("/insert")
+    @ResponseBody
+    public Map<String, Object> insertStudent(StudentWithGradeClassMajorCollegeDto stuWGCMC) {
+        Map<String, Object> map = new HashMap();
+        if (studentService.selectStudentByNum(stuWGCMC.getStuNum()) != null) { //如果修改后的学生学号已存在
+            map.put("data", "stuNumExist");
         } else {
-            result.put("success", false);
-            result.put("msg", "添加失败! (ಥ_ಥ)服务器端发生异常!");
+            studentService.insertStudent(stuWGCMC);
+            map.put("data", "insertSuccess");
         }
-
-        return result;
+        return map;
     }
 
     /**
-     * @description: 根据id修改指定的学生信息
-     * @param: student
-     * @date: 2019-06-17 5:29 PM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/editStudent")
+     * @author JinZhiyun
+     * @Description 删除一个学生ajax交互
+     * @Date 18:47 2019/6/24
+     * @Param [stuNum]
+     * @return java.util.Map<java.lang.String,java.lang.Object>
+     **/
+    @RequestMapping("/deleteOne")
     @ResponseBody
-    public Map<String, Object> editStudent(Student student) {
-        if (studentService.update(student) > 0) {
-            result.put("success", true);
-        } else {
-            result.put("success", false);
-            result.put("msg", "添加失败! (ಥ_ಥ)服务器端发生异常!");
-        }
-        return result;
+    public Map<String, Object> deleteOneStudent(@RequestParam("stuNum") String stuNum) {
+        Map<String, Object> map = new HashMap();
+
+        studentService.deleteOneStudent(stuNum);
+        map.put("data", "deleteSuccess");
+        return map;
     }
 
-
     /**
-     * @description: 根据id删除指定的学生信息
-     * @param: ids
-     * @date: 2019-06-17 5:30 PM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/deleteStudent")
+     * @return java.util.Map<java.lang.String   ,   java.lang.Object>
+     * @Author JinZhiyun
+     * @Description 删除多个学生ajax交互
+     * @Date 22:02 2019/4/27
+     * @Param [students]
+     **/
+    @RequestMapping("/deleteMany")
     @ResponseBody
-    public Map<String, Object> deleteStudent(@RequestParam(value = "ids[]", required = true) Integer[] ids) {
-
-        if (studentService.deleteById(ids) > 0) {
-            result.put("success", true);
-        } else {
-            result.put("success", false);
+    public Map<String, Object> deleteManyStudents(@RequestParam("students") String students) {
+        Map<String, Object> map = new HashMap();
+        List<StudentWithGradeClassMajorCollegeDto> stuWGCMCs = JSON.parseArray(students, StudentWithGradeClassMajorCollegeDto.class);
+        List<String> stuNums=new ArrayList<>();
+        for (StudentWithGradeClassMajorCollegeDto stuWGCMC:stuWGCMCs) {
+            stuNums.add(stuWGCMC.getStuNum());
         }
-        return result;
+        studentService.deleteManyStudents(stuNums);
+        map.put("data", "deleteSuccess");
+        return map;
     }
 
-
     /**
-     * @description: 上传头像-原理:将头像上传到项目发布目录中,通过读取数据库中的头像路径来获取头像
-     * @param: photo
-     * @param: request
-     * @date: 2019-06-17 1:02 PM
-     * @return: java.util.Map<java.lang.String, java.lang.Object>
-     */
-    @PostMapping("/uploadPhoto")
-    @ResponseBody
-    public Map<String, Object> uploadPhoto(MultipartFile photo, HttpServletRequest request) {
-        //存储头像的本地目录
-        final String dirPath = request.getServletContext().getRealPath("/upload/student_portrait/");
-        //存储头像的项目发布目录
-        final String portraitPath = request.getServletContext().getContextPath() + "/upload/student_portrait/";
-        //返回头像的上传结果
-        return UploadFile.getUploadResult(photo, dirPath, portraitPath);
+     * @author JinZhiyun
+     * @Description 定向到班长信息iframe子页面classStuInfo.jsp
+     * @Date 12:51 2019/7/7
+     * @Param [model, stuNum]
+     * @return java.lang.String
+     **/
+    @RequestMapping("/stuInfo")
+    public String stuInfo(Model model, @RequestParam(value = "stuNum", required = false) String stuNum) {
+        StudentWithGradeClassMajorCollegeDto stuWGCMC= studentService.selectStudentInfoByNum(stuNum);
+        model.addAttribute(Constants.STUDENT_MODEL, stuWGCMC);
+        return "app/query/classStuInfo";
     }
 }

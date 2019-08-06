@@ -1,40 +1,92 @@
 package com.uestc.service;
 
-import com.uestc.bean.LoginForm;
-import com.uestc.bean.Student;
+import com.github.pagehelper.PageInfo;
+import com.uestc.dto.other.MyPage;
+import com.uestc.dto.other.senior.StudentPercentBySex;
+import com.uestc.dto.student.StudentSearchDto;
+import com.uestc.dto.student.StudentWithGradeClassMajorCollegeDto;
+import com.uestc.entity.Student;
 
 import java.util.List;
 
 /**
- * @project: sms
- * @description: 业务层-操控学生信息
- * @author: 黄宇辉
- * @date: 6/16/2019-10:50 AM
- * @version: 1.0
- * @website: https://yubuntu0109.github.io/
- */
+ * @author JinZhiyun
+ * @IntefaceName StudentService
+ * @Description 学生业务接口
+ * @Date 2019/6/14 12:52
+ * @Version 1.0
+ **/
 public interface StudentService {
+    /**
+     * @author JinZhiyun
+     * @Description 返回学号对应的学生
+     * @Date 10:06 2019/6/23
+     * @Param [stuNum]
+     * @return com.uestc.entity.Student
+     **/
+    Student selectStudentByNum(String stuNum);
 
-    // TODO: 6/18/2019 验证登录信息是否正确
-    Student login(LoginForm loginForm);
+    /**
+     * @author JinZhiyun
+     * @Description 返回符合条件的学生信息分页结果
+     * @Date 15:14 2019/6/19
+     * @Param [myPage, studentSearch]
+     * @return com.github.pagehelper.PageInfo<com.uestc.dto.student.StudentWithGradeClassMajorCollegeDto>
+     **/
+    PageInfo<StudentWithGradeClassMajorCollegeDto> selectAllStudentInfo(MyPage myPage, StudentSearchDto studentSearch);
 
-    // TODO: 6/17/2019 根据班级与学生名获取指定或全部学生信息列表
-    List<Student> selectList(Student student);
+    /**
+     * @author JinZhiyun
+     * @Description 返回用户名对应的学生及其附带信息分页结果
+     * @Date 23:19 2019/6/19
+     * @Param [myPage, stuNum]
+     * @return com.github.pagehelper.PageInfo<com.uestc.dto.student.StudentWithGradeClassMajorCollegeDto>
+     **/
+    PageInfo<StudentWithGradeClassMajorCollegeDto> selectStudentOwnInfoByNum(MyPage myPage, String stuNum);
 
-    // TODO: 6/19/2019 根据学号获取指定学生信息
-    Student fingBySno(Student student);
+    /**
+     * @author JinZhiyun
+     * @Description 修改学生信息
+     * @Date 16:49 2019/6/23
+     * @Param [stuOriNum, stuWGCMC]
+     * @return void
+     **/
+    void updateStudentInfo(String stuOriNum, StudentWithGradeClassMajorCollegeDto stuWGCMC);
 
-    // TODO: 6/17/2019 添加班级信息
-    int insert(Student student);
+    /**
+     * @author JinZhiyun
+     * @Description 添加学生业务
+     * @Date 21:19 2019/6/23
+     * @Param [stuWGCMC]
+     * @return void
+     **/
+    void insertStudent(StudentWithGradeClassMajorCollegeDto stuWGCMC);
 
-    // TODO: 6/17/2019 根据id修改指定学生信息
-    int update(Student student);
+    /**
+     * @author JinZhiyun
+     * @Description 删除一个学生业务
+     * @Date 18:43 2019/6/24
+     * @Param [stuNum]
+     * @return void
+     **/
+    void deleteOneStudent(String stuNum);
 
-    // TODO: 6/18/2019 根据id修改指定学生密码
-    int updatePassowrd(Student student);
+    /**
+     * @author JinZhiyun
+     * @Description 批量删除学生业务
+     * @Date 19:11 2019/6/24
+     * @Param [stuNums]
+     * @return void
+     **/
+    void deleteManyStudents(List<String> stuNums);
 
-    // TODO: 6/17/2019 根据id删除指定学生信息
-    int deleteById(Integer[] ids);
+    /**
+     * @author JinZhiyun
+     * @Description 由学号返回相应学生信息
+     * @Date 12:45 2019/7/7
+     * @Param [stuNum]
+     * @return com.uestc.dto.student.StudentWithGradeClassMajorCollegeDto
+     **/
+    StudentWithGradeClassMajorCollegeDto selectStudentInfoByNum(String stuNum);
 
 }
-

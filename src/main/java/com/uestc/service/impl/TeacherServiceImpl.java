@@ -1,63 +1,122 @@
 package com.uestc.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.uestc.dto.other.MyPage;
+import com.uestc.dto.teacher.TeacherSearchDto;
+import com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto;
+import com.uestc.entity.Teacher;
+import com.uestc.service.TeacherService;
+import com.uestc.util.MyTimeUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.uestc.bean.LoginForm;
-import com.uestc.bean.Teacher;
-import com.uestc.dao.TeacherMapper;
-import com.uestc.service.TeacherService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @project: sms
- * @description: 业务层实现类-操控教师信息
- * @author: 黄宇辉
- * @date: 6/18/2019-9:48 AM
- * @version: 1.0
- * @website: https://yubuntu0109.github.io/
- */
+ * @ClassName TeacherServiceImpl
+ * @Author JinZhiyun
+ * @Description 教师业务实现
+ * @Date 2019/4/16 13:08
+ * @Version 1.0
+ **/
 @Service
 @Transactional
-public class TeacherServiceImpl implements TeacherService {
-
-    //注入Mapper接口对象
-    @Autowired
-    private TeacherMapper teacherMapper;
+public class TeacherServiceImpl extends BaseServiceImpl implements TeacherService {
 
     @Override
-    public Teacher login(LoginForm loginForm) {
-        return teacherMapper.login(loginForm);
+    public PageInfo<TeacherWithTitleMajorCollegeDto> selectAllTeacherInfo(MyPage myPage, TeacherSearchDto teacherSearch) {
+        PageHelper.startPage(myPage.getPageNum(), myPage.getPageSize());//第一个参数的意思为：当前页数，第二个参数的意思为：每页显示多少条记录
+        List<TeacherWithTitleMajorCollegeDto> teaWTMCs = teacherMapper.selectAllTeacherInfo(teacherSearch);
+        for (TeacherWithTitleMajorCollegeDto teaWTMC : teaWTMCs) {
+            if (teaWTMC.getTeaBirthday() != null) {
+                //date字符串
+                teaWTMC.setTeaBirthdayToString(MyTimeUtil.dateToStr(teaWTMC.getTeaBirthday()));
+                //由生日计算年龄
+                teaWTMC.setTeaAge(MyTimeUtil.getAgeByBirth(teaWTMC.getTeaBirthday()));
+            }
+        }
+        return new PageInfo<>(teaWTMCs);
     }
 
     @Override
-    public List<Teacher> selectList(Teacher teacher) {
-        return teacherMapper.selectList(teacher);
+    public PageInfo<TeacherWithTitleMajorCollegeDto> selectTeacherOwnInfoByNum(MyPage myPage, String teaNum) {
+        PageHelper.startPage(myPage.getPageNum(), myPage.getPageSize());//第一个参数的意思为：当前页数，第二个参数的意思为：每页显示多少条记录
+        List<TeacherWithTitleMajorCollegeDto> teaWTMCs = new ArrayList<>();
+        TeacherWithTitleMajorCollegeDto teaWTMC0 = teacherMapper.selectTeacherOwnInfoByNum(teaNum);
+        if (teaWTMC0 != null) {
+            teaWTMCs.add(teaWTMC0);
+            for (TeacherWithTitleMajorCollegeDto teaWTMC : teaWTMCs) {
+                if (teaWTMC.getTeaBirthday() != null) {
+                    //date字符串
+                    teaWTMC.setTeaBirthdayToString(MyTimeUtil.dateToStr(teaWTMC.getTeaBirthday()));
+                    //由生日计算年龄
+                    teaWTMC.setTeaAge(MyTimeUtil.getAgeByBirth(teaWTMC.getTeaBirthday()));
+                }
+            }
+        }
+        return new PageInfo<>(teaWTMCs);
     }
 
     @Override
-    public Teacher findByTno(Teacher teacher) {
-        return teacherMapper.findByTno(teacher);
+    public Teacher selectTeacherByNum(String teaNum) {
+        return teacherMapper.selectTeacherByNum(teaNum);
     }
 
     @Override
-    public int insert(Teacher teacher) {
-        return teacherMapper.insert(teacher);
+    public void updateTeacherInfo(String teaOriNum, TeacherWithTitleMajorCollegeDto teaWTMC) {
+        if (!teaOriNum.equals(teaWTMC.getTeaNum())) {
+            classMapper.updateClassTeaNum(teaOriNum, teaWTMC.getTeaNum());
+            gradeMapper.updateGradeTeaNum(teaOriNum, teaWTMC.getTeaNum());
+            majorMapper.updateMajorTeaNum(teaOriNum, teaWTMC.getTeaNum());
+            collegeMapper.updateCollegeTeaNum(teaOriNum, teaWTMC.getTeaNum());
+        }
+        if (teaWTMC.getTeaBirthdayToString() != null) {
+            teaWTMC.setTeaBirthday(MyTimeUtil.strToDate(teaWTMC.getTeaBirthdayToString()));
+        } else {
+            teaWTMC.setTeaBirthday(null);
+        }
+        teacherMapper.updateTeacherInfo(teaOriNum, teaWTMC);
     }
 
     @Override
-    public int update(Teacher teacher) {
-        return teacherMapper.update(teacher);
+    public void insertTeacher(TeacherWithTitleMajorCollegeDto teaWTMC) {
+        if (teaWTMC.getTeaBirthdayToString() != null) {
+            teaWTMC.setTeaBirthday(MyTimeUtil.strToDate(teaWTMC.getTeaBirthdayToString()));
+        } else {
+            teaWTMC.setTeaBirthday(null);
+        }
+        teacherMapper.insertTeacher(teaWTMC);
     }
 
     @Override
-    public int updatePassowrd(Teacher teacher) {
-        return teacherMapper.updatePassword(teacher);
+    public void deleteOneTeacher(String teaNum) {
+        gradeMapper.updateGradeTeaNum(teaNum, null); //若是年级教师负责人，该班年级教师负责人工号置null
+        classMapper.updateClassTeaNum(teaNum, null); //若是年级学生负责人，该年级学生负责人学号置null
+        majorMapper.updateMajorTeaNum(teaNum, null);
+        collegeMapper.updateCollegeTeaNum(teaNum, null);
+        teacherMapper.deleteOneTeacher(teaNum);
     }
 
     @Override
-    public int deleteById(Integer[] ids) {
-        return teacherMapper.deleteById(ids);
+    public void deleteManyTeachers(List<String> teaNums) {
+        for (String teaNum : teaNums) {
+            deleteOneTeacher(teaNum);
+        }
+    }
+
+    @Override
+    public TeacherWithTitleMajorCollegeDto selectTeacherInfoByNum(String teaNum) {
+        TeacherWithTitleMajorCollegeDto teaWTMC = teacherMapper.selectTeacherOwnInfoByNum(teaNum);
+        if (teaWTMC != null) {
+            if (teaWTMC.getTeaBirthday() != null) {
+                //date字符串
+                teaWTMC.setTeaBirthdayToString(MyTimeUtil.dateToStr(teaWTMC.getTeaBirthday()));
+                //由生日计算年龄
+                teaWTMC.setTeaAge(MyTimeUtil.getAgeByBirth(teaWTMC.getTeaBirthday()));
+            }
+        }
+        return teaWTMC;
     }
 }

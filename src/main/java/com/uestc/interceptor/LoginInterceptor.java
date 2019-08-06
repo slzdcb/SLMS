@@ -1,44 +1,50 @@
 package com.uestc.interceptor;
 
+import com.uestc.entity.User;
+import com.uestc.util.Constants;
+import com.uestc.util.MySimpleUtil;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-
+import org.apache.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @project: sms
- * @description: 用户登录拦截器
- * @author: 黄宇辉
- * @date: 6/11/2019-5:15 PM
- * @version: 1.0
- * @website: https://yubuntu0109.github.io/
- */
+ * @ClassName LoginInterceptor
+ * @Author JinZhiyun
+ * @Description 登录Session拦截器
+ * @Date 2019/4/14 12:32
+ * @Version 1.0
+ **/
 public class LoginInterceptor implements HandlerInterceptor {
+    private final static Logger logger = Logger.getLogger(LoginInterceptor.class);
 
-    //该方法会在控制器方法前执行,其返回值表示是否中断后续操作
+    /**
+     * @return boolean
+     * @Author JinZhiyun
+     * @Description 判断是否登录，即session是否建立，否则重定向至登录界面
+     * @Date 22:47 2019/4/18
+     * @Param [httpServletRequest, httpServletResponse, o]
+     **/
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        //获取请求的url
-        String url = request.getRequestURI();
-        //判断用户是否已登录
-        if (request.getSession().getAttribute("userInfo") != null) {
+    public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
+        User user = (User) httpServletRequest.getSession().getAttribute(Constants.USERINFO_SESSION);
+        if (user != null ) {
+            logger.info(user.getUserName() + "访问系统！");
             return true;
         }
-        //用户未登录,拦击其请求并将其转发到用户登录页面
-        request.getRequestDispatcher("/WEB-INF/view/system/login.jsp").forward(request, response);
+        logger.info("ip:"+MySimpleUtil.getIpAddress(httpServletRequest) + " 未登录下企图进入系统！");
+        httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/login");
         return false;
     }
 
-    //该方法会在控制器方法调用之后,且解析视图之前调用
     @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+    public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
 
     }
 
-    //该方法会在整个请求完成,既视图渲染结束之后执行
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
 
     }
 }
