@@ -1,39 +1,109 @@
 package com.uestc.dao;
 
-import com.uestc.bean.LoginForm;
-import com.uestc.bean.Teacher;
+import com.uestc.dto.other.senior.ObjectTotalGroupByCommonName;
+import com.uestc.dto.teacher.TeacherSearchDto;
+import com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto;
+import com.uestc.entity.Teacher;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
- * @project: sms
- * @description: 数据访问层-操控学生信息
- * @author: 黄宇辉
- * @date: 6/18/2019-9:47 AM
- * @version: 1.0
- * @website: https://yubuntu0109.github.io/
- */
+ * @Author Mardan
+ * @IntefaceName TeacherMapper
+ * @Description 教师业务持久层接口
+ * @Date 2019/6/14 13:00
+ * @Version 1.0
+ **/
+@Repository
 public interface TeacherMapper {
+    /**
+     * @return java.util.List<com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto>
+     * @Author Mardan
+     * @Description 查询所有符合条件的教师及其附带信息
+     * @Date 8:24 2019/6/30
+     * @Param [teacherSearch]
+     **/
+    List<TeacherWithTitleMajorCollegeDto> selectAllTeacherInfo(TeacherSearchDto teacherSearch);
 
-    // TODO: 6/18/2019 验证登录信息是否正确
-    Teacher login(LoginForm loginForm);
+    /**
+     * @Author Mardan
+     * @Description 查询用户名对应的教师及其附带信息
+     * @Date 12:39 2019/7/7
+     * @Param [teaNum]
+     * @return com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto
+     **/
+    TeacherWithTitleMajorCollegeDto selectTeacherOwnInfoByNum(@Param("teaNum") String teaNum);
 
-    // TODO: 6/18/2019 根据教师与班级名查询指定/全部教师信息列表
-    List<Teacher> selectList(Teacher teacher);
+    /**
+     * @return com.uestc.entity.Teacher
+     * @Author Mardan
+     * @Description 查询工号对应的教师
+     * @Date 12:32 2019/6/30
+     * @Param [teaNum]
+     **/
+    Teacher selectTeacherByNum(@Param("teaNum") String teaNum);
 
-    // TODO: 6/19/2019 根据工号查询指定教师信息
-    Teacher findByTno(Teacher teacher);
+    /**
+     * @return void
+     * @Author Mardan
+     * @Description 修改教师信息
+     * @Date 12:57 2019/6/30
+     * @Param [teaOriNum, teaWTMC]
+     **/
+    void updateTeacherInfo(@Param("teaOriNum") String teaOriNum, @Param("teaWTMC") TeacherWithTitleMajorCollegeDto teaWTMC);
 
-    // TODO: 6/18/2019 添加教师信息
-    int insert(Teacher teacher);
+    /**
+     * @return void
+     * @Author Mardan
+     * @Description 向教师表插入一个教师
+     * @Date 16:20 2019/6/30
+     * @Param [teaWTMC]
+     **/
+    void insertTeacher(TeacherWithTitleMajorCollegeDto teaWTMC);
 
-    // TODO: 6/18/2019 根据id修改指定教师信息 
-    int update(Teacher teacher);
+    /**
+     * @return void
+     * @Author Mardan
+     * @Description 删除一个学生
+     * @Date 16:48 2019/6/30
+     * @Param [teaNum]
+     **/
+    void deleteOneTeacher(@Param("teaNum") String teaNum);
 
-    // TODO: 6/18/2019 根据id修改指定教师密码
-    int updatePassword(Teacher teacher);
+    /**
+     * @Author Mardan
+     * @Description 删除多个教师
+     * @Date 18:28 2019/6/30
+     * @Param [teaNums]
+     * @return void
+     **/
+    void deleteManyTeachers(List<String> teaNums);
 
-    // TODO: 6/18/2019 根据id删除指定教师信息  
-    int deleteById(Integer[] ids);
-
+    /**
+     * @Author Mardan
+     * @Description 查找符合条件的对应类别名称的教师数的封装对象，这里用mysql存储过程实现
+     * type为查询的类型：
+     *      allCollegeByTeaTitle：查询某学院下的不同职称教师人数
+     *      wholeSchoolByTeaTitle： 查询全校的不同职称教师人数
+     *      allMajorByTeaTitle： 查询某专业下的不同职称教师人数
+     * CREATE DEFINER=`root`@`localhost` PROCEDURE `count_tea_percent`(IN type_ varchar(50), IN college_name_ varchar(50), IN major_name_ varchar(50))
+     * begin
+     * 	case type_
+     * 		when 'allCollegeByTeaTitle' then
+     * 			select count(*) as total,t2.title_name as commonName from teacher t1 inner join title t2 on t1.tea_title=t2.title_id inner join major m1 on t1.tea_major=m1.major_id inner join college c1 on m1.major_college=c1.college_id and c1.college_name=college_name_ group by t1.tea_title;
+     * 		when 'wholeSchoolByTeaTitle' then
+     * 			select count(*) as total,t2.title_name as commonName from teacher t1 inner join title t2 on t1.tea_title=t2.title_id group by t1.tea_title;
+     * 		when 'allMajorByTeaTitle' then
+     * 			select count(*) as total,t2.title_name as commonName from teacher t1 inner join title t2 on t1.tea_title=t2.title_id inner join major m1 on t1.tea_major=m1.major_id and m1.major_name=major_name_ group by t1.tea_title;
+     *      else
+     * 			select 0 as total,'' as commonName;
+     *  end case;
+     * end
+     * @Date 17:06 2019/7/24
+     * @Param [type, collegeName, majorName]
+     * @return java.util.List<com.uestc.dto.other.senior.ObjectTotalGroupByCommonName>
+     **/
+    List<ObjectTotalGroupByCommonName> selectTeaTotalByCommonName(@Param("type") String type, @Param("collegeName") String collegeName, @Param("majorName") String majorName);
 }

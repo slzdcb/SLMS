@@ -1,34 +1,23 @@
 package com.uestc.service;
 
-import com.uestc.bean.Grade;
+import com.uestc.entity.Grade;
 
 import java.util.List;
 
 /**
- * @project: sms
- * @description: 业务层-操控年级信息
- * @author: 黄宇辉
- * @date: 6/14/2019-10:35 AM
- * @version: 1.0
- * @website: https://yubuntu0109.github.io/
- */
+ * @Author Mardan
+ * @IntefaceName GradeService
+ * @Description 年级业务接口
+ * @Date 2019/6/14 12:52
+ * @Version 1.0
+ **/
 public interface GradeService {
-
-    // TODO: 6/14/2019 根据年级名称查询指定/全部年级列表信息
-    List<Grade> selectList(Grade gradename);
-
-    // TODO: 6/15/2019 查询所有年级列表信息(用于在班级管理页面中获取年级信息)
-    List<Grade> selectAll();
-
-    // TODO: 6/14/2019 根据年级名称查询指定年级信息
-    Grade findByName(String gradename);
-
-    // TODO: 6/14/2019 添加年级信息
-    int insert(Grade grade);
-
-    // TODO: 6/14/2019 根据id修改指定年级信息
-    int update(Grade grade);
-
-    // TODO: 6/14/2019 根据id删除指定年级信息
-    int deleteById(Integer[] ids);
+    /**
+     * @Author Mardan
+     * @Description 查询所有的年级信息
+     * @Date 22:45 2019/6/18
+     * @Param []
+     * @return java.util.List<com.uestc.entity.Grade>
+     **/
+    List<Grade> selectAllGrade();
 }
