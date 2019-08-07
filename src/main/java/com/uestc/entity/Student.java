@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  * @ClassName Student
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 学生实体类
  * @Date 2019/4/15 16:28
  * @Version 1.0

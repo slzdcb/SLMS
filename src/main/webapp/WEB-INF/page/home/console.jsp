@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 13681864361
-  Date: 2019/5/3
-  Time: 9:56
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
@@ -35,13 +28,6 @@
                             <div class="layui-carousel layadmin-carousel layadmin-shortcut">
                                 <div carousel-item>
                                     <ul class="layui-row layui-col-space10">
-                                        <%--<li class="layui-col-xs3">--%>
-                                        <%--<a lay-href="${ctx}/static/plugins/myPersonalProject/index.html"--%>
-                                        <%--target="_blank">--%>
-                                        <%--<i class="layui-icon layui-icon-console"></i>--%>
-                                        <%--<cite>酷乐酱的个人主页</cite>--%>
-                                        <%--</a>--%>
-                                        <%--</li>--%>
                                         <li class="layui-col-xs3">
                                             <a lay-href="${ctx}/student/query">
                                                 <i class="layui-icon layui-icon-survey"></i>
@@ -164,7 +150,7 @@
                             <td>当前版本</td>
                             <td>
                                 <script type="text/html" template>
-                                    StuInfoAdmin-v1.1.0
+                                    SLMS-v1.1.0
                                 </script>
                             </td>
                         </tr>
@@ -180,7 +166,7 @@
                             <td>后端框架</td>
                             <td>
                                 <script type="text/html" template>
-                                    spring+springmvc+mybatis
+                                    (SSM) = spring+springmvc+mybatis
                                 </script>
                             </td>
                         </tr>
@@ -200,57 +186,31 @@
                                 </script>
                             </td>
                         </tr>
-                        <tr>
-                            <td>主要特色</td>
-                            <td>响应式 / 清爽 / 极简 / 沙雕</td>
-                        </tr>
-                        <tr>
-                            <td>源码获取</td>
-                            <td style="padding-bottom: 0;">
-                                <div class="layui-btn-container">
-                                    <a href="${ctx}/static/plugins/myPersonalProject/index.html" target="_blank"
-                                       class="layui-btn layui-btn-danger">获取授权</a>
-                                    <a href="https://github.com/jinzhiyun1998/Student-Information-Administration-System"
-                                       target="_blank" class="layui-btn">立即下载</a>
-                                </div>
-                            </td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="layui-card">
                 <div class="layui-card-header">
-                    更新公告
+                    第三组
                     <i class="layui-icon layui-icon-tips" lay-tips="注意查看哦" lay-offset="5"></i>
                 </div>
                 <div class="layui-card-body layui-text layadmin-text">
-                    <p>大学生信息管理系统1.1.0版本上线啦！</p>
-                    <p>更新如下内容：</p>
-                    <p> 优化了数据表结构，对原有的表的部分字段进行了修改，并增加了title和grade两个表</p>
-                    <p>优化了sql语句效率</p>
-                    <p> 优化了前端查询界面及查询方式，使其更加全面，对用户友好</p>
-                    <p> 更新了登录界面记住密码的cookie设置</p>
-                    <p> 更新了邮箱验证码服务，增加了验证码有效时间</p>
-                    <p> 优化了源代码结构，增强了规范性和可拓展性</p>
+                    <p>学生生活管理系统1.1.0版本上线啦！</p>
+                    <p>项目成员：</p>
+                    <p> 范家荣 麦尔旦 倪星宇 陶懋翔 汪弘睿 张曜轩</p>
                 </div>
             </div>
             <div class="layui-card">
                 <div class="layui-card-header">
-                    作者心语
-                    <i class="layui-icon layui-icon-tips" lay-tips="要支持的噢" lay-offset="5"></i>
+                    项目寄语
+                    <i class="layui-icon layui-icon-tips" lay-tips="" lay-offset="5"></i>
                 </div>
                 <div class="layui-card-body layui-text layadmin-text">
-                    <p>以下附layui制作者贤心原话↓↓↓</p>
+                    <p>未来展望</p>
                     <p>(</p>
-                    <p>一直以来，layui 秉承无偿开源的初心，虔诚致力于服务各层次前后端 Web
-                        开发者，在商业横飞的当今时代，这一信念从未动摇。即便身单力薄，仍然重拾决心，埋头造轮，以尽可能地填补产品本身的缺口。</p>
-                    <p>子曰：君子不用防，小人防不住。请务必通过官网正规渠道，获得 <a href="http://www.layui.com/admin/"
-                                                        target="_blank">layuiAdmin</a>！</p>
-                    <p>—— 贤心（<a href="http://www.layui.com/" target="_blank">layui.com</a>）</p>
+                    <p>项目有待完整!!!，</p>
                     <p>)</p>
-                    <p>感谢贤心提供的后台模板，对在闲鱼上花20块钱买你这个1200块的后台模板深感抱歉，但你又能拿我怎么样呢23333？贤心？</p>
-                    <p>—— 酷乐酱（<a href="http://www.kurochan.cn/" target="_blank">kurochan.cn</a>）</p>
                 </div>
             </div>
         </div>

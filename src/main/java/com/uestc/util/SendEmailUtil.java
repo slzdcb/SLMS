@@ -2,7 +2,7 @@ package com.uestc.util;
 
 /**
  * @ClassName SendEmailUtil
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 发送邮件工具类
  * @Date 2019/4/8 14:39
  * @Version 1.0
@@ -19,7 +19,7 @@ import java.util.Properties;
 public class SendEmailUtil {
     /**
      * @return boolean
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 想指定邮箱发送邮件服务
      * @Date 23:22 2019/4/10
      * @Param [emailAddress, emailMsg]

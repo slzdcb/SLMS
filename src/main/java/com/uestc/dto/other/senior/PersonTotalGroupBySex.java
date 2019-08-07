@@ -3,7 +3,7 @@ package com.uestc.dto.other.senior;
 import java.io.Serializable;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @ClassName PersonTotalGroupBySex
  * @Description 封装根据性别查询人数的类
  * @Date 2019/7/15 11:14

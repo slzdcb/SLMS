@@ -1,7 +1,7 @@
 package com.uestc.dto.other;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @ClassName SearchCondition
  * @Description 查询的的条件
  * @Date 2019/7/25 9:12

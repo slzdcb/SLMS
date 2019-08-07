@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * @ClassName MajorServiceImpl
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 专业业务实现
  * @Date 2019/4/16 18:59
  * @Version 1.0

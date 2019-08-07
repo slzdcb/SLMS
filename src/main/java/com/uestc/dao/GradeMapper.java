@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @IntefaceName GradeMapper.xml
  * @Description 年级业务持久层接口
  * @Date 2019/6/14 13:00
@@ -16,7 +16,7 @@ import java.util.List;
 @Repository
 public interface GradeMapper {
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询所有的年级信息
      * @Date 22:42 2019/6/18
      * @Param []
@@ -25,7 +25,7 @@ public interface GradeMapper {
     List<Grade> selectAllGrade();
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 更新年级学生负责人学号
      * @Date 20:33 2019/6/23
      * @Param [stuOriNum, stuNum]
@@ -34,7 +34,7 @@ public interface GradeMapper {
     void updateGradeStuNum(@Param("stuOriNum") String stuOriNum, @Param("stuNum") String stuNum);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 更新年级教师负责人学号
      * @Date 12:49 2019/6/30
      * @Param [teaOriNum, teaNum]

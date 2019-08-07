@@ -13,7 +13,7 @@ import java.util.UUID;
 
 /**
  * @ClassName UserServiceImpl
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 用户业务实现
  * @Date 2019/1/25 9:58
  * @Version 1.0

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @IntefaceName TitleMapper.xml
  * @Description 教师职称业务持久层接口
  * @Date 2019/6/14 13:00
@@ -15,7 +15,7 @@ import java.util.List;
 @Repository
 public interface TitleMapper {
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询所有的教师职称信息
      * @Date 20:57 2019/6/25
      * @Param []
@@ -25,7 +25,7 @@ public interface TitleMapper {
 
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询所有的教师职称名称
      * @Date 21:14 2019/7/23
      * @Param []

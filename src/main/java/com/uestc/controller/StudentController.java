@@ -21,7 +21,7 @@ import java.util.Map;
 
 /**
  * @ClassName StudentController
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 学生业务控制器
  * @Date 2019/4/13 20:58
  * @Version 1.0
@@ -31,7 +31,7 @@ import java.util.Map;
 public class StudentController extends BaseController{
     /**
      * @return java.lang.String
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 定向到学生信息查询页面stuInfoQuery.jsp
      * @Date 23:01 2019/4/18
      * @Param []
@@ -42,7 +42,7 @@ public class StudentController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询学生信息的ajax交互
      * @Date 14:48 2019/6/19
      * @Param [myPage, studentSearch]
@@ -56,7 +56,7 @@ public class StudentController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询学生个人信息的ajax交互
      * @Date 16:51 2019/7/25
      * @Param [myPage]
@@ -72,7 +72,7 @@ public class StudentController extends BaseController{
 
     /**
      * @return java.lang.String
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 定向到学生信息修改页面stuInfoModify.jsp
      * @Date 10:14 2019/4/20
      * @Param []
@@ -84,7 +84,7 @@ public class StudentController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 重定向到编辑学生iframe子页面并返回相应model
      * @Date 16:11 2019/7/7
      * @Param [model, stuWGCMC]
@@ -97,7 +97,7 @@ public class StudentController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 更新学生信息
      * @Date 16:52 2019/7/25
      * @Param [stuOriNum, stuWGCMC]
@@ -119,7 +119,7 @@ public class StudentController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 添加学生ajax交互
      * @Date 21:18 2019/6/23
      * @Param [stuWGCMC]
@@ -139,7 +139,7 @@ public class StudentController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 删除一个学生ajax交互
      * @Date 18:47 2019/6/24
      * @Param [stuNum]
@@ -157,7 +157,7 @@ public class StudentController extends BaseController{
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 删除多个学生ajax交互
      * @Date 22:02 2019/4/27
      * @Param [students]
@@ -177,7 +177,7 @@ public class StudentController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 定向到班长信息iframe子页面classStuInfo.jsp
      * @Date 12:51 2019/7/7
      * @Param [model, stuNum]

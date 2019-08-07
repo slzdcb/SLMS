@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * @ClassName VerifyCode
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 验证码相关业务类
  * @Date 2019/4/8 15:51
  * @Version 1.0
@@ -12,7 +12,7 @@ import java.util.Random;
 public class VerifyCode {
     /**
      * @return java.lang.String
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description //生成六位随机数
      * @Date 15:54 2019/4/8
      * @Param []

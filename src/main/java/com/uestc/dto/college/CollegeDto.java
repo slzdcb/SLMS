@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * @ClassName CollegeDto
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 学院及其附带信息dto
  * @Date 2019/4/17 23:09
  * @Version 1.0

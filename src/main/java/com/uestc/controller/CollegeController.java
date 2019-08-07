@@ -23,7 +23,6 @@ import java.util.Map;
 
 /**
  * @ClassName CollegeController
- * @Author JinZhiyun
  * @Description 学院业务控制器
  * @Date 2019/4/16 18:55
  * @Version 1.0
@@ -33,7 +32,7 @@ import java.util.Map;
 public class CollegeController extends BaseController{
     /**
      * @return java.lang.Object
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 用于ajax渲染学院select表单栏，找出数据库中所有的学院名称
      * @Date 22:49 2019/4/18
      * @Param []
@@ -52,7 +51,7 @@ public class CollegeController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询所有学院信息的ajax交互
      * @Date 16:43 2019/7/25
      * @Param [myPage, collegeSearchDto]
@@ -66,7 +65,7 @@ public class CollegeController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询用户学院信息的ajax交互
      * @Date 16:44 2019/7/25
      * @Param [myPage]
@@ -81,7 +80,7 @@ public class CollegeController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 重定向到编辑学院iframe子页面并返回相应model
      * @Date 16:44 2019/7/25
      * @Param [model, collegeDto]
@@ -96,7 +95,7 @@ public class CollegeController extends BaseController{
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新学院信息
      * @Date 16:46 2019/5/2
      * @Param [collegeOriId, collegeOriName, collegeDto]
@@ -111,7 +110,7 @@ public class CollegeController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 重定向到添加学院iframe子页面并返回相应model
      * @Date 15:04 2019/7/14
      * @Param []
@@ -124,7 +123,7 @@ public class CollegeController extends BaseController{
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新学院信息
      * @Date 19:49 2019/5/2
      * @Param [collegeDto]
@@ -138,7 +137,7 @@ public class CollegeController extends BaseController{
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 删除一个学院ajax交互
      * @Date 15:57 2019/7/14
      * @Param [collegeName]
@@ -155,7 +154,7 @@ public class CollegeController extends BaseController{
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 删除多个学院ajax交互
      * @Date 21:58 2019/5/2
      * @Param [colleges]

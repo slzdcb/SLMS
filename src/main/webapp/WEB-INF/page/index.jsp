@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 13681864361
-  Date: 2019/4/6
-  Time: 15:22
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
@@ -13,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <c:set var="ctx" value="${pageContext.request.contextPath}"/>
-    <title>StuInfoAdmin - 大学生学籍信息管理系统</title>
+    <title>SLMS - 学生生活管理系统</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -80,7 +73,7 @@
         <div class="layui-side layui-side-menu">
             <div class="layui-side-scroll">
                 <div class="layui-logo" lay-href="${ctx}/console">
-                    <span>StuInfoAdmin</span>
+                    <span>SLMS</span>
                 </div>
 
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu"
@@ -94,12 +87,6 @@
                             <dd data-name="console" class="layui-this">
                                 <a lay-href="${ctx}/console">控制台</a>
                             </dd>
-                            <%--<dd data-name="console">--%>
-                            <%--<a href="${ctx}/static/plugins/myPersonalProject/index.html" target="_blank">酷乐的个人主页</a>--%>
-                            <%--</dd>--%>
-                            <%--<dd data-name="console">--%>
-                            <%--<a lay-href="home/homepage2.html">主页二</a>--%>
-                            <%--</dd>--%>
                         </dl>
                     </li>
                     <li data-name="app" class="layui-nav-item">

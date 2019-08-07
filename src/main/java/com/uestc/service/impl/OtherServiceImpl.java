@@ -24,7 +24,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @ClassName OtherServiceImpl
  * @Description 其他业务接口方法实现类
  * @Date 2019/6/6 13:12
@@ -87,7 +87,7 @@ public class OtherServiceImpl extends BaseServiceImpl implements OtherService {
         // 获取前端传入的参数
         String emailAddress = userEmail;
         String verifyCode = VerifyCode.randomCode();
-        String emailMsg = "收到来自StuInfoAdmin--大学生学籍信息管理系统的验证码：\n" + verifyCode + "\n有效时间: " + EmailVerifyCode.validTime / (1000 * 60) + "分钟";
+        String emailMsg = "收到来自SLMS--学生服务管理系统的验证码：\n" + verifyCode + "\n有效时间: " + EmailVerifyCode.validTime / (1000 * 60) + "分钟";
 
         try {
 

@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * @ClassName StudentSearchDto
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 封装学生信息查询搜索表单传来的JSON数据
  * @Date 2019/4/16 10:44
  * @Version 1.0

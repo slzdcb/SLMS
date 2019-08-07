@@ -1,7 +1,7 @@
 package com.uestc.dto.other.senior;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @IntefaceName Value
  * @Description //TODO
  * @Date 2019/7/16 8:33

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @ClassName Major
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 专业实体类
  * @Date 2019/4/15 16:40
  * @Version 1.0

@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @IntefaceName UserMapper
  * @Description 用户业务持久层接口
  * @Date 2019/6/14 13:00
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper {
     /**
      * @return int
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 根据用户名密码查询符合条件的用户数量
      * @Date 9:40 2019/4/19
      * @Param [userId, userPassword]
@@ -24,7 +24,7 @@ public interface UserMapper {
 
     /**
      * @return com.uestc.entity.User
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 根据用户UUId查询用户信息
      * @Date 9:53 2019/4/19
      * @Param [userId]
@@ -32,7 +32,7 @@ public interface UserMapper {
     User selectUserById(@Param("userId") String userId);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 根据用户名查询用户信息
      * @Date 8:09 2019/6/6
      * @Param [userName]
@@ -41,7 +41,7 @@ public interface UserMapper {
     User selectUserByName(@Param("userName") String userName);
 
     /**
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 根据用户邮箱查询用户信息
      * @Date 11:21 2019/5/12
      * @Param [userEmail]
@@ -51,7 +51,7 @@ public interface UserMapper {
 
     /**
      * @return int
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 向用户表插入注册用户信息，成功返回1
      * @Date 9:43 2019/4/19
      * @Param [user]
@@ -60,7 +60,7 @@ public interface UserMapper {
 
     /**
      * @return void
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新邮箱对应的用户密码
      * @Date 9:47 2019/4/19
      * @Param [userEmail, userPassword]
@@ -69,7 +69,7 @@ public interface UserMapper {
 
     /**
      * @return void
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新用户信息
      * @Date 9:48 2019/4/19
      * @Param [user]
@@ -78,7 +78,7 @@ public interface UserMapper {
 
     /**
      * @return void
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新当前用户密码
      * @Date 9:51 2019/4/19
      * @Param [userPassword, userId]
@@ -87,7 +87,7 @@ public interface UserMapper {
 
     /**
      * @return void
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新用户邮箱
      * @Date 9:53 2019/4/19
      * @Param [userOldEmail, userNewEmail]

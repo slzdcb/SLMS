@@ -6,7 +6,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @IntefaceName UserService
  * @Description 用户业务接口
  * @Date 2019/6/14 12:52
@@ -14,7 +14,7 @@ import java.util.List;
  **/
 public interface UserService {
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 用户登录验证服务
      * @Date 16:54 2019/6/5
      * @Param [userName, userPassword]
@@ -23,7 +23,7 @@ public interface UserService {
     User selectUserByNameAndPassword(String userName, String userPassword);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 更新当前用户的Session
      * @Date 16:54 2019/6/5
      * @Param [session]
@@ -33,7 +33,7 @@ public interface UserService {
 
     /**
      * @return com.uestc.entity.User
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 根据用户id查询用户的全部信息
      * @Date 23:18 2019/4/10
      * @Param [userId]
@@ -41,7 +41,7 @@ public interface UserService {
     User selectUserById(String userId);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 根据用户名查询用户信息
      * @Date 8:09 2019/6/6
      * @Param [userName]
@@ -50,7 +50,7 @@ public interface UserService {
     User selectUserByName(String userName);
 
     /**
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 根据用户邮箱查询用户信息
      * @Date 11:21 2019/5/12
      * @Param [userEmail]
@@ -60,7 +60,7 @@ public interface UserService {
 
     /**
      * @return java.lang.String
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 用户注册验证服务
      * @Date 10:47 2019/4/8
      * @Param [user]
@@ -68,7 +68,7 @@ public interface UserService {
     String insertUserRegInfo(User user);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 注销登录用户session
      * @Date 8:30 2019/6/6
      * @Param [session]
@@ -78,7 +78,7 @@ public interface UserService {
 
     /**
      * @return void
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 忘记密码时由邮箱重置密码服务
      * @Date 23:16 2019/4/10
      * @Param [userEmail, userPassword]
@@ -86,7 +86,7 @@ public interface UserService {
     void updateResetPasswordByEmail(String userEmail, String userPassword);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 返回当前身份相对所有身份的补集
      * @Date 13:43 2019/6/6
      * @Param [userIdentity]
@@ -96,7 +96,7 @@ public interface UserService {
 
     /**
      * @return java.lang.String
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 修改用户基本资料
      * @Date 23:20 2019/4/10
      * @Param [user]
@@ -105,7 +105,7 @@ public interface UserService {
 
     /**
      * @return void
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 重置当前用户密码
      * @Date 23:20 2019/4/10
      * @Param [userPassword, userId]
@@ -114,7 +114,7 @@ public interface UserService {
 
     /**
      * @return void
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更改绑定邮箱
      * @Date 10:27 2019/4/11
      * @Param [userOldEmail, userNewEmail]

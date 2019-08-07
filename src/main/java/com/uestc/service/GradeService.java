@@ -5,7 +5,7 @@ import com.uestc.entity.Grade;
 import java.util.List;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @IntefaceName GradeService
  * @Description 年级业务接口
  * @Date 2019/6/14 12:52
@@ -13,7 +13,7 @@ import java.util.List;
  **/
 public interface GradeService {
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询所有的年级信息
      * @Date 22:45 2019/6/18
      * @Param []

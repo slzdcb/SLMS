@@ -19,8 +19,8 @@ layui.define(['table', 'form'], function (exports) {
             }
         }
         , id: function (value) {
-            if (!Number12(value)) {
-                return '用户名必须为12位数字';
+            if (value == "") {
+                return '此项不能为空';
             }
         }
         , CMCid: function (value) {

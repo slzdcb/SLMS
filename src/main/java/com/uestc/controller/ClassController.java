@@ -21,7 +21,6 @@ import java.util.Map;
 
 /**
  * @ClassName ClassController
- * @Author JinZhiyun
  * @Description 班级业务控制器
  * 处理班级相关的页面跳转、增删改查ajax请求。
  * 该控制类都有根请求路径/class
@@ -33,7 +32,7 @@ import java.util.Map;
 public class ClassController extends BaseController {
     /**
      * @return java.lang.Object
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 联动渲染班级select栏的ajax交互，接收majorName参数，返回该majorName下的所有班级构成的list作为JSON
      * @Date 22:30 2019/4/23
      * @Param [majorName]
@@ -46,7 +45,7 @@ public class ClassController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 定向到班级信息查询页面classInfoQuery.jsp
      * @Date 22:48 2019/4/18
      * @Param []
@@ -58,7 +57,7 @@ public class ClassController extends BaseController {
 
     /**
      * @return com.uestc.dto.other.ResultMap<java.util.List   <   com.uestc.dto.classP.ClassWithGradeMajorCollegeDto>>
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 班级信息查询的ajax交互，返回符合layui表格要求的JSON
      * @Date 9:33 2019/7/7
      * @Param [myPage, classSearch]
@@ -72,7 +71,7 @@ public class ClassController extends BaseController {
 
     /**
      * @return com.uestc.dto.other.ResultMap<java.util.List   <   com.uestc.dto.classP.ClassWithGradeMajorCollegeDto>>
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询用户个人的班级信息的ajax交互，返回符合layui表格要求的JSON
      * @Date 11:43 2019/7/7
      * @Param [myPage]
@@ -87,7 +86,7 @@ public class ClassController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 定向到班级信息修改页面classInfoModify.jsp
      * @Date 17:44 2019/4/28
      * @Param []
@@ -99,7 +98,7 @@ public class ClassController extends BaseController {
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 重定向到编辑班级iframe子页面并返回相应model
      * @Date 16:38 2019/7/25
      * @Param [model, classWGMC]
@@ -113,7 +112,7 @@ public class ClassController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String       ,       java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新班级信息的ajax交互，返回字符串表示更新成功与否结果
      * @Date 10:10 2019/4/29
      * @Param [classOriId, classOriName, classWMCD]
@@ -128,7 +127,7 @@ public class ClassController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 重定向到添加班级iframe子页面并返回相应model
      * @Date 18:24 2019/7/7
      * @Param []
@@ -140,7 +139,7 @@ public class ClassController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String       ,       java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新教师信息
      * @Date 10:55 2019/4/29
      * @Param [classWMCD]
@@ -157,7 +156,7 @@ public class ClassController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String       ,       java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 删除一个班级ajax交互
      * @Date 15:08 2019/4/29
      * @Param [classWMCD]
@@ -174,7 +173,7 @@ public class ClassController extends BaseController {
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 删除多个班级ajax交互
      * @Date 16:43 2019/7/25
      * @Param [classes]

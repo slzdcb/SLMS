@@ -21,7 +21,7 @@ import java.util.Map;
 
 /**
  * @ClassName MajorCollege
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 专业业务控制器
  * @Date 2019/4/16 18:55
  * @Version 1.0
@@ -31,7 +31,7 @@ import java.util.Map;
 public class MajorController extends BaseController {
     /**
      * @return java.lang.Object
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 联动渲染专业select栏的ajax交互
      * @Date 22:56 2019/4/18
      * @Param [collegeName]
@@ -44,7 +44,7 @@ public class MajorController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 定向到专业和学员信息查询页面majorAndCollegeInfoQuery.jsp
      * @Date 22:58 2019/4/18
      * @Param []
@@ -56,7 +56,7 @@ public class MajorController extends BaseController {
 
     /**
      * @return com.uestc.dto.other.ResultMap<java.util.List   <   com.uestc.dto.major.MajorWithCollegeDto>>
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询所有专业信息的ajax交互
      * @Date 9:22 2019/7/11
      * @Param [myPage, majorSearch]
@@ -70,7 +70,7 @@ public class MajorController extends BaseController {
 
     /**
      * @return com.uestc.dto.other.ResultMap<java.util.List   <   com.uestc.dto.major.MajorWithCollegeDto>>
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询用户专业信息的ajax交互
      * @Date 9:22 2019/7/11
      * @Param [myPage]
@@ -85,7 +85,7 @@ public class MajorController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 定向到专业学院信息修改页面majorAndCollegeInfoModify.jsp
      * @Date 9:22 2019/7/11
      * @Param []
@@ -97,7 +97,7 @@ public class MajorController extends BaseController {
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 重定向到编辑专业iframe子页面并返回相应model
      * @Date 16:46 2019/7/25
      * @Param [model, majorWC]
@@ -111,7 +111,7 @@ public class MajorController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String       ,       java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新专业信息
      * @Date 11:07 2019/5/2
      * @Param [majorOriId, majorOriName, majorWC]
@@ -126,7 +126,7 @@ public class MajorController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 重定向到添加专业iframe子页面并返回相应model
      * @Date 12:49 2019/5/2
      * @Param []
@@ -138,7 +138,7 @@ public class MajorController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 更新专业信息
      * @Date 13:01 2019/5/2
      * @Param [majorWC]
@@ -153,7 +153,7 @@ public class MajorController extends BaseController {
     }
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 删除一个专业ajax交互
      * @Date 9:16 2019/7/14
      * @Param [majorName]
@@ -170,7 +170,7 @@ public class MajorController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 删除多个专业ajax交互
      * @Date 16:26 2019/5/2
      * @Param [majors]

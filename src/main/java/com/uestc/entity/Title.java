@@ -3,7 +3,7 @@ package com.uestc.entity;
 import java.io.Serializable;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @ClassName Title
  * @Description 教师职称实体类
  * @Date 2019/6/14 13:10

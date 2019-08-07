@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * @author JinZhiyun
  * @ClassName BaseController
  * @Description 基础控制器，用来继承。
  * 有如下内容：

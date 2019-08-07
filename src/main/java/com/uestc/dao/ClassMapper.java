@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @IntefaceName ClassMapper
  * @Description 班级业务持久层接口
  * @Date 2019/6/14 13:00
@@ -19,7 +19,7 @@ import java.util.List;
 public interface ClassMapper {
     /**
      * @return java.util.List<java.lang.Class>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 接收majorName参数，查询该majorName下的所有班级
      * 若majorName为空，则返回class表中所有班级
      * @Date 22:33 2019/4/23
@@ -28,7 +28,7 @@ public interface ClassMapper {
     List<Class> selectClassByMajorName(@Param("majorName") String majorName);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 根据班级名称查询班级信息
      * @Date 16:53 2019/7/7
      * @Param [className]
@@ -37,7 +37,7 @@ public interface ClassMapper {
     Class selectClassByName(@Param("className") String className);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 根据班长学号查询班级信息
      * @Date 17:01 2019/7/7
      * @Param [classStuName]
@@ -46,7 +46,7 @@ public interface ClassMapper {
     Class selectClassByStuNum(@Param("classStuName") String classStuName);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 根据班主任工号查询班级信息
      * @Date 17:08 2019/7/7
      * @Param [classTeaName]
@@ -55,7 +55,7 @@ public interface ClassMapper {
     Class selectClassByTeaNum(@Param("classTeaName") String classTeaName);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 更新班长学号
      * @Date 20:27 2019/6/23
      * @Param [stuOriNum, stuNum]
@@ -64,7 +64,7 @@ public interface ClassMapper {
     void updateClassStuNum(@Param("stuOriNum") String stuOriNum, @Param("stuNum") String stuNum);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 更新班主任工号
      * @Date 12:38 2019/6/30
      * @Param [teaOriNum, teaNum]
@@ -73,7 +73,7 @@ public interface ClassMapper {
     void updateClassTeaNum(@Param("teaOriNum")String teaOriNum,@Param("teaNum") String teaNum);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 根据输入classSearch的查询条件查询符合条件的所有班级信息
      * @Date 8:52 2019/7/7
      * @Param [classSearch]
@@ -82,7 +82,7 @@ public interface ClassMapper {
     List<ClassWithGradeMajorCollegeDto> selectAllClassInfo(ClassSearchDto classSearch);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询学生用户名对应的班级及其附带信息
      * @Date 12:41 2019/7/7
      * @Param [stuNum]
@@ -91,7 +91,7 @@ public interface ClassMapper {
     ClassWithGradeMajorCollegeDto selectStuClassOwnInfoByNum(@Param("stuNum") String stuNum);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 查询教师用户名对应的班级及其附带信息
      * @Date 12:41 2019/7/7
      * @Param [teaNum]
@@ -100,7 +100,7 @@ public interface ClassMapper {
     ClassWithGradeMajorCollegeDto selectTeaClassOwnInfoByNum(@Param("teaNum") String teaNum);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 修改班级信息
      * @Date 17:36 2019/7/7
      * @Param [classOriId, classWGMC]
@@ -109,7 +109,7 @@ public interface ClassMapper {
     void updateClassInfo(@Param("classOriId") String classOriId, @Param("classWGMC") ClassWithGradeMajorCollegeDto classWGMC);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 向班级表插入一个班级
      * @Date 18:42 2019/7/7
      * @Param [classWGMC]
@@ -118,7 +118,7 @@ public interface ClassMapper {
     void insertClass(ClassWithGradeMajorCollegeDto classWGMC);
 
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 删除一个班级，mysql级联删除，子表中记录也会删除
      * @Date 9:34 2019/7/8
      * @Param [className]

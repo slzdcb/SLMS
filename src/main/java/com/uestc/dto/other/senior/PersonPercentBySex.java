@@ -3,7 +3,7 @@ package com.uestc.dto.other.senior;
 import java.io.Serializable;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @ClassName PersonPercentBySex
  * @Description 封装男女比
  * @Date 2019/7/14 16:43

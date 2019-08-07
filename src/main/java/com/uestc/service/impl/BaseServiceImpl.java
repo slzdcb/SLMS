@@ -5,7 +5,7 @@ import com.uestc.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @ClassName BaseServiceImpl
  * @Description 基础业务类，用来继承
  * @Date 2019/6/5 9:16

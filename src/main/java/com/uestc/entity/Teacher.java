@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  * @ClassName Teacher
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 老师实体类
  * @Date 2019/4/15 16:33
  * @Version 1.0

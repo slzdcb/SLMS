@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * @ClassName CollegeServiceImpl
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 学院业务实现
  * @Date 2019/4/16 19:00
  * @Version 1.0

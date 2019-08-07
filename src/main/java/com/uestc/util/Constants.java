@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @ClassName Constants
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 存放一些常量
  * @Date 2019/4/14 8:30
  * @Version 1.0

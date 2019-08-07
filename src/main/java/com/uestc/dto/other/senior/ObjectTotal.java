@@ -3,7 +3,7 @@ package com.uestc.dto.other.senior;
 import java.io.Serializable;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @ClassName ObjectTotal
  * @Description 封装人数的基类
  * @Date 2019/7/15 11:09

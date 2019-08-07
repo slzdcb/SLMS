@@ -1,7 +1,7 @@
 package com.uestc.dto.other.senior;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @ClassName ObjectTotalGroupByCommonName
  * @Description 封装类别对应名称及其下的人数传输对象
  * @Date 2019/7/16 8:42

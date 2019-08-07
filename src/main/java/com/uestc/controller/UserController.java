@@ -18,7 +18,7 @@ import java.util.Map;
 
 /**
  * @ClassName UserController
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 用户业务控制器
  * 处理班级相关的页面跳转、增删改查ajax请求。
  * 该控制类都有根请求路径/class
@@ -32,7 +32,7 @@ import java.util.Map;
 public class UserController extends BaseController {
     /**
      * @return java.lang.String
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 定向到用户基本信息页面，并返回相应用户model
      * @Date 16:54 2019/7/25
      * @Param [model]
@@ -48,7 +48,7 @@ public class UserController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 上传头像
      * @Date 16:54 2019/7/25
      * @Param [file]
@@ -72,7 +72,7 @@ public class UserController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 重置用户基本信息的ajax交互
      * @Date 16:55 2019/7/25
      * @Param [user]
@@ -87,7 +87,7 @@ public class UserController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 定向到修改密码页面password.jsp
      * @Date 10:50 2019/6/13
      * @Param [model]
@@ -101,7 +101,7 @@ public class UserController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String       ,       java.lang.Object>
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 已登录主页后在password.jsp页面修改密码的ajax交互
      * @Date 10:51 2019/6/13
      * @Param [userOldPassword, userNewPassword]
@@ -124,7 +124,7 @@ public class UserController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 定向到修改邮箱页面email.jsp
      * @Date 11:06 2019/6/13
      * @Param [model]
@@ -138,7 +138,7 @@ public class UserController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String ,   java.lang.Object>
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 修改邮箱的ajax交互
      * @Date 9:52 2019/4/19
      * @Param [userOldEmail, userNewEmail, request, session]

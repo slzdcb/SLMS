@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @ClassName UserServiceLogger
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 对用户业务的日志管理
  * @Date 2019/4/12 10:51
  * @Version 1.0
@@ -26,7 +26,7 @@ public class UserServiceLogger {
 
     /**
      * @return void
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 用户登录日志管理
      * @Date 10:19 2019/5/21
      * @Param [joinPoint]

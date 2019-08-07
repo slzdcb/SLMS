@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * @ClassName StudentWithGradeClassMajorCollegeDto
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 学生及其附带信息dto
  * @Date 2019/4/15 18:33
  * @Version 1.0

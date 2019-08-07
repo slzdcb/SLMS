@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 13681864361
-  Date: 2019/4/6
-  Time: 17:52
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
@@ -13,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <c:set var="ctx" value="${pageContext.request.contextPath}"/>
-    <title>注册 - StuInfoAdmin</title>
+    <title>注册 - SLMS</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -28,8 +21,8 @@
 <div class="layadmin-user-login layadmin-user-display-show" id="LAY-user-login" style="display: none;">
     <div class="layadmin-user-login-main">
         <div class="layadmin-user-login-box layadmin-user-login-header">
-            <h2>StuInfoAdmin</h2>
-            <p>大学生学籍信息管理系统</p>
+            <h2>SLMS</h2>
+            <p>学生服务管理系统</p>
         </div>
         <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
             <div class="layui-form-item">
@@ -95,7 +88,7 @@
     </div>
 
     <div class="layui-trans layadmin-user-login-footer">
-        <p>© 2019 <a href="http://kurochan.cn/" target="_blank">kurochan.cn</a></p>
+        <p>Copyright &copy; 2019. All rights reserved UESTC 学生生活管理系统</p>
     </div>
 
 </div>

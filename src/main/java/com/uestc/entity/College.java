@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @ClassName College
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 学院实体类
  * @Date 2019/4/15 16:36
  * @Version 1.0

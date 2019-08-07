@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author JinZhiyun
+ * @Author Mardan
  * @ClassName TitleController
  * @Description 教师职称业务控制器
  * @Date 2019/6/14 12:43
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/title")
 public class TitleController extends BaseController {
     /**
-     * @author JinZhiyun
+     * @Author Mardan
      * @Description 用于ajax渲染年级select表单栏，找出数据库中所有的年级名称
      * @Date 20:55 2019/6/25
      * @Param []

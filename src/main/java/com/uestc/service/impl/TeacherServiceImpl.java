@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * @ClassName TeacherServiceImpl
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 教师业务实现
  * @Date 2019/4/16 13:08
  * @Version 1.0

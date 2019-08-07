@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @ClassName AuthorityInterceptor
- * @Author JinZhiyun
+ * @Author Mardan
  * @Description 用户权限拦截器
  * @Date 2019/5/3 12:58
  * @Version 1.0
@@ -24,7 +24,7 @@ public class AuthorityInterceptor implements HandlerInterceptor {
 
     /**
      * @return boolean
-     * @Author JinZhiyun
+     * @Author Mardan
      * @Description 拦截访问修改页面的请求，如果非管理员身份，提示error.jsp
      * @Date 13:18 2019/5/3
      * @Param [httpServletRequest, httpServletResponse, o]
