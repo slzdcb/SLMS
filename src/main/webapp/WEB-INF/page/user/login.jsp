@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 13681864361
-  Date: 2019/4/6
-  Time: 17:52
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
@@ -13,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <c:set var="ctx" value="${pageContext.request.contextPath}"/>
-    <title>登入 - StuInfoAdmin</title>
+    <title>登入 - SLMS</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -28,8 +21,8 @@
 
     <div class="layadmin-user-login-main">
         <div class="layadmin-user-login-box layadmin-user-login-header">
-            <h2>StuInfoAdmin</h2>
-            <p>大学生学籍信息管理系统</p>
+            <h2>学生服务管理系统</h2>
+            <p>SLMS</p>
         </div>
         <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
             <div class="layui-form-item">
@@ -69,19 +62,11 @@
                     入
                 </button>
             </div>
-            <div class="layui-trans layui-form-item layadmin-user-login-other">
-                <label>社交账号登入</label>
-                <a href="javascript:;"><i class="layui-icon layui-icon-login-qq"></i></a>
-                <a href="javascript:;"><i class="layui-icon layui-icon-login-wechat"></i></a>
-                <a href="javascript:;"><i class="layui-icon layui-icon-login-weibo"></i></a>
-
-                <a href="${ctx}/reg" class="layadmin-user-jump-change layadmin-link">注册帐号</a>
-            </div>
         </div>
     </div>
 
     <div class="layui-trans layadmin-user-login-footer">
-        <p>© 2019 <a href="http://kurochan.cn/" target="_blank">kurochan.cn</a></p>
+        <p>Copyright &copy; 2019. All rights reserved UESTC 学生生活管理系统</p>
     </div>
 </div>
 
@@ -141,12 +126,6 @@
                 , url: '${ctx}/loginTest' //实际使用请改成服务端真实接口
                 , data: {'userName': field.username, 'userPassword': field.password, 'remember': field.remember}
                 , success: function (res) {
-                    // //请求成功后，写入 access_token
-                    // layui.data(setter.tableName, {
-                    //     key: setter.request.tokenName
-                    //     ,value: res.data.access_token
-                    // });
-
                     if (res.data == "resultSuccess") {
                         //登入成功的提示与跳转
                         layer.msg('登入成功', {
@@ -172,16 +151,7 @@
                     }
                 }
             });
-
         });
-
-
-        // //实际使用时记得删除该代码
-        // layer.msg('为了方便演示，用户名密码可随意输入', {
-        //     offset: '15px'
-        //     ,icon: 1
-        // });
-
     });
 </script>
 </body>
