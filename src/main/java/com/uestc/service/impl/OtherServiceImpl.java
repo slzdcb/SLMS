@@ -87,7 +87,7 @@ public class OtherServiceImpl extends BaseServiceImpl implements OtherService {
         // 获取前端传入的参数
         String emailAddress = userEmail;
         String verifyCode = VerifyCode.randomCode();
-        String emailMsg = "收到来自SLMS--学生服务管理系统的验证码：\n" + verifyCode + "\n有效时间: " + EmailVerifyCode.validTime / (1000 * 60) + "分钟";
+        String emailMsg = "收到来自学生服务管理系统的验证码：\n" + verifyCode + "\n有效时间: " + EmailVerifyCode.validTime / (1000 * 60) + "分钟";
 
         try {
 

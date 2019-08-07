@@ -2,7 +2,6 @@ package com.uestc.controller;
 
 import com.uestc.dto.other.EmailVerifyCode;
 import com.uestc.dto.other.senior.StudentPercentBySex;
-import com.uestc.entity.College;
 import com.uestc.entity.User;
 import com.uestc.interceptor.Token;
 import com.uestc.util.Constants;
@@ -13,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -217,8 +218,12 @@ public class OtherController extends BaseController {
      * @Param []
      **/
     @RequestMapping("/console")
-    public String console() {
-        return "home/console";
+    public String console(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
+        if (otherService.ifUserIsAdmin(httpServletRequest.getSession())){
+            return "home/adminconsole";
+        }else {
+            return "home/studentconsole";
+        }
     }
 
     /**
