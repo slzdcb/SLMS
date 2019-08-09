@@ -21,46 +21,47 @@
 
 # 运行指南:
 ## 1：项目开发环境
-IDE： IntelliJ IDEA 2019.2 (Ultimate Edition)
-项目构建工具： Maven 3.6.1
-数据库： Mysql 8.0.17
-JDK版本： jdk 1.8.0
-Tomcat版本： Tomcat 9.0.22
+- IDE： IntelliJ IDEA 2019.2 (Ultimate Edition)
+- 项目构建工具： Maven 3.6.1
+- 数据库： Mysql 8.0.17
+- JDK版本： jdk 1.8.0
+- Tomcat版本： Tomcat 9.0.22
 
 ## 2：数据库
-系统管理员 Mardan/88888888
-学生 2017221101025/123456
+- 系统管理员 Mardan/88888888
+- 学生 2017221101025/123456
+
 
 
 项目结构
 ```
 SLMS
-├── docs								// 项目主页
-├── pom.xml 							// maven依赖
-├── README.md 							// readme
-└── src 								// 类源代码目录
+├── docs                                // 项目主页
+├── pom.xml                             // maven依赖
+├── README.md                           // readme
+└── src                                 // 类源代码目录
     ├── main
     │   ├── java
     │   │   └── com
-    │   │       └── uestc 				// java代码目录
-    │   │           ├── controller		// 控制层
-    │   │           ├── dao 			// 持久层
-    │   │           ├── dto 			// 传输对象
-    │   │           ├── entity 			// 实体类
-    │   │           ├── interceptor 	// 拦截器
-    │   │           ├── log 			// 日志管理
-    │   │           ├── service 		// 服务层
-    │   │           │   └─ impl 		// 服务层接口实现
-    │   │           └── util 			// 工具方法
-    │   ├── resource 					// 资源文件目录
-    │   │   ├── jdbc.properties 		// jdbc连接数据库
-    │   │   ├── log4j.properties 		// log4j 日志输出
-    │   │   ├── mapper 					// mybatis对dao接口的xml实现
+    │   │       └── uestc               // java代码目录
+    │   │           ├── controller      // 控制层
+    │   │           ├── dao             // 持久层
+    │   │           ├── dto             // 传输对象
+    │   │           ├── entity          // 实体类
+    │   │           ├── interceptor     // 拦截器
+    │   │           ├── log             // 日志管理
+    │   │           ├── service         // 服务层
+    │   │           │   └─ impl         // 服务层接口实现
+    │   │           └── util            // 工具方法
+    │   ├── resource                    // 资源文件目录
+    │   │   ├── jdbc.properties         // jdbc连接数据库
+    │   │   ├── log4j.properties        // log4j 日志输出
+    │   │   ├── mapper                  // mybatis对dao接口的xml实现
     │   │   ├── mybatis-config.xml
-    │   │   ├── SLMS.sql 				//创建数据库mysql源码
+    │   │   ├── SLMS.sql                //创建数据库mysql源码
     │   │   ├── spring-context.xml
     │   │   └── spring-mvc.xml
-    │   └── webapp 						// tomcat前端文件目录
+    │   └── webapp                      // tomcat前端文件目录
     │       ├── index.jsp
     │       ├── static
     │       │   ├── custom
@@ -68,6 +69,6 @@ SLMS
     │       └── WEB-INF
     │           ├── page
     │           └── web.xml
-    └── test 							// 测试代码目录
+    └── test                            // 测试代码目录
         └── java
 ```
