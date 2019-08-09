@@ -10,16 +10,16 @@ import com.uestc.entity.User;
 import java.util.List;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName ClassService
  * @Description 班级业务接口
- * @Date 2019/6/14 12:52
+ * @Date 2019/7/14 12:52
  * @Version 1.0
  **/
 public interface ClassService {
     /**
      * @return java.util.List<com.uestc.entity.Class>
-     * @Author Mardan
+     * @Author
      * @Description 接收majorName参数，返回该majorName下的所有班级构成的list
      * @Date 22:50 2019/4/23
      * @Param [majorName]
@@ -28,7 +28,7 @@ public interface ClassService {
 
     /**
      * @return com.github.pagehelper.PageInfo<com.uestc.dto.classP.ClassWithGradeMajorCollegeDto>
-     * @Author Mardan
+     * @Author
      * @Description 使用mybatis分页插件，根据layui前端表格传来的分页信息封装对象mypage，返回符合条件的班级信息分页结果
      * @Date 8:46 2019/7/7
      * @Param [myPage, classSearch]
@@ -37,7 +37,7 @@ public interface ClassService {
 
     /**
      * @return com.github.pagehelper.PageInfo<com.uestc.dto.classP.ClassWithGradeMajorCollegeDto>
-     * @Author Mardan
+     * @Author
      * @Description 使用mybatis分页插件，根据layui前端表格传来的分页信息封装对象mypage，返回用户名对应的班级及其附带信息分页结果
      * @Date 11:44 2019/7/7
      * @Param [myPage, user]
@@ -46,7 +46,7 @@ public interface ClassService {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 根据业务逻辑返回更新班级ajax的map键data值
      * @Date 16:46 2019/7/7
      * @Param [classOriName, classWGMC]
@@ -55,7 +55,7 @@ public interface ClassService {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 根据业务逻辑返回更新班级ajax的map键data值
      * @Date 18:30 2019/7/7
      * @Param [classWGMC]
@@ -64,7 +64,7 @@ public interface ClassService {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description 删除一个班级业务
      * @Date 9:32 2019/7/8
      * @Param [className]
@@ -73,7 +73,7 @@ public interface ClassService {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description 删除多个班级业务
      * @Date 9:45 2019/7/8
      * @Param [classNames]

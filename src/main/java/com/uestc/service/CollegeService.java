@@ -10,15 +10,15 @@ import com.uestc.entity.User;
 import java.util.List;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName CollegeService
  * @Description 学院业务接口
- * @Date 2019/6/14 12:52
+ * @Date 2019/7/14 12:52
  * @Version 1.0
  **/
 public interface CollegeService {
     /**
-     * @Author Mardan
+     * @Author
      * @Description 找出所有的学院
      * @Date 13:34 2019/6/14
      * @Param []
@@ -27,7 +27,7 @@ public interface CollegeService {
     List<College> selectAllCollege();
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 返回符合的学院信息的分页结果
      * @Date 13:21 2019/7/25
      * @Param [myPage, collegeSearchDto]
@@ -36,7 +36,7 @@ public interface CollegeService {
     PageInfo<CollegeDto> selectAllCollegeInfo(MyPage myPage, CollegeSearchDto collegeSearchDto);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 返回用户名对应的学院及其附带信息分页结果
      * @Date 19:40 2019/7/10
      * @Param [myPage, user]
@@ -45,7 +45,7 @@ public interface CollegeService {
     PageInfo<CollegeDto> selectCollegeOwnInfoByNum(MyPage myPage, User user);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 根据业务逻辑返回更新学院ajax的map键data值
      * @Date 9:51 2019/7/14
      * @Param [collegeOriId, collegeOriName, collegeDto]
@@ -54,7 +54,7 @@ public interface CollegeService {
     String updateCollegeInfo(String collegeOriId, String collegeOriName, CollegeDto collegeDto);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 根据业务逻辑返回更新学院ajax的map键data值
      * @Date 15:05 2019/7/14
      * @Param [collegeDto]
@@ -63,7 +63,7 @@ public interface CollegeService {
     String insertCollege(CollegeDto collegeDto);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 删除学院业务
      * @Date 15:58 2019/7/14
      * @Param [collegeName]
@@ -72,7 +72,7 @@ public interface CollegeService {
     void deleteOneCollege(String collegeName);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 删除多个学院
      * @Date 16:06 2019/7/14
      * @Param [collegeNames]

@@ -10,17 +10,17 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName TeacherMapper
  * @Description 教师业务持久层接口
- * @Date 2019/6/14 13:00
+ * @Date 2019/7/14 13:00
  * @Version 1.0
  **/
 @Repository
 public interface TeacherMapper {
     /**
      * @return java.util.List<com.uestc.dto.teacher.TeacherWithTitleMajorCollegeDto>
-     * @Author Mardan
+     * @Author
      * @Description 查询所有符合条件的教师及其附带信息
      * @Date 8:24 2019/6/30
      * @Param [teacherSearch]
@@ -28,7 +28,7 @@ public interface TeacherMapper {
     List<TeacherWithTitleMajorCollegeDto> selectAllTeacherInfo(TeacherSearchDto teacherSearch);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查询用户名对应的教师及其附带信息
      * @Date 12:39 2019/7/7
      * @Param [teaNum]
@@ -38,7 +38,7 @@ public interface TeacherMapper {
 
     /**
      * @return com.uestc.entity.Teacher
-     * @Author Mardan
+     * @Author
      * @Description 查询工号对应的教师
      * @Date 12:32 2019/6/30
      * @Param [teaNum]
@@ -47,7 +47,7 @@ public interface TeacherMapper {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description 修改教师信息
      * @Date 12:57 2019/6/30
      * @Param [teaOriNum, teaWTMC]
@@ -56,7 +56,7 @@ public interface TeacherMapper {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description 向教师表插入一个教师
      * @Date 16:20 2019/6/30
      * @Param [teaWTMC]
@@ -65,15 +65,15 @@ public interface TeacherMapper {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description 删除一个学生
-     * @Date 16:48 2019/6/30
+     * @Date 16:48 2019/7/20
      * @Param [teaNum]
      **/
     void deleteOneTeacher(@Param("teaNum") String teaNum);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 删除多个教师
      * @Date 18:28 2019/6/30
      * @Param [teaNums]
@@ -82,7 +82,7 @@ public interface TeacherMapper {
     void deleteManyTeachers(List<String> teaNums);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查找符合条件的对应类别名称的教师数的封装对象，这里用mysql存储过程实现
      * type为查询的类型：
      *      allCollegeByTeaTitle：查询某学院下的不同职称教师人数

@@ -10,9 +10,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * @ClassName CommonLogger
- * @Author Mardan
+ * @Author
  * @Description 通用日志管理
- * @Date 2019/5/21 10:13
+ * @Date 2019/7/21 10:13
  * @Version 1.0
  **/
 @Aspect
@@ -32,7 +32,7 @@ public class CommonLogger {
 
     /**
      * @return java.lang.Object
-     * @Author Mardan
+     * @Author
      * @Description 业务方法耗时aop实现
      * @Date 10:19 2019/5/21
      * @Param [pjp]
@@ -60,7 +60,7 @@ public class CommonLogger {
 
     /**
      * @return java.lang.Object
-     * @Author Mardan
+     * @Author
      * @Description 工具方法耗时aop实现
      * @Date 10:19 2019/5/21
      * @Param [pjp]

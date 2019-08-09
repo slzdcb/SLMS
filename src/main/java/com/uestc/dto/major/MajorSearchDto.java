@@ -5,7 +5,7 @@ import com.uestc.dto.other.SearchCondition;
 import java.io.Serializable;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName MajorSearchDto
  * @Description 封装专业信息查询搜索表单传来的JSON数据
  * @Date 2019/7/8 16:36

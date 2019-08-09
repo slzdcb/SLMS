@@ -5,15 +5,15 @@ import com.uestc.entity.Title;
 import java.util.List;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName TitleService
  * @Description 教师职称业务接口
- * @Date 2019/6/14 12:52
+ * @Date 2019/7/14 12:52
  * @Version 1.0
  **/
 public interface TitleService {
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查询所有的教师职称信息
      * @Date 20:59 2019/6/25
      * @Param []

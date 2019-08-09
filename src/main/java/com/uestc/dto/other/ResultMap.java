@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * @ClassName ResultMap
- * @Author Mardan
+ * @Author
  * @Description 符合layui数据表格要求的返回JSON数据格式的传输对象
- * @Date 2019/4/15 16:53
+ * @Date 2019/7/15 16:53
  * @Version 1.0
  **/
 public class ResultMap<T> implements Serializable {

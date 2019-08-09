@@ -10,16 +10,16 @@ import com.uestc.entity.User;
 import java.util.List;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName MajorService
  * @Description 专业业务接口
- * @Date 2019/6/14 12:52
+ * @Date 2019/7/14 12:52
  * @Version 1.0
  **/
 public interface MajorService {
     /**
      * @return java.util.List<com.uestc.entity.Major>
-     * @Author Mardan
+     * @Author
      * @Description 返回符合条件的专业信息
      * @Date 22:57 2019/4/18
      * @Param [collegeName]
@@ -27,7 +27,7 @@ public interface MajorService {
     List<Major> selectMajorByCollegeName(String collegeName);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 返回符合条件的专业信息的分页结果
      * @Date 16:38 2019/7/8
      * @Param [myPage, majorSearch]
@@ -36,7 +36,7 @@ public interface MajorService {
     PageInfo<MajorWithCollegeDto> selectAllMajorInfo(MyPage myPage, MajorSearchDto majorSearch);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 返回用户名对应的专业及其附带信息分页结果
      * @Date 17:19 2019/7/8
      * @Param [myPage, user]
@@ -45,7 +45,7 @@ public interface MajorService {
     PageInfo<MajorWithCollegeDto> selectMajorOwnInfoByNum(MyPage myPage, User user);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 根据业务逻辑返回更新专业ajax的map键data值
      * @Date 8:58 2019/7/12
      * @Param [majorOriId, majorOriName, majorWC]
@@ -54,7 +54,7 @@ public interface MajorService {
     String updateMajorInfo(String majorOriId, String majorOriName, MajorWithCollegeDto majorWC);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 根据业务逻辑返回更新专业ajax的map键data值
      * @Date 8:37 2019/7/14
      * @Param [majorWC]
@@ -63,7 +63,7 @@ public interface MajorService {
     String insertMajor(MajorWithCollegeDto majorWC);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 删除专业业务
      * @Date 8:57 2019/7/14
      * @Param [majorName]
@@ -72,7 +72,7 @@ public interface MajorService {
     void deleteOneMajor(String majorName);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 删除多个专业业务
      * @Date 9:17 2019/7/14
      * @Param [majorNames]

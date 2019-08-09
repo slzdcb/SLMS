@@ -5,10 +5,10 @@ import com.uestc.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName BaseServiceImpl
  * @Description 基础业务类，用来继承
- * @Date 2019/6/5 9:16
+ * @Date 2019/7/5 9:16
  * @Version 1.0
  **/
 public class BaseServiceImpl {

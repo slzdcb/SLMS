@@ -7,9 +7,9 @@ import java.util.Date;
 
 /**
  * @ClassName Teacher
- * @Author Mardan
+ * @Author
  * @Description 老师实体类
- * @Date 2019/4/15 16:33
+ * @Date 2019/7/15 16:33
  * @Version 1.0
  **/
 public class Teacher implements Serializable {

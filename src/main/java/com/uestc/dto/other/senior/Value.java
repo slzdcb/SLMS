@@ -1,7 +1,7 @@
 package com.uestc.dto.other.senior;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName Value
  * @Description //TODO
  * @Date 2019/7/16 8:33

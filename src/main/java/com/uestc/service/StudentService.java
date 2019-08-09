@@ -10,15 +10,15 @@ import com.uestc.entity.Student;
 import java.util.List;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName StudentService
  * @Description 学生业务接口
- * @Date 2019/6/14 12:52
+ * @Date 2019/7/14 12:52
  * @Version 1.0
  **/
 public interface StudentService {
     /**
-     * @Author Mardan
+     * @Author
      * @Description 返回学号对应的学生
      * @Date 10:06 2019/6/23
      * @Param [stuNum]
@@ -27,7 +27,7 @@ public interface StudentService {
     Student selectStudentByNum(String stuNum);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 返回符合条件的学生信息分页结果
      * @Date 15:14 2019/6/19
      * @Param [myPage, studentSearch]
@@ -36,7 +36,7 @@ public interface StudentService {
     PageInfo<StudentWithGradeClassMajorCollegeDto> selectAllStudentInfo(MyPage myPage, StudentSearchDto studentSearch);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 返回用户名对应的学生及其附带信息分页结果
      * @Date 23:19 2019/6/19
      * @Param [myPage, stuNum]
@@ -45,7 +45,7 @@ public interface StudentService {
     PageInfo<StudentWithGradeClassMajorCollegeDto> selectStudentOwnInfoByNum(MyPage myPage, String stuNum);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 修改学生信息
      * @Date 16:49 2019/6/23
      * @Param [stuOriNum, stuWGCMC]
@@ -54,7 +54,7 @@ public interface StudentService {
     void updateStudentInfo(String stuOriNum, StudentWithGradeClassMajorCollegeDto stuWGCMC);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 添加学生业务
      * @Date 21:19 2019/6/23
      * @Param [stuWGCMC]
@@ -63,7 +63,7 @@ public interface StudentService {
     void insertStudent(StudentWithGradeClassMajorCollegeDto stuWGCMC);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 删除一个学生业务
      * @Date 18:43 2019/6/24
      * @Param [stuNum]
@@ -72,7 +72,7 @@ public interface StudentService {
     void deleteOneStudent(String stuNum);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 批量删除学生业务
      * @Date 19:11 2019/6/24
      * @Param [stuNums]
@@ -81,7 +81,7 @@ public interface StudentService {
     void deleteManyStudents(List<String> stuNums);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 由学号返回相应学生信息
      * @Date 12:45 2019/7/7
      * @Param [stuNum]

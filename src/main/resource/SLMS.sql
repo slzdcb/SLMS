@@ -301,7 +301,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('1adb593211b14216bcf9d009dd51cad2','2017221101025','Mardan','Bn5Dr6xcBNeLzhRkwp+6SA==','学生','/static/custom/img/uploadUserIcon/user_default_icon.jpg','13086617863@126.com','13681864361'),('82d583c0b3cc4d6a87fd5460c87c0f05','1101','管理员1101','Z5OtYgV5ia7CSsBmWful8w==','管理员','/static/custom/img/uploadUserIcon/user_default_icon.jpg','1140655668@qq.com','13686864361'),('eddb5442a19d4d1186fda4bf45c65c99','100000000001','王艳艳','unv/emQ2LFaEzNvxHNznvA==','教师','/static/custom/img/uploadUserIcon/user_default_icon.jpg','201700000000@qq.com','12345678901');
+INSERT INTO `user` VALUES ('1adb593211b14216bcf9d009dd51cad2','2017221101025','Mardan','Z5OtYgV5ia7CSsBmWful8w==','学生','/static/custom/img/uploadUserIcon/user_default_icon.jpg','13086617863@126.com','13681864361'),('82d583c0b3cc4d6a87fd5460c87c0f05','1101','管理员1101','Z5OtYgV5ia7CSsBmWful8w==','管理员','/static/custom/img/uploadUserIcon/user_default_icon.jpg','1140655668@qq.com','13686864361'),('eddb5442a19d4d1186fda4bf45c65c99','100000000001','王艳艳','unv/emQ2LFaEzNvxHNznvA==','教师','/static/custom/img/uploadUserIcon/user_default_icon.jpg','201700000000@qq.com','12345678901');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 

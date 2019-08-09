@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * @ClassName Major
- * @Author Mardan
+ * @Author
  * @Description 专业实体类
- * @Date 2019/4/15 16:40
+ * @Date 2019/7/15 16:40
  * @Version 1.0
  **/
 public class Major implements Serializable {

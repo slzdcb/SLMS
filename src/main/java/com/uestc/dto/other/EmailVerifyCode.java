@@ -3,10 +3,10 @@ package com.uestc.dto.other;
 import com.uestc.util.MyTimeUtil;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName EmailVerifyCode
  * @Description 邮箱验证码类
- * @Date 2019/6/6 9:27
+ * @Date 2019/7/6 9:27
  * @Version 1.0
  **/
 public class EmailVerifyCode {
@@ -52,7 +52,7 @@ public class EmailVerifyCode {
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 检查当前存储的验证是否还有效
      * @Date 9:58 2019/6/6
      * @Param []

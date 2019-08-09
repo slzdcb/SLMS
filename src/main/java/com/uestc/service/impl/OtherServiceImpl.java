@@ -24,10 +24,10 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName OtherServiceImpl
  * @Description 其他业务接口方法实现类
- * @Date 2019/6/6 13:12
+ * @Date 2019/7/6 13:12
  * @Version 1.0
  **/
 @Service

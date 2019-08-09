@@ -5,9 +5,9 @@ import java.util.List;
 
 /**
  * @ClassName Constants
- * @Author Mardan
+ * @Author
  * @Description 存放一些常量
- * @Date 2019/4/14 8:30
+ * @Date 2019/7/14 8:30
  * @Version 1.0
  **/
 public class Constants {

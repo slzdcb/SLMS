@@ -7,9 +7,9 @@ import java.util.Date;
 
 /**
  * @ClassName Student
- * @Author Mardan
+ * @Author
  * @Description 学生实体类
- * @Date 2019/4/15 16:28
+ * @Date 2019/7/15 16:28
  * @Version 1.0
  **/
 public class Student implements Serializable {

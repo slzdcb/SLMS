@@ -4,15 +4,15 @@ import java.util.Random;
 
 /**
  * @ClassName VerifyCode
- * @Author Mardan
+ * @Author
  * @Description 验证码相关业务类
- * @Date 2019/4/8 15:51
+ * @Date 2019/7/8 15:51
  * @Version 1.0
  **/
 public class VerifyCode {
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description //生成六位随机数
      * @Date 15:54 2019/4/8
      * @Param []

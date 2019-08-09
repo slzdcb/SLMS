@@ -7,9 +7,9 @@ import java.io.Serializable;
 
 /**
  * @ClassName MajorWithCollegeDto
- * @Author Mardan
+ * @Author
  * @Description 专业及其附带信息dto
- * @Date 2019/4/17 20:59
+ * @Date 2019/7/17 20:59
  * @Version 1.0
  **/
 public class MajorWithCollegeDto extends Major implements Serializable {

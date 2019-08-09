@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * @ClassName College
- * @Author Mardan
+ * @Author
  * @Description 学院实体类
- * @Date 2019/4/15 16:36
+ * @Date 2019/7/15 16:36
  * @Version 1.0
  **/
 public class College implements Serializable {

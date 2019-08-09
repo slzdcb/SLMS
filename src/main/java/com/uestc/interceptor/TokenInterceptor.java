@@ -2,9 +2,9 @@ package com.uestc.interceptor;
 
 /**
  * @ClassName TokenInterceptor
- * @Author Mardan
+ * @Author
  * @Description Token拦截器
- * @Date 2019/5/11 18:51
+ * @Date 2019/7/11 18:51
  * @Version 1.0
  **/
 
@@ -20,7 +20,7 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
     private final static org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(TokenInterceptor.class);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 实现Token相应注解的功能
      * @Date 13:04 2019/5/12
      * @Param [request, response, handler]
@@ -54,7 +54,7 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 判断表单是否重复提交
      * @Date 13:05 2019/5/12
      * @Param [request]

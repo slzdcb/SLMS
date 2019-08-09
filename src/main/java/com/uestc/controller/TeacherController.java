@@ -21,16 +21,16 @@ import java.util.Map;
 
 /**
  * @ClassName TeacherController
- * @Author Mardan
+ * @Author
  * @Description 教师业务控制器
- * @Date 2019/4/16 13:07
+ * @Date 2019/7/16 13:07
  * @Version 1.0
  **/
 @Controller
 @RequestMapping("/teacher")
 public class TeacherController extends BaseController{
     /**
-     * @Author Mardan
+     * @Author
      * @Description 定向到教师信息查询页面teaInfoQuery.jsp
      * @Date 8:02 2019/6/30
      * @Param []
@@ -42,7 +42,7 @@ public class TeacherController extends BaseController{
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查询教师信息的ajax交互
      * @Date 8:07 2019/6/30
      * @Param [myPage, teacherSearch]
@@ -57,7 +57,7 @@ public class TeacherController extends BaseController{
 
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查询教师个人信息的ajax交互
      * @Date 16:53 2019/7/25
      * @Param [myPage]
@@ -73,7 +73,7 @@ public class TeacherController extends BaseController{
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 定向到教师信息修改页面teaInfoModify.jsp
      * @Date 12:35 2019/4/27
      * @Param []
@@ -84,7 +84,7 @@ public class TeacherController extends BaseController{
         return "app/modify/teaInfoModify";
     }
     /**
-     * @Author Mardan
+     * @Author
      * @Description 重定向到编辑教师iframe子页面并返回相应model
      * @Date 16:53 2019/7/25
      * @Param [model, teaWTMC]
@@ -97,7 +97,7 @@ public class TeacherController extends BaseController{
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 更新教师信息
      * @Date 16:53 2019/7/25
      * @Param [teaOriNum, teaWTMC]
@@ -119,7 +119,7 @@ public class TeacherController extends BaseController{
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 添加教师ajax交互
      * @Date 16:12 2019/6/30
      * @Param [teaWTMC]
@@ -139,7 +139,7 @@ public class TeacherController extends BaseController{
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 删除一个教师ajax交互
      * @Date 16:42 2019/6/30
      * @Param [teaNum]
@@ -156,7 +156,7 @@ public class TeacherController extends BaseController{
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @Author Mardan
+     * @Author
      * @Description 删除多个教师ajax交互
      * @Date 9:32 2019/5/2
      * @Param [teachers]
@@ -177,7 +177,7 @@ public class TeacherController extends BaseController{
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 定向到班主任信息iframe子页面classStuInfo.jsp
      * @Date 9:20 2019/4/19
      * @Param [model, teaNum]

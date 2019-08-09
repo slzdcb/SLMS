@@ -20,16 +20,16 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName OtherController
  * @Description 其他一些请求的控制类
- * @Date 2019/6/6 13:09
+ * @Date 2019/7/6 13:09
  * @Version 1.0
  **/
 @Controller
 public class OtherController extends BaseController {
     /**
-     * @Author Mardan
+     * @Author
      * @Description 定向到主页index.jsp，并返回用户model
      * @Date 16:48 2019/7/25
      * @Param []
@@ -46,7 +46,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 定向到登录页面login.jsp
      * @Date 9:25 2019/4/19
      * @Param []
@@ -58,7 +58,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 注销并定向到登录页面login.jsp
      * @Date 9:36 2019/4/19
      * @Param []
@@ -70,7 +70,7 @@ public class OtherController extends BaseController {
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 测试登录成功与否的ajax交互
      * @Date 16:49 2019/7/25
      * @Param [user, remember]
@@ -95,7 +95,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 定向到注册页面reg.jsp
      * @Date 9:37 2019/4/19
      * @Param []
@@ -107,7 +107,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String                               ,                               java.lang.Object>
-     * @Author Mardan
+     * @Author
      * @Description 判断注册成功与否的ajax交互
      * @Date 9:39 2019/4/19
      * @Param [user]
@@ -122,7 +122,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 定向到忘记密码页面forget.jsp
      * @Date 9:37 2019/4/19
      * @Param []
@@ -135,7 +135,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String       ,       java.lang.Object>
-     * @Author Mardan
+     * @Author
      * @Description 发送验证码的ajax交互
      * @Date 8:46 2019/6/6
      * @Param [user]
@@ -152,7 +152,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String       ,       java.lang.Object>
-     * @Author Mardan
+     * @Author
      * @Description 检测验证码是否正确的ajax交互
      * @Date 8:58 2019/6/6
      * @Param [emailVerifyCode, user]
@@ -176,7 +176,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String                               ,                               java.lang.Object>
-     * @Author Mardan
+     * @Author
      * @Description 重置密码的ajax交互
      * @Date 9:46 2019/4/19
      * @Param [user]
@@ -200,7 +200,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 定向到无修改权限提示页面error.jsp
      * @Date 13:17 2019/5/3
      * @Param []
@@ -212,7 +212,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 定向到控制台console.jsp
      * @Date 9:58 2019/5/3
      * @Param []
@@ -228,7 +228,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String               ,               java.lang.Object>
-     * @Author Mardan
+     * @Author
      * @Description 性别比可视化ajax
      * @Date 18:54 2019/5/5
      * @Param [stuCollegeName, stuMajorName, stuClassName]
@@ -246,7 +246,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 重定向到echarts可视化性别比饼图
      * @Date 12:18 2019/5/5
      * @Param []
@@ -258,7 +258,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 重定向到echarts可视化学生数柱状图
      * @Date 19:37 2019/5/5
      * @Param []
@@ -270,7 +270,7 @@ public class OtherController extends BaseController {
 
     /**
      * @return java.util.Map<java.lang.String   ,   java.lang.Object>
-     * @Author Mardan
+     * @Author
      * @Description 学生人数比可视化ajax
      * @Date 19:00 2019/7/21
      * @Param [collegeName, majorName, type]
@@ -287,7 +287,7 @@ public class OtherController extends BaseController {
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 本硕博比可视化ajax
      * @Date 17:40 2019/7/23
      * @Param [collegeName, type]
@@ -310,7 +310,7 @@ public class OtherController extends BaseController {
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 重定向到师资力量echarts可视化
      * @Date 17:42 2019/7/23
      * @Param []
@@ -322,7 +322,7 @@ public class OtherController extends BaseController {
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 师资力量可视化ajax
      * @Date 18:45 2019/7/24
      * @Param [collegeName, majorName, type]

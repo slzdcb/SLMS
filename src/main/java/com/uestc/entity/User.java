@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * @ClassName User
- * @Author Mardan
+ * @Author
  * @Description 用户实体类
- * @Date 2019/1/25 9:56
+ * @Date 2019/7/25 9:56
  * @Version 1.0
  **/
 public class User implements Serializable {

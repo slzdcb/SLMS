@@ -11,17 +11,17 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName StudentMapper
  * @Description 学生业务持久层接口
- * @Date 2019/6/14 13:00
+ * @Date 2019/7/14 13:00
  * @Version 1.0
  **/
 @Repository
 public interface StudentMapper {
     /**
      * @return com.uestc.entity.Student
-     * @Author Mardan
+     * @Author
      * @Description 查询学号对应的学生
      * @Date 14:57 2019/6/19
      * @Param [stuNum]
@@ -30,7 +30,7 @@ public interface StudentMapper {
 
     /**
      * @return java.util.List<com.uestc.dto.student.StudentWithGradeClassMajorCollegeDto>
-     * @Author Mardan
+     * @Author
      * @Description 查询所有符合条件的学生及其附带信息
      * @Date 14:57 2019/6/19
      * @Param [studentSearch]
@@ -38,7 +38,7 @@ public interface StudentMapper {
     List<StudentWithGradeClassMajorCollegeDto> selectAllStudentInfo(StudentSearchDto studentSearch);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查询用户名对应的学生及其附带信息
      * @Date 12:40 2019/7/7
      * @Param [stuNum]
@@ -48,7 +48,7 @@ public interface StudentMapper {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description 修改学生信息
      * @Date 16:50 2019/6/23
      * @Param [stuOriNum, stuWGCMC]
@@ -57,7 +57,7 @@ public interface StudentMapper {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description 向学生表插入一个学生
      * @Date 21:21 2019/6/23
      * @Param [stuWGCMC]
@@ -66,7 +66,7 @@ public interface StudentMapper {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description 删除一个学生
      * @Date 8:36 2019/6/24
      * @Param [stuNum]
@@ -75,7 +75,7 @@ public interface StudentMapper {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description 删除多个学生
      * @Date 19:17 2019/6/24
      * @Param [stuNums]
@@ -83,7 +83,7 @@ public interface StudentMapper {
     void deleteManyStudents(List<String> stuNums);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查找符合条件的对应性别的学生数的封装对象
      * @Date 17:59 2019/7/14
      * @Param [stuCollegeName, stuMajorName, stuClassName]
@@ -92,7 +92,7 @@ public interface StudentMapper {
     List<StudentTotalGroupBySex> selectStuTotalBySex(@Param("stuCollegeName") String stuCollegeName, @Param("stuMajorName") String stuMajorName, @Param("stuClassName") String stuClassName);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查找符合条件的对应类别名称的学生数的封装对象，这里用mysql存储过程实现
      * type为查询的类型：
      *      allCollege：查询全部学院的学生人数比

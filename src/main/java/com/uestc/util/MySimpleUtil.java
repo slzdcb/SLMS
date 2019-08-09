@@ -9,16 +9,16 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName MySimpleUtil
  * @Description 自定义的简易工具类
- * @Date 2019/6/19 22:46
+ * @Date 2019/7/19 22:46
  * @Version 1.0
  **/
 public class MySimpleUtil {
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 获取用户ip地址
      * @Date 22:53 2019/6/19
      * @Param [request]
@@ -44,7 +44,7 @@ public class MySimpleUtil {
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description
      * 输入形如[ObjectTotalGroupByCommonName{commonName='硕士'} ObjectTotal{total=30},
      *           ObjectTotalGroupByCommonName{commonName='博士'} ObjectTotal{total=10},
@@ -77,7 +77,7 @@ public class MySimpleUtil {
     }
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description
      * 输入形如objectTotals:
      *          [ObjectTotalGroupByCommonName{commonName='副教授'} ObjectTotal{total=2},

@@ -6,9 +6,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @ClassName SetCookie
- * @Author Mardan
+ * @Author
  * @Description 设置Cookie业务类
- * @Date 2019/4/18 13:55
+ * @Date 2019/7/18 13:55
  * @Version 1.0
  **/
 public class SetCookie {
@@ -20,7 +20,7 @@ public class SetCookie {
 
     /**
      * @return void
-     * @Author Mardan
+     * @Author
      * @Description //设置用户登录cookie
      * @Date 13:58 2019/4/18
      * @Param [userId, userPassword, remember, request, response]

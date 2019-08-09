@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName CardMapper
  * @Description 一卡通业务持久层接口
  * @Date 2019/7/14 13:00
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
 public interface CardMapper {
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 根据班级名称查询班级信息
      * @Date 16:53 2019/7/7
      * @Param [cardFee]

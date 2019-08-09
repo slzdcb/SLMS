@@ -3,10 +3,10 @@ package com.uestc.entity;
 import java.io.Serializable;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName Grade
  * @Description 年级实体类
- * @Date 2019/6/14 13:07
+ * @Date 2019/7/14 13:07
  * @Version 1.0
  **/
 public class Grade implements Serializable {

@@ -16,9 +16,9 @@ import java.util.List;
 
 /**
  * @ClassName MajorServiceImpl
- * @Author Mardan
+ * @Author
  * @Description 专业业务实现
- * @Date 2019/4/16 18:59
+ * @Date 2019/7/16 18:59
  * @Version 1.0
  **/
 @Service

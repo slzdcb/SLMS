@@ -10,16 +10,16 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author Mardan
+ * @Author
  * @IntefaceName OtherService
  * @Description 其他业务接口
- * @Date 2019/6/14 12:52
+ * @Date 2019/7/14 12:52
  * @Version 1.0
  **/
 public interface OtherService {
     /**
      * @return java.lang.String 返回上传的图片存储的相对路径
-     * @Author Mardan
+     * @Author
      * @Description 头像上传业务
      * @Date 15:33 2019/4/10
      * @Param [file, request, UserId]
@@ -28,7 +28,7 @@ public interface OtherService {
 
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 发送邮箱验证码业务
      * @Date 9:53 2019/6/6
      * @Param [userEmail]
@@ -37,7 +37,7 @@ public interface OtherService {
     EmailVerifyCode sendVerifyCodeToEmail(String userEmail);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 验证邮箱验证码正确与否，是否失效
      * @Date 9:23 2019/6/6
      * @Param [code, session]
@@ -46,7 +46,7 @@ public interface OtherService {
     boolean ifValidEmailVerifyCode(String code, HttpSession session);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 判断当前登录的用户是否为管理员
      * @Date 20:51 2019/6/20
      * @Param [session]
@@ -55,7 +55,7 @@ public interface OtherService {
     boolean ifUserIsAdmin(HttpSession session);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查找符合条件的对应性别的学生数的封装对象
      * @Date 16:49 2019/7/14
      * @Param [stuCollegeName, stuMajorName, stuClassName]
@@ -64,7 +64,7 @@ public interface OtherService {
     StudentPercentBySex selectStuTotalBySex(String stuCollegeName, String stuMajorName, String stuClassName);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description
      *  返回一个长度为2的List，第0项是类别名称组成的List，第1项是对应类别名称下的人数
      *  type为查询的类型：
@@ -80,7 +80,7 @@ public interface OtherService {
     List<List<Object>> proSelectStuTotalByCollegeOrMajorName(String type, String collegeName, String majorName);
     
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查询本硕博人数比业务
      * type为查询的类型：
      *      wholeSchoolByStuDegree：表示全校的本硕博人数比，返回的List为1，即仅含一个Map
@@ -94,7 +94,7 @@ public interface OtherService {
     List<Map<String, Object>> transferStuTotalToValidJSON(String type, String collegeName);
 
     /**
-     * @Author Mardan
+     * @Author
      * @Description 查找符合条件的对应类别名称的教师数的封装对象，这里用mysql存储过程实现
      * type为查询的类型：
      *      allCollegeByTeaTitle：表示某学院下的不同职称教师人数

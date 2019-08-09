@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * @ClassName MyPage
- * @Author Mardan
+ * @Author
  * @Description 自定义分页类的封装
- * @Date 2019/4/16 11:22
+ * @Date 2019/7/16 11:22
  * @Version 1.0
  **/
 public class MyPage implements Serializable {

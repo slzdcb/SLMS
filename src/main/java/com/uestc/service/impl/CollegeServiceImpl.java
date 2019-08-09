@@ -17,9 +17,9 @@ import java.util.List;
 
 /**
  * @ClassName CollegeServiceImpl
- * @Author Mardan
+ * @Author
  * @Description 学院业务实现
- * @Date 2019/4/16 19:00
+ * @Date 2019/7/16 19:00
  * @Version 1.0
  **/
 @Service

@@ -6,9 +6,9 @@ import java.io.Serializable;
 
 /**
  * @ClassName TeacherSearchDto
- * @Author Mardan
+ * @Author
  * @Description 封装教师信息查询搜索表单传来的JSON数据
- * @Date 2019/4/16 14:16
+ * @Date 2019/7/16 14:16
  * @Version 1.0
  **/
 public class TeacherSearchDto extends SearchCondition implements Serializable {

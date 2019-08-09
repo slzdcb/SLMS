@@ -6,10 +6,10 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName MyTimeUtil
  * @Description 计算时间工具类
- * @Date 2019/6/6 9:17
+ * @Date 2019/7/6 9:17
  * @Version 1.0
  **/
 public class MyTimeUtil {
@@ -19,7 +19,7 @@ public class MyTimeUtil {
 
     /**
      * @return long
-     * @Author Mardan
+     * @Author
      * @Description 获取当前时间，返回毫秒级时间
      * @Date 10:20 2019/6/6
      * @Param []
@@ -33,7 +33,7 @@ public class MyTimeUtil {
 
     /**
      * @return boolean
-     * @Author Mardan
+     * @Author
      * @Description 比较当前时间与指定时间timeComparedTo差值是否超过了validTime
      * @Date 10:20 2019/6/6
      * @Param [timeComparedTo, validTime]
@@ -51,7 +51,7 @@ public class MyTimeUtil {
 
     /**
      * @return int
-     * @Author Mardan
+     * @Author
      * @Description 根据生日计算年龄
      * @Date 22:48 2019/6/19
      * @Param [birthDay]
@@ -83,7 +83,7 @@ public class MyTimeUtil {
 
     /**
      * @return java.lang.String
-     * @Author Mardan
+     * @Author
      * @Description 将短时间格式时间转换为字符串 yyyy-MM-dd
      * @Date 17:26 2019/6/23
      * @Param [dateDate]
@@ -96,7 +96,7 @@ public class MyTimeUtil {
 
     /**
      * @return java.util.Date
-     * @Author Mardan
+     * @Author
      * @Description 将短时间格式字符串转换为时间 yyyy-MM-dd
      * @Date 17:27 2019/6/23
      * @Param [strDate]

@@ -5,17 +5,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName TitleController
  * @Description 教师职称业务控制器
- * @Date 2019/6/14 12:43
+ * @Date 2019/7/14 12:43
  * @Version 1.0
  **/
 @Controller
 @RequestMapping("/title")
 public class TitleController extends BaseController {
     /**
-     * @Author Mardan
+     * @Author
      * @Description 用于ajax渲染年级select表单栏，找出数据库中所有的年级名称
      * @Date 20:55 2019/6/25
      * @Param []

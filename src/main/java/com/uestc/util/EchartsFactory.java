@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author Mardan
+ * @Author
  * @ClassName EchartsFactory
  * @Description 处理Echarts所需传输对象类的工厂类
  * @Date 2019/7/23 21:21

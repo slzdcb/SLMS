@@ -13,9 +13,9 @@ import java.util.UUID;
 
 /**
  * @ClassName UserServiceImpl
- * @Author Mardan
+ * @Author
  * @Description 用户业务实现
- * @Date 2019/1/25 9:58
+ * @Date 2019/7/25 9:58
  * @Version 1.0
  **/
 @Service

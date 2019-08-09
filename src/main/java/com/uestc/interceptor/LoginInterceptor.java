@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @ClassName LoginInterceptor
- * @Author Mardan
+ * @Author
  * @Description 登录Session拦截器
- * @Date 2019/4/14 12:32
+ * @Date 2019/7/14 12:32
  * @Version 1.0
  **/
 public class LoginInterceptor implements HandlerInterceptor {
@@ -21,7 +21,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     /**
      * @return boolean
-     * @Author Mardan
+     * @Author
      * @Description 判断是否登录，即session是否建立，否则重定向至登录界面
      * @Date 22:47 2019/4/18
      * @Param [httpServletRequest, httpServletResponse, o]

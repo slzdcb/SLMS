@@ -6,9 +6,9 @@ import java.io.Serializable;
 
 /**
  * @ClassName CollegeDto
- * @Author Mardan
+ * @Author
  * @Description 学院及其附带信息dto
- * @Date 2019/4/17 23:09
+ * @Date 2019/7/17 23:09
  * @Version 1.0
  **/
 public class CollegeDto extends College implements Serializable {

@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 /**
  * @ClassName Class
- * @Author Mardan
+ * @Author
  * @Description 班级实体类
- * @Date 2019/4/15 16:45
+ * @Date 2019/7/15 16:45
  * @Version 1.0
  **/
 public class Class implements Serializable {
